@@ -1,0 +1,511 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lecture</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	</head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+				<style>
+				.container{
+						display: flex;
+				}
+				.col{
+						flex: 1;
+				}
+				</style>
+
+				<!-- <div class='footer'>
+					CIE-598
+					Fall 2021
+				</div> -->
+
+				<style>
+				.reveal .slides section .fragment.fade-down {
+						opacity: 1;
+						visibility: visible;
+				}
+				.reveal .slides section .fragment.fade-down.visible,
+				.reveal .slides section .fragment.visible:not(.current-fragment) {
+						opacity: 0.4;
+				}
+				.reveal .slides section .fragment.fade-down,
+				.reveal .slides section .fragment.current-fragment {
+						color: #fff;
+				}
+
+			</style>
+				<!-- <section> -->
+				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="CIE-598: Experimental soil mechanics">
+						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+						<p style="color:#faffff; font-size:35px">Fall 2022</p>
+						<p style="color:#faffff; font-size:35px">TBD</p>
+						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					</div>
+        </section>
+
+
+
+        <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Contents</h1>
+					<div class="container">
+						<div class="col">
+							<ul style="margin-top:0px;">
+								<li>Syllabus
+
+										<ol>
+											<li>Introduction</li>
+											<li>Computational resources</li>
+											<li>References</li>
+											<li>Course objectives</li>
+											<li>Learning outcomes</li>
+											<li>Course assesment</li>
+											<li>Grades</li>
+											<li>Class policies</li>
+											<li>Tentative schedulle</li>
+										</ol>
+								</li>
+
+							</ul>
+						</div>
+
+						<div class="col">
+							<object data="FiguresGeneral\Syllabus.pdf"  style="width:100%; height:95%"></object>
+						</div>
+					</div>
+
+        </section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>About the instructor</h1>
+					<p style="margin-top:0px">Name: Luis Zamrano-Cruzatty, Ph.D.</p>
+					<p>Office: 308 Boardman Hall</p>
+					<p>Office hours: Tuesdays and Thursdays 8-9 AM or let me know if you want to meet.</p>
+					<p>Email: luis.zambrano@maine.edu</p>
+					<p>Phone: 207.581.1277</p>
+					<p> What about you?</p>
+				</section>
+
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Course description</h1>
+					<ul style="margin-top:0px;">
+						<li class="fragment">Practice oriented</li>
+						<li class="fragment">Lecture and laboratory components</li>
+						<li class="fragment">We will cover most common tests to characterize soil behavior</li>
+						<li class="fragment">In the lecture we will discuss in-situ techniques</li>
+						<li class="fragment">We will use lab data to calibrate constitutive models</li>
+					</ul>
+				</section>
+
+
+				<section data-background="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Computational resources</h1>
+					<ul style="margin-top:0px">
+						<li class="fragment">Course materials and communications will be subministered through Brightspace</li>
+						<li class="fragment">Tests will be administered through Brightspace</li>
+						<li class="fragment">Similarly, projects, Homework, and any submission of your work must be uploaded in Brightspace</li>
+						<li class="fragment">You will need to use spreadsheets or coding to process lab data (e.g., Python)</li>
+						<li class="fragment">For the calibration of the constitutive models we will use either Plaxis or Fortran (TBD)</li>
+					</ul>
+				</section>
+
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>References</h1>
+					<p style="margin-top:0px"> Most of the reference for the course comes from journal articles. However, the following contains excellent information about testing and shear strength:</p>
+					<ul style="margin-top:0px;font-size:32px">
+						<li>Duncan, J.M., Wright, S.G. and Brandon, T.L., 2014. Soil strength and slope stability. John Wiley & Sons.</li>
+						<li>Holtz, R.D., Kovacs, W.D. and Sheahan, T.C., 1981. An introduction to geotechnical engineering (Vol. 733). Englewood Cliffs: Prentice-Hall.</li>
+						<li>Wood, D.M., 1990. Soil behaviour and critical state soil mechanics. Cambridge university press.</li>
+						<li>Davis, R.O. and Selvadurai, A.P., 2005. Plasticity and geomechanics. Cambridge university press.</li>
+					</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Course objectives</h1>
+					<ol style="margin-top:0px">
+						<li class="fragment">To learn about the different tests to obtain shear strength and consolidation parameters of soils.</li>
+						<li class="fragment">To understand the effect of water drainage in soils to select the appropriate laboratory test and soil model.</li>
+						<li class="fragment">To comprehend and learn the limitations and assumptions in the design and analysis of soil laboratory results.</li>
+						<li class="fragment">To understand the advantages and limitations of different in-situ tests and their applicability for soil characterization.</li>
+						<li class="fragment">To comprehend the process of soil characterization with emphasis on the selection and calibration of soil’s constitutive models.</li>
+					</ol>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Learning outcomes</h1>
+						<ol style="margin-top:0px; font-size:0.9em">
+							<li class="fragment">Describe sources of sampling disturbance.</li>
+							<li class="fragment">Describe the best practices for sample storage and preparation.</li>
+							<li class="fragment">Describe the assumptions, boundary conditions, and stress and strain paths of laboratory tests.</li>
+							<li class="fragment">Distinguish between drained and undrained analysis and total and effective parameters.</li>
+							<li class="fragment">Produce technical specifications for a laboratory test.</li>
+							<li class="fragment">Perform advanced laboratory testing.</li>
+							<li class="fragment">Critically review laboratory reports.</li>
+							<li class="fragment">Analyse in-situ test results.</li>
+							<li class="fragment">Simulate laboratory tests using numerical models.</li>
+							<li class="fragment">Design laboratory testing programs.</li>
+						</ol>
+				</section>
+
+
+				<section  data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Course assesment</h1>
+						<div class="container">
+							<div class="col">
+								<ul style="margin-top:0px">
+									<li>Laboratory practice: 30%</li>
+									<li>Reports: 20%</li>
+									<li>Project: 30%</li>
+									<li>Final exam: 20%</li>
+								</ul>
+							</div>
+							<div class="col">
+								<p style="margin-top:0px">Grading scheme:</p>
+								<ul>
+									<li>A: Above 90</li>
+									<li>B: 80-90</li>
+									<li>C: 70-80</li>
+									<li>D: 60-70</li>
+									<li>F: Below 60</li>
+								</ul>
+							</div>
+						</div>
+				</section>
+
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Laboratory practice</h1>
+						<ul style="margin-top:0px">
+							<li class="fragment">Five lab practices</li>
+							<li class="fragment">You are responsible for finishing the lab practice</li>
+							<li class="fragment">Tests will demand more than one hour</li>
+							<li class="fragment">You must read manuals and standars before the lab practice</li>
+							<li class="fragment">You must keep the lab clean and organized</li>
+							<li class="fragment">Your grade on this item is awarded in accordance with performance in the lab</li>
+						</ul>
+				</section>
+
+				<section  data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				   <h1>Reports</h1>
+					 <ul style="margin-top:0px">
+						 <li class="fragment">One for each lab practice</li>
+						 <li class="fragment">One per group</li>
+						 <li class="fragment">Assume you are reporting to a client</li>
+						 <li class="fragment">High quality report is expected</li>
+					 </ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Project</h1>
+						<ul style="margin-top:0px">
+							<li class="fragment">Compile a manual for the CRS test</li>
+							<li class="fragment">One per group</li>
+							<li class="fragment">High quality report is expected</li>
+						</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Final exam</h1>
+						<ul style="margin-top:0px">
+							<li class="fragment">Individual</li>
+							<li class="fragment">Comprehensive</li>
+							<li class="fragment">Bring calculator, compass, protractor, and rulers</li>
+						</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>General formating instructions</h1>
+						<ul style="margin-top:0px">
+							<li class="fragment">Be concise. </li>
+							<li class="fragment">Use approproate symbols for units and variables.</li>
+							<li class="fragment">Label graphics correctly.</li>
+							<li class="fragment">Use correct Greek symbols for soil properties.</li>
+							<li class="fragment">In stress vs stress plots use same scale for x and y.</li>
+							<li class="fragment">Use dots for data and continuos lines for analytical results.</li>
+						</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Class policies</h1>
+					<ul style="margin-top:0px">
+						<li class="fragment">In-person and synchronous course. Assistance is required. </li>
+						<li class="fragment">Late homework will not be accepted.</li>
+						<li class="fragment">If you need more time or have a domestic issue let me know in advance.</li>
+						<li class="fragment">Follow safety measurements in the lab, such as: wearing gloves, glasses, and protective shoes if possible.</li>
+					</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1> Academic honesty</h1>
+					<p style="margin-top:0px">Please see the University of Maine System's Academic Integrity Policy  listed in the Board Policy Manual as Policy 314: https://www.maine.edu/board-of-trustees/policy-manual/section-314/</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Accessibility Services</h1>
+
+						<p style="margin-top:0px"> If you have a disability for which you may be requesting an accommodation, please contact Student Accessibility Services, 121 East Annex, 581.2319, as early as possible in the term. Students who have already been approved for accommodations by SAS and have a current accommodation letter should meet with me Luis Zambrano-Cruzatty privately as soon as possible.</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Sexual violence policy</h1>
+						<p style="margin-top:0px"> Your teacher is required to reportsexual violence events to Title IX Student Services or the Office of Equal Opportunity.
+						If you want to talk in confidence to someone about an experience of sexual discrimination, please contact these resources:
+						For confidential resources on campus: Counseling Center.
+						For confidential resources off campus:  Rape Response Services or Partners for Peace.
+						Other resources:  For support services on campus: Title IX Student Services, Office of Community Standards, University of Maine Police or 911.
+					</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+				    <h1>Course schedule disclaimer</h1>
+
+						<p style="margin-top:0px"> In the event of an extended disruption of normal classroom activities (due to COVID-19 or other long-term disruptions), the format for this course may be modified to enable its completion within its programmed time frame. In that event, you will be provided an addendum to the syllabus that will supersede this version.
+						</p>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>Course contents and schedule</h1>
+				    <object data="FiguresGeneral\Schedulle.pdf"  style="margin-top: 0px; height: 600px; width:100%"></object>
+				</section>
+
+				<section data-background-image="FiguresGeneral\Main_slide_Maine.svg">
+					<p style="margin-top:400px">Questions or comments?</p>
+				</section>
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/fullscreen/plugin.js"></script>
+	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+	<script src="plugin/audio-slideshow/recorder.js"></script> -->
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script>
+
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+											pdfSeparateFragments: false});
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+			controls: true,
+			progress: true,
+			center: false,
+			hash: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			autoPlayMedia: true,
+			width: 1280,
+			height: 720,
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+				config: 'TeX-AMS_HTML-full',
+				tex2jax: {
+					inlineMath: [['\\(','\\)']],
+					displayMath: [['\\[','\\]']],
+					balanceBraces: true,
+					processEscapes: false,
+					processRefs: true,
+					processEnvironments: true,
+					preview: 'TeX',
+					skipTags: ['script','noscript','style','textarea','pre','code'],
+					ignoreClass: 'tex2jax_ignore',
+					processClass: 'tex2jax_process'
+				},
+			},
+
+			spotlight: {
+
+					// size of the spotlight
+					size: 100,
+
+					// true: Locks the mouse pointer inside the presentation
+					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+					// displayed regardless of the configured values
+					lockPointerInsideCanvas: false,
+
+					// toggle spotlight by holding down the mouse key
+					toggleSpotlightOnMouseDown: false,
+
+					// the keyCode pressed and held to turn on spotlight, disabled when set to false
+					// Problems with this config? Maybe your touchpad is disabled on keypress?
+					spotlightOnKeyPressAndHold: true,
+
+					// choose the cursor when spotlight is on. Maybe "crosshair"?
+					spotlightCursor: 'default',
+
+					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+					presentingCursor: 'default',
+
+					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+					initialPresentationMode: true,
+
+					// true: disable selecting in presentation mode
+					disablingUserSelect: false,
+
+					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+					fadeInAndOut: 100,
+
+					// enable pointer mode
+					useAsPointer: false,
+
+					// pointer color (If pointer mode enabled)
+					pointerColor: 'red'
+			},
+
+			keyboard: {
+					// alternative to toggleSpotlightOnMouseDown:
+					// toggle spotlight by pressing key 'c'
+					32: function() { RevealSpotlight.toggleSpotlight() },
+
+					// enter/leave presentation mode by pressing key 'p'
+					80: function() {
+						RevealSpotlight.togglePresentationMode();
+					},
+			},
+
+			// Push each slide change to the browser history
+			history: true,
+
+			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+				themes: false,
+				transitions: false,
+				markers: true,
+				hideMissingTitles: true,
+				custom: [
+									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+							]
+			},
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+			// ...
+			chalkboard: {
+							boardmarkerWidth: 3,
+							chalkWidth: 5,
+							chalkEffect: 0.05,
+							src: "chalkboard.json",
+							// storage: ,
+							readOnly: false,
+							transition: 800,
+							theme: "chalkboard",
+							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+							eraser: { src: path + 'img/sponge.png', radius: 20},
+							boardmarkers : [
+											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+							],
+							chalks: [
+											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+							]
+					},
+					customcontrols: {
+						controls: [
+							{ icon: '<i class="fa fa-pen-square"></i>',
+								title: 'Toggle chalkboard (B)',
+								action: 'RevealChalkboard.toggleChalkboard();'
+							},
+							{ icon: '<i class="fa fa-pen"></i>',
+								title: 'Toggle notes canvas (C)',
+								action: 'RevealChalkboard.toggleNotesCanvas();'
+							}
+						]
+					},
+
+				// ...
+			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+								],
+									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+				});
+
+	</script>
+
+</html>
