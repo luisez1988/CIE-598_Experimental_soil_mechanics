@@ -361,6 +361,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 	var erasing = false;
 	var lining = false;
 	var circling= false;
+	var protractor= false;
 
 	var slideStart = Date.now();
 	var slideIndices = {
@@ -492,8 +493,10 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 				} );
 
 				container.appendChild( handle );
-			}
-		}
+			}}
+			// Adding a second layer for objects
+
+
 
 
 		var sponge = document.createElement( 'img' );
@@ -505,15 +508,21 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 		drawingCanvas[ id ].sponge = sponge;
 
 		var canvas = document.createElement( 'canvas' );
+		// var canvas_tools=document.createElement( 'canvas' );
 		canvas.width = drawingCanvas[ id ].width;
+		// canvas_tools.width = drawingCanvas[ id ].width;
 		canvas.height = drawingCanvas[ id ].height;
+		// canvas_tools.height = drawingCanvas[ id ].height;
 		canvas.setAttribute( 'data-chalkboard', id );
+		// canvas_tools.setAttribute( 'data-chalkboard', id );
 		canvas.style.cursor = pens[ id ][ color[ id ] ].cursor;
+		// canvas_tools.style.cursor = pens[ id ][ color[ id ] ].cursor;
 		container.appendChild( canvas );
+		// container.appendChild( canvas_tools );
 		drawingCanvas[ id ].canvas = canvas;
-
+		// drawingCanvas[ id ].canvas_tools = canvas_tools;
 		drawingCanvas[ id ].context = canvas.getContext( '2d' );
-
+		// drawingCanvas[ id ].context_tools = canvas_tools.getContext( '2d' );
 		setupCanvasEvents( container );
 
 		document.querySelector( '.reveal' ).appendChild( container );
@@ -1534,7 +1543,27 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 	function start_circling(){
 		circling=true;
-	}
+	};
+
+
+
+	function switch_protractor( xMouse, yMouse){
+		if (!protractor){
+			var ctx = drawingCanvas[ mode ].context
+			var img=new Image()
+			img.src=path + 'img/Portractor.png';
+			img.onload=function(){
+			ctx.drawImage(img, xMouse-546/2,yMouse-277,546,277);
+			};
+			protractor=true;
+
+		}else{
+			switchBoard( board + 1 );
+			switchBoard( board - 1 );
+			protractor=false;
+
+		};
+	};
 /*****************************************************************
  ** User interface
  ******************************************************************/
@@ -1636,7 +1665,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 					var scale = drawingCanvas[ mode ].scale;
 					var xOffset = drawingCanvas[ mode ].xOffset;
 					var yOffset = drawingCanvas[ mode ].yOffset;
-
+					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
 					mouseX = evt.pageX;
 					mouseY = evt.pageY;
 				drawMyLine(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
@@ -1645,6 +1674,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 					var scale = drawingCanvas[ mode ].scale;
 					var xOffset = drawingCanvas[ mode ].xOffset;
 					var yOffset = drawingCanvas[ mode ].yOffset;
+					drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
 					mouseX = evt.pageX;
 					mouseY = evt.pageY;
 				drawMyCircle(( lastX - xOffset ) / scale, ( lastY - yOffset ) / scale, ( mouseX - xOffset ) / scale, ( mouseY - yOffset ) / scale, color[ mode ] )
@@ -1685,7 +1715,7 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 		canvas.addEventListener('dblclick', function ( evt ) {
 			evt.preventDefault();
-			drawingCanvas[ mode ].canvas.style.cursor = pens[ mode ][ color[ mode ] ].cursor;
+			drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Ruler.png), auto';
 			stopDrawing();
 			stopErasing();
 			start_line();
@@ -1693,12 +1723,21 @@ console.warn( "toggleNotesButton is deprecated, use customcontrols plugin instea
 
 		canvas.addEventListener('click', ( evt ) =>{
 			var shifted= evt.shiftKey;
+			var ctled=evt.ctrlKey;
 			if (shifted){
 				evt.preventDefault();
-				drawingCanvas[ mode ].canvas.style.cursor = pens[ mode ][ color[ mode ] ].cursor;
+				drawingCanvas[ mode ].canvas.style.cursor = 'url(' + path + 'img/Compass.png), auto';
 				stopDrawing();
 				stopErasing();
 				start_circling();
+			};
+			if (ctled){
+				evt.preventDefault();
+				stopDrawing();
+				stopErasing();
+				mouseX = evt.pageX;
+				mouseY = evt.pageY;
+				switch_protractor(mouseX, mouseY);
 			};
 		});
 
