@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Lecture</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	</head>
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+				<style>
+				.container{
+						display: flex;
+				}
+				.col{
+						flex: 1;
+				}
+				</style>
+
+				<!-- <div class='footer'>
+					CIE-598
+					Fall 2021
+				</div> -->
+
+				<style>
+				.reveal .slides section .fragment.fade-down {
+						opacity: 1;
+						visibility: visible;
+				}
+				.reveal .slides section .fragment.fade-down.visible,
+				.reveal .slides section .fragment.visible:not(.current-fragment) {
+						opacity: 0.4;
+				}
+				.reveal .slides section .fragment.fade-down,
+				.reveal .slides section .fragment.current-fragment {
+						color: #fff;
+				}
+
+			</style>
+				<!-- <section> -->
+				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Direct shear test">
+						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+						<p style="color:#faffff; font-size:35px">Fall 2022</p>
+						<p style="color:#faffff; font-size:35px">9/21/2022</p>
+						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					</div>
+        </section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Direct shear test</h1>
+						<div class="container">
+							<div class="col">
+				            Initial configuration
+										<figure>
+										  <img src="https://www.geoengineer.org/storage/education/2375/editor_photos/9335/Picture3.jpg" style="width:100%" data-preload/>
+										  <footer style="margin-top:-60px;"><small></small></footer>
+										</figure>
+							</div>
+							<div class="col">
+										Final configuration
+										<figure>
+										  <img src="https://images.squarespace-cdn.com/content/v1/5a0eb3e58fd4d2924a621c5a/1565164562702-WYZG4Q83H6TBDVDWGO8P/Direct+Shear+Test+Equipment.jpg" style="width:100%" data-preload/>
+										  <footer style="margin-top:-60px;"><small></small></footer>
+										</figure>
+							</div>
+						</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1 style="margin-top:0px;font-size:51px">Objective of the direct shear test</h1>
+					<ul>
+						<li class="fragment"> Measure <strong style="color:#7abbe6">effective parameters</strong> such as \(c'\), \(\phi'_p\), \(\phi'_r\). </li>
+						<li class="fragment"> Consolidation parameters can also be obtained. </li>
+						<li class="fragment"> \(C_v\) must be measured to determine shear rate. </li>
+						<li class="fragment"> The DS is a <strong style="color:#7abbe6">drained</strong> shear test. Therefore, the shearing is controlled such that \(\Delta u ≈ 0\). </li>
+					</ul>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>DS in sand</h1>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>DS in clay</h1>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>DS stress path</h1>
+
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Pros and cons of the DS test</h1>
+						<div class="container">
+							<div class="col">
+									Pros
+									<ul>
+										<li>Is a \(K_0\) consolidated test</li>
+										<li>Plane-strain test</li>
+										<li>Conservative if sheared parallel to sedimentation plane</li>
+										<li>Simple to mount and perform</li>
+										<li>Provides consolidation results</li>
+										<li>ASTM provided</li>
+
+									</ul>
+							</div>
+							<div class="col">
+								Cons
+								<ul>
+									<li>Does not provide undrained shear strengths</li>
+									<li>Does not provide strains</li>
+									<li>Modulus and stress-strain relationships cannot be obtained</li>
+									<li>Pore pressures are not measured</li>
+									<li>Stress paths are unknown</li>
+									<li>Progressive failure</li>
+								</ul>
+							</div>
+						</div>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Sample preparation-Sand</h1>
+						<ul>
+						 <li>Sand must be deposited with care using a consistent procedure.</li>
+						 <li>Ensure that the test can be replicated.
+Typically conduct tests under identical settings at least twice.</li>
+						 <li>Should try to have uniform void ratio trough the sample</li>
+						 <li>Various methos available:
+							 <ol>
+								 <li>Pluviation</li>
+								 <li>Sedimentation</li>
+								 <li>Funnel deposition</li>
+								 <li>Controlled compaction or vibration</li>
+							 </ol>
+						 </li>
+						 <li>Need max and min void ratio to determine relative density</li>
+						 <li>All samples should have the same initial void ratio</li>
+						</ul>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Sample preparation-Sand</h1>
+					<iframe src="A review on sand sample reconstitution methods and procedures for undrained simple shear test.pdf" width="100%" height="600px" data-preload></iframe>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Sample preparation- Clay</h1>
+					<ul>
+						<li>Intact samples are trimmed first following bets practices.</li>
+						<li>For fully softened shear strength follow the following procedure:
+							<ol>
+								<li>Soak soil for two days</li>
+								<li>Sieve through sive No. 40</li>
+								<li>Air-dry the sample</li>
+								<li>Sample should be near the liquid limit for testing. 24-26 blows in a Casagrande cup.</li>
+							</ol>
+						</li>
+						<li>Place the bottom place with saturated porous stone and filter paper.</li>
+						<li>For FSSS fill using a spatula from outside to inside. Press to remove air.</li>
+					</ul>
+				</section>
+
+				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+				    <h1>Sample preparation- Clay</h1>
+						<div class="container">
+							<div class="col">
+								<ul>
+									<li>Clean and put top box and black screws. Repeat filling procedure.</li>
+									<li>Clean excess soil and place the gap screws (yellow screws).</li>
+								</ul>
+							</div>
+							<div class="col">
+									<figure>
+									  <img src="FiguresGeneral/FSSS.svg" style="width:100%" data-preload/>
+									  <footer style="margin-top:-60px;"><small></small></footer>
+									</figure>
+							</div>
+						</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>ASTM D3080 details</h1>
+					<ul>
+						<li class="fragment"> Withdrawn in April 2020. </li>
+						<li class="fragment"> 2:1 minimum test specimen diameter or width to thickness ratio required.</li>
+						<li class="fragment"> During shear, readings should be taken at displacement intervals of 2% of specimen diameter or width. </li>
+						<li class="fragment"> Follow recomendations presented in ASTM D2435 for the consolidation stage. </li>
+						<li class="fragment"> Weight of top half of the DS box should be less than 1% of the applied normal load. Otherwise it should be supported by a counter force.</li>
+					</ul>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Problems in a DS test</h1>
+					<ul>
+						<li class="fragment"> End of primary consolidation not reached. It is very important to ensure EOP for last consolidation load. </li>
+						<li class="fragment"> Sample sheared too fast. Test will not be a drained test. </li>
+						<li class="fragment"> Shearing stage stop early. The test specimen should past the peak shear stress to get a well defined curve. </li>
+					</ul>
+
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Specifying a DS test</h1>
+					<ul>
+						<li class="fragment"> Normal stress is selected based on problem being analyse. Could perform a sacrifitail analysis to find a range of normal stress for testing. </li>
+						<li class="fragment"> Shear rate is based on the \(C_v\). Use Taylor's or Casagrande's method and calculate the displacement rate using:
+							$$d_r=\cfrac{d_f}{50 t_{50}}=\cfrac{d_f}{11.6 t_{90}}$$
+						 </li>
+						 <li class="fragment"> \(d_r=\) displacement rate, \(d_f=\) final displacement (Use 0.1 in for NC clays and 0.2 in otherwise). </li>
+						</ul>
+				</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+			 var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+			var today = new Date();
+			today.setTime(today.getTime());
+	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+	<script type="text/javascript">
+				 var months = ['January','February','March','April','May','June','July',
+	'August','September','October','November','December'];
+				var today = new Date();
+				today.setTime(today.getTime());
+		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+	</script>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/zoom/zoom.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/search/search.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script src="plugin/fullscreen/plugin.js"></script>
+	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+	<script src="plugin/audio-slideshow/recorder.js"></script> -->
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script>
+
+		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+											pdfSeparateFragments: false});
+		// Also available as an ES module, see:
+		// https://revealjs.com/initialization/
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+			controls: true,
+			progress: true,
+			center: false,
+			hash: true,
+			transition: 'none',
+			slideNumber: 'c/t',
+			autoPlayMedia: true,
+			width: 1280,
+			height: 720,
+			math: {
+				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+				config: 'TeX-AMS_HTML-full',
+				tex2jax: {
+					inlineMath: [['\\(','\\)']],
+					displayMath: [['\\[','\\]']],
+					balanceBraces: true,
+					processEscapes: false,
+					processRefs: true,
+					processEnvironments: true,
+					preview: 'TeX',
+					skipTags: ['script','noscript','style','textarea','pre','code'],
+					ignoreClass: 'tex2jax_ignore',
+					processClass: 'tex2jax_process'
+				},
+			},
+
+			spotlight: {
+
+					// size of the spotlight
+					size: 100,
+
+					// true: Locks the mouse pointer inside the presentation
+					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+					// displayed regardless of the configured values
+					lockPointerInsideCanvas: false,
+
+					// toggle spotlight by holding down the mouse key
+					toggleSpotlightOnMouseDown: false,
+
+					// the keyCode pressed and held to turn on spotlight, disabled when set to false
+					// Problems with this config? Maybe your touchpad is disabled on keypress?
+					spotlightOnKeyPressAndHold: true,
+
+					// choose the cursor when spotlight is on. Maybe "crosshair"?
+					spotlightCursor: 'default',
+
+					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+					presentingCursor: 'default',
+
+					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+					initialPresentationMode: true,
+
+					// true: disable selecting in presentation mode
+					disablingUserSelect: false,
+
+					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+					fadeInAndOut: 100,
+
+					// enable pointer mode
+					useAsPointer: false,
+
+					// pointer color (If pointer mode enabled)
+					pointerColor: 'red'
+			},
+
+			keyboard: {
+					// alternative to toggleSpotlightOnMouseDown:
+					// toggle spotlight by pressing key 'c'
+					32: function() { RevealSpotlight.toggleSpotlight() },
+
+					// enter/leave presentation mode by pressing key 'p'
+					80: function() {
+						RevealSpotlight.togglePresentationMode();
+					},
+			},
+
+			// Push each slide change to the browser history
+			history: true,
+
+			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+				themes: false,
+				transitions: false,
+				markers: true,
+				hideMissingTitles: true,
+				custom: [
+									{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+									{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+							]
+			},
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+			// ...
+			chalkboard: {
+							boardmarkerWidth: 3,
+							chalkWidth: 5,
+							chalkEffect: 0.05,
+							src: "chalkboard.json",
+							// storage: ,
+							readOnly: false,
+							transition: 800,
+							theme: "chalkboard",
+							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+							eraser: { src: path + 'img/sponge.png', radius: 20},
+							boardmarkers : [
+											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+							],
+							chalks: [
+											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+							]
+					},
+					customcontrols: {
+						controls: [
+							{ icon: '<i class="fa fa-pen-square"></i>',
+								title: 'Toggle chalkboard (B)',
+								action: 'RevealChalkboard.toggleChalkboard();'
+							},
+							{ icon: '<i class="fa fa-pen"></i>',
+								title: 'Toggle notes canvas (C)',
+								action: 'RevealChalkboard.toggleNotesCanvas();'
+							}
+						]
+					},
+
+				// ...
+			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+								],
+									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+				});
+
+	</script>
+
+</html>
