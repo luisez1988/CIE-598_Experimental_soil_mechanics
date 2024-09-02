@@ -18,17 +18,17 @@
 // Override theme settings (see ../template/settings.scss)
 
 
-.reveal {
-	background: url("FiguresGeneral/Normal_slide_Maine.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
+// .reveal {
+// 	background: url("FiguresGeneral/Normal_slide_Maine.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 100%;
+// }
 
 
 
-$backgroundColor: #1c2e3f;
-$mainColor: #fff;
+$backgroundColor: #fff;
+$mainColor: #000;
 $headingColor: #7abbe6;
 
 $mainFontSize: 40px;
@@ -43,7 +43,7 @@ $barprogress_color: #7abbe6;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: darken( #7abbe6, 25% );
 
-$heading1Size: 1.7em;
+$heading1Size: 1.5em;
 $heading2Size: 1.5em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
