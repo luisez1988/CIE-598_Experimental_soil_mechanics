@@ -1,11 +1,10 @@
 <!doctype html>
-<html>
-	<head>
+<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>Lecture</title>
-
+	
+		<title>CIE-598: Experimental Soil Mechanics</title>
+	
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
@@ -14,60 +13,118 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<link rel="stylesheet" href="plugin/chalkboard/style.css">
 		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>		
+
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
 	</head>
-  <body>
-
-    <div class="reveal">
-
-      <div class="slides">
-				<style>
-				.container{
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
 						display: flex;
-				}
-				.col{
-						flex: 1;
-				}
-				</style>
-
-				<!-- <div class='footer'>
-					CIE-598
-					Fall 2021
-				</div> -->
-
-				<style>
-				.reveal .slides section .fragment.fade-down {
-						opacity: 1;
-						visibility: visible;
-				}
-				.reveal .slides section .fragment.fade-down.visible,
-				.reveal .slides section .fragment.visible:not(.current-fragment) {
-						opacity: 0.4;
-				}
-				.reveal .slides section .fragment.fade-down,
-				.reveal .slides section .fragment.current-fragment {
-						color: #fff;
-				}
-
-			</style>
-				<!-- <section> -->
-				<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-					<div style="margin-top:280px;margin-left:600px" class="title_slide" name="Sample handling">
-						<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-						<p style="color:#faffff; font-size:35px">Fall 2022</p>
-						<p style="color:#faffff; font-size:35px">08/31/2022</p>
-						<!-- <span id="spanDate_text" style="color:#faffff; font-size:35px"></span> -->
+					}
+					.col{
+						flex-wrap: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-598
+						Fall 2024
 					</div>
-        </section>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/1WQSUdXDimlFk2r2Nlub8z4t7Lw__UWq6/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-350px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 1: Sample handling">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Fall 2024</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>
 
 
         <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>Contents</h1>
-					<ol>
-						<li>Perfect sampling</li>
-						<li>Disturbance in the laboratory process</li>
-						<li>Best practices</li>
-					</ol>
+					<h1>In these slides...</h1>
+					<div class='container'>
+						<div class='col'>
+							<ul class="contentStyle" style="margin-top: 5px;">
+								<li class="l1">Perfect sampling</li>
+								<li class="l1">Sample disturbance</li>								
+								<li class='l1'>Sampling and handling clay</li>
+								<li class='l1'>Sampling and handling sand</li>
+								<li class='l1'>Understanding ASTM standards</li>										
+							</ul>
+						</div>
+						<div class='col'>
+							<div class='container'>
+								<div class='col'>
+									<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+										<p style="margin-top: -10px;"> Objectives of the lecture</p>
+										<ul>
+											<li>Understand the effects of disturbance and the best practices to mitigate it.</li>
+											<li>Learn the best practices to handle samples.</li>
+											<li>Learn about the components of an ASTM standard and where to find them.</li>
+										</ul>
+									</div>
+								</div>
+								<div class='col'>
+								<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+									<p style="margin-top: -20px;">After this lecture we will able to:</p>
+									<ul style="margin-top: -15px;">
+										<li>Describe the effects of sample disturbance on the sample's initial conditions.</li>
+										<li>Extract, handle, and prepare samples carefully.</li>					
+										<li>Find ASTM standards and understand its components.</li>											
+									</ul>
+								</div>
+								</div>
+								</div>
+						</div>
+						</div>
 
         </section>
 
@@ -76,39 +133,75 @@
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Perfect sampling</h1>
 
+					<div class='container'>
+					<div class='col' style='width: 30%;'>
+					<figure>
+					<img src='FiguresGeneral/sampling.svg' width='100%'/>
+					<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+					</figure>
+					</div>
+					<div class='col' style='width: 70%;'>
+					<div class="fragment">
+						<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						An <span class='atb'>intact</span> sample undergoes several processes that can <span class='atb'>disturb</span> it. Therefore, the concept of <strong style='color:#7abbe6'>perfect sampling</strong> is an <span class='atb'>idealization</span>. 
+						</div>
+
+					</div>
+
+					<div class="fragment">
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	We can use <strong style='color:#7abbe6'>Skempton's pore pressure parameters</strong> to approximate the <strong style='color:#7abbe6'>perfect sampling</strong> <span class='atb'>effective stress</span>.
+</div>
+
+					</div>
+					</div>
+					</div>
+
+					<div class="fragment">
+						<div class='defBox' name='Perfect sampling effective stress' style='margin-top: 0px;margin-left: 0px;'>
+						<strong style='color:green'>\(\sigma'_{ps}\)</strong>: <br>
+						<div class='equationBox'>
+						\( \sigma'_{ps}= \sigma'_{h,0} \)
+						</div>
+						</div>
+
+					</div>
+
 				</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Disturbance in the lab</h1>
 						<div class="container">
-							<div class="col">
-								<p>Soil testing involves:</p>
-								<ul>
-									<li class="fragment">Intrusion of sampler in the soil </li>
-									<li class="fragment"> Extraction of sampler </li>
-									<li class="fragment"> Handling of sample in-situ </li>
-									<li class="fragment"> Transportation of sample </li>
-									<li class="fragment"> Handling sample in the lab </li>
-									<li class="fragment"> Preparing the sample for testing </li>
-								</ul>
-								<p><strong style="color:#7abbe6">Read</strong>: "Recommended practice for soft ground site characterization": Arthur Casagrande Lecture</p>
-							</div>
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<figure>
 								  <img src="FiguresGeneral/Ladd.svg.2022_08_22_06_17_04.0.svg" style="width:100%" data-preload/>
-								  <footer style="margin-top:0px;"><small>From Ladd and DeGrout (2003) </small></footer>
+								  <footer style="margin-top:-50px;"><small>From Ladd and DeGrout (2003) </small></footer>
 								</figure>
 								<img  width="100%">
 							</div>
+							<div class="col" style='width: 50%;'>
+								<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								The <strong style='color:#7abbe6'>sample effective stress</strong> is much <span class='atb'>lower</span> than <strong style='color:green'>\(\sigma'_{ps}\)</strong>.
+								</div>
+
+								<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+								As a result, the <strong style='color:green'>undrained shear strength</strong> that would be obtained if the sample had the <span class='atb'>in-situ</span> initial conditions is <span class='atb'>larger</span> than the <strong style='color:green'>laboratory</strong> value. 
+								</div>
+
+
+								
+							</div>
 						</div>
+
+						<p style="margin-top: -30px;"><strong style="color:#7abbe6">Read</strong>: "Recommended practice for soft ground site characterization": Arthur Casagrande Lecture</p>
 				</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Drilling</h1>
 						<div class="container">
-							<div class="col">
+							<div class="col" style='width: 40%;'>
 								<div class="container">
-									<div class="col">
+									<div class="col" style='width: 50%;'>
 								    <figure>
 								      <img src="https://marvel-b1-cdn.bc0a.com/f00000000216661/geoprobe.com/sites/default/files/thumbnails/DrillingRigs.jpg" style="width:100%" data-preload/>
 											<footer style="margin-top:-60px;"><small></small></footer>
@@ -119,25 +212,32 @@
 										</figure>
 
 									</div>
-									<div class="col">
+									<div class="col" style='width: 50%;'>
 										<figure>
 										  <img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780128157923000027-f02-06-9780128157923.jpg" style="width:100%" data-preload/>
 										  <footer style="margin-top:-60px;"><small></small></footer>
 										</figure>
 										<figure>
-											<img src="https://photos.marinetraffic.com/ais/showphoto.aspx?shipid=753908&size=thumb300&stamp=false" style="width:100%" data-preload/>
+											<img src="https://www.fugro.com/_next/image?url=https%3A%2F%2Fd3rwfsce0vn25a.cloudfront.net%2Fimage%2F665520746864%2Fimage_5s5i85s6ed6bf1kdtbc1mkfi5n%2F-Ro%3A5%2Cw%3A1440%2Ch%3A750%2Cn%3Adefault-B1440-FWEBP&w=3840&q=75" style="width:100%" data-preload/>
 											<footer style="margin-top:-60px;"><small></small></footer>
 										</figure>
 									</div>
 								</div>
 
 							</div>
-							<div class="col">
-								<ul>
-									<li class="fragment"> Depending on exploration depth and location there is a diverse set of equipment available. </li>
-									<li class="fragment"> During drilling, vertical stress is reduced compared to horizontal stress causing triaxial extension (TE).</li>
-									<li class="fragment"> Drilling mud prevents failure under TE providing additional vertical stress.</li>
-								</ul>
+							<div class="col" style='width: 60%;'>
+								<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+									Depending on exploration <span class='atb'>depth and location</span> there is a diverse set of <span class='atb'>equipment available</span>.
+
+									During drilling, vertical stress is <span class='atb'>reduced</span> compared to horizontal stress causing <strong style='color:#7abbe6'>triaxial extension (TE)</strong>.
+								</div>
+
+								<div class='findingBox' style='margin-top: 10px;margin-left: 0px;'>
+								
+									Drilling mud <span class='atb'>prevents failure</span> under TE providing additional vertical stress.
+								</div>
+
+
 							</div>
 						</div>
 				</section>
@@ -148,79 +248,101 @@
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 				    <h1>Tube sampling</h1>
 						<div class="container">
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<figure>
 									<img src="FiguresGeneral/sampling_tube.png" style="width:100%; margin-top:0px;" data-preload/>
 									<footer style="margin-top:-60px;"><small></small></footer>
 								</figure>
 							</div>
-							<div class="col">
-								<strong style="color:#7abbe6">Sample disturbance</strong> is <strong style="color:red">reduced</strong> with:
-								<ul>
-									<li class="fragment"><strong style="color:#7abbe6">Increasing</strong> sampler diameter </li>
-									<li class="fragment"><strong style="color:#7abbe6">Decreasing</strong> sampler thickness </li>
-								</ul>
+							<div class="col" style='width: 50%;'>
+								<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+									<strong style="color:#7abbe6">Sample disturbance</strong> is <span class='atb'>reduced</span> with:
+									<ul>
+										<li class="fragment"><span class='atb'>Increasing</span> sampler diameter </li>
+										<li class="fragment"><span class='atb'>Decreasing</span> sampler thickness </li>
+									</ul>
+								</div>
+
+								
 							</div>
 						</div>
-						<p class="fragment">Use outer diameter 76 mm if tube sample is 75 mm \(D_0/t>45\) with sharp cutting edge with inner clearance ratio \(ICR\approx 0\%\). \(ICR=(D_i-D_c)/D_c\)
-			 </p>
+						<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							<p>Use outer diameter 76 mm if tube sample is 75 mm (\(D_0/t>45\)) with sharp cutting edge with <strong style='color:#7abbe6'>inner clearance ratio</strong> \(ICR\approx 0\%\). <br>
+								 \(ICR=(D_i-D_c)/D_c\)</p>
+						</div>
+
+	
 						 </section>
 
 
-								<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-								    <h1>Tube extraction</h1>
-										<div class="container">
-											<div class="col">
-												<figure>
-													<img src="https://ebrary.net/htm/img/39/1127/22.png" style="width:85%;margin-top:-20px" data-preload/>
-													<footer style="margin-top:-30px;"><small>Fixed piston sampler (Osterberg 1973)</small></footer>
-												</figure>
-											</div>
-											<div class="col">
-												<ul>
-													<li class="fragment"> Intact soil below the sampler will resist extraction. </li>
-													<li class="fragment"> As the sample is moved to the surface, pore pressure is reduced \(\longrightarrow\) gas exsolution may occur.</li>
-													<li class="fragment"> Seal the tube as soon as possible. </li>
-													<li class="fragment"> Hydraulic piston sampler produces the lowest amount of disturbance. ASTM available (ASTM D6519). </li>
-												</ul>
-											</div>
-										</div>
-								</section>
+	<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<h1>Tube extraction</h1>
+			<div class="container">
+				<div class="col" style='width: 50%;'>
+					<figure>
+						<img src="https://ebrary.net/htm/img/39/1127/22.png" style="width:85%;margin-top:-20px" data-preload/>
+						<footer style="margin-top:-30px;"><small>Fixed piston sampler (Osterberg 1973)</small></footer>
+					</figure>
+				</div>
+				<div class="col" style='width: 50%;'>
+					<ul>
+						<li class="fragment"> <strong style='color:#7abbe6'>Intact</strong> soil below the sampler will <span class='atb'>resist extraction</span>. </li>
+						<li class="fragment"> As the sample is moved to the surface, pore pressure is <span class='atb'>reduced</span> \(\longrightarrow\) gas <span class='atb'>exsolution</span> may occur.</li>
+						<li class="fragment"> <strong style='color:#7abbe6'>Seal</strong> the tube as soon as possible. </li>
+						<li class="fragment"> <span class='atb'>Hydraulic piston sampler</span> produces the lowest amount of disturbance. ASTM available (ASTM D6519). </li>
+					</ul>
+				</div>
+			</div>
+	</section>
+
+	<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+		<h1>Transportation and storage</h1>
+			<div class="container">
+				<div class="col" style='width: 30%;'>
+					<figure>
+						<img src="FiguresGeneral/vertical.PNG" style="width:70%; margin-top:-15px" data-preload/>
+						<footer style="margin-top:-60px;"><small></small></footer>
+					</figure>
+					<figure>
+						<img src="FiguresGeneral/Horizontal.PNG" style="width:70%; margin-top:-15px" data-preload/>
+						<footer style="margin-top:-20px;"><small>Taken from T. Brandon's Lecture Notes</small></footer>
+					</figure>
+				</div>
+				<div class="col" style='width: 70%;'>
+					<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+					Sample <strong style='color:#7abbe6'>transportation</strong> must be done <span class='atb'>carefully</span> to avoid further <strong style='color:#7abbe6'>disturbance</strong>. You want to <strong style='color:#7abbe6'>preserve</strong> the direction of the <span class='atb'>gravity loading</span>.
+					</div>
+					
+					<ul style="margin-top:0px;">
+						<li class="fragment"> Store tubes in <span class='atb'>vertical position</span>. </li>
+						<li class="fragment"> Tubes can be stored horizontal only <span class='atb'>temporally</span>. </li>						
+					</ul>
+				</div>
+			</div>
+			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+			The ASTM standard <strong style='color:#7abbe6'>D4220</strong> provides guidelines for <span class='atb'>transportation</span> and <span class='atb'>storage</span> of soil samples.
+			</div>
+	</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Transportation and storage</h1>
+				    <h1>Sample extrusion</h1>
 						<div class="container">
-							<div class="col">
-								<figure>
-								  <img src="FiguresGeneral/vertical.PNG" style="width:70%; margin-top:-15px" data-preload/>
-								  <footer style="margin-top:-60px;"><small></small></footer>
-								</figure>
-								<figure>
-								  <img src="FiguresGeneral/Horizontal.PNG" style="width:70%; margin-top:-15px" data-preload/>
-								  <footer style="margin-top:-60px;"><small></small></footer>
-								</figure>
-							</div>
-							<div class="col">
-								<ul style="margin-top:150px;">
-									<li class="fragment"> Tubes are stored in vertical possition. </li>
-									<li class="fragment"> Tubes can be stored horizontal only temporally. </li>
-									<li class="fragment"> Follow ASTM D4220. </li>
-								</ul>
-							</div>
-						</div>
-				</section>
-
-				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Sample extrussion</h1>
-						<div class="container">
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<ul>
-									<li class="fragment"> Don't use samples metalic tubes for long-term storage. Soil will be chemically improved. </li>
-									<li class="fragment"> Significant disturbance can be produced during extrussion. Cracks could develop. </li>
-									<li class="fragment"> Cut tubes with horizontal band saw. Follow procedure suggested in Ladd and DeGrout (2003)</li>
+									<li class="fragment">
+										<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+											<strong style='color:red'>Don't use</strong> metallic tubes for <span class='atb'>long-term storage</span>. Soil will be <strong style='color:#7abbe6'>chemically</strong> improved.
+										</div>
+										 </li>
+									<li class="fragment"> <strong style='color:#7abbe6'>Significant</strong> disturbance can be produced during <span class='atb'>extrusion</span>. <strong style='color:#7abbe6'>Cracks</strong> could develop. </li>
+									<li class="fragment">
+										<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+											If possible, <strong style='color:green'>follow</strong> procedure suggested in Ladd and DeGrout (2003)
+										</div>
+										</li>
 								</ul>
 							</div>
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<figure>
 								  <img src="FiguresGeneral/Dgrout.PNG" style="width:100%" data-preload/>
 								  <footer style="margin-top:-60px;"><small></small></footer>
@@ -230,78 +352,214 @@
 				</section>
 
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-					<h1>Long-term storing</h1>
+					<h1>Long-term storage</h1>
 					<div class="container">
-						<div class="col">
-					     <ul>
-					     	<li class="fragment"> Take moisture content samples and shear strength indeces if possible </li>
-								<li class="fragment"> Usually separeted in 12" samples. Log depths carefully </li>
-								<li class="fragment"> Wrap in saran wrap </li>
-								<li class="fragment"> Wrap in aluminium wrap </li>
-								<li class="fragment"> Place in plastic container </li>
-								<li class="fragment"> Wax </li>
-					     </ul>
+						<div class="col" style='width: 70%;'>
+							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+							It is <strong style='color:#7abbe6'>good practice</strong> to extract samples from Shelby tubes as soon as possible. This is <strong style='color:#7abbe6'>important</strong> for <span class='atb'>long-term storage</span> (e.g. > 1 month). <br>
+							Follow the following procedures:
+							</div>
+
+					     
 						</div>
-						<div class="col">
+						<div class="col" style='width: 30%;'>
 							<figure>
 							  <img src="FiguresGeneral/wax.PNG" style="width:100%" data-preload/>
 							  <footer style="margin-top:-60px;"><small></small></footer>
 							</figure>
 						</div>
 					</div>
-
+					<ol>
+						<li class="fragment"> <strong style='color:#7abbe6'>Take samples</strong> for <span class='atb'>moisture content</span> and shear strength indices</li>
+						   <li class="fragment"> Usually separated in 12" chunks. <strong style='color:#7abbe6'>Log depths</strong> carefully </li>
+						   <li class="fragment"> Wrap in <strong style='color:#7abbe6'>saran wrap</strong> followed by <span class='atb'>aluminum paper</span> </li>						   
+						   <li class="fragment"> Place in <strong style='color:#7abbe6'>plastic</strong> container and <span class='atb'>wax</span> </li>
+						   
+					</ol>
 				</section>
 
 				<section  data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
-				    <h1>Handling/triming</h1>
+				    <h1>Handling/trimming</h1>
 						<div class="container">
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<div class="container">
-									<div class="col">
+									<div class="col" style='width: 50%;'>
 								     <img src="FiguresGeneral/breaking_horizontal.svg" style="width:50%" data-preload/>
 										 <img src="FiguresGeneral/breaking.svg" style="width:50%" data-preload/>
 										 <img src="FiguresGeneral/squish.svg" style="width:50%" data-preload/>
 									</div>
-									<div class="col">
-										<p>Don't breake the sample</p>
-										<p style="margin-top:70px;">Don't let sample bend and and breake</p>
-										<p style="margin-top:60px;">Don't let the sample bend. Don't squish the sample</p>
+									<div class="col" style='width: 50%;'>
+										<p><strong style='color:red'>Don't</strong> break the sample</p>
+										<p style="margin-top:70px;"><strong style='color:red'>Don't</strong> let sample bend and and break</p>
+										<p style="margin-top:60px;"><strong style='color:red'>Don't</strong> let the sample bend or squish the sample</p>
 									</div>
 								</div>
 
 							</div>
-							<div class="col">
+							<div class="col" style='width: 50%;'>
 								<div class="container">
-									<div class="col">
+									<div class="col" style='width: 50%;'>
 										 <img src="FiguresGeneral/no_breaking.svg" style="width:50%" data-preload/>
 										 <img src="FiguresGeneral/no_breaking_horizontal.svg" style="width:50%" data-preload/>
 										 <img src="FiguresGeneral/no_squish.svg" style="width:50%" data-preload/>
 									</div>
-									<div class="col">
-										<p>Use a wire saw and slide the sample</p>
-										<p style="margin-top:70px;">Use a wire saw and catcher</p>
-										<p style="margin-top:60px;">Use a solid base and move the sample vertically</p>
+									<div class="col" style='width: 50%;'>
+										<p><strong style='color:green'>Use</strong> a wire saw and slide the sample</p>
+										<p style="margin-top:70px;"><strong style='color:green'>Use</strong> a wire saw and catcher</p>
+										<p style="margin-top:60px;"><strong style='color:green'>Use</strong> a solid base and keep the sample vertical</p>
 									</div>
 								</div>
 							</div>
 						</div>
 				</section>
 
+				<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+				<h1>Sampling coarse materials</h1>
+				<div class='container'>
+				<div class='col' style='width: 70%;'>
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				In practice, obtaining <strong style='color:#7abbe6'>intact</strong> samples from <strong style='color:#7abbe6'>coarse</strong> materials is <span class='atb'>challenging</span>. We often rely on <span class='atb'>empirical</span> correlations to <strong style='color:#7abbe6'>estimate</strong> strength and permeability properties.
+				</div>
+				</div>
+				<div class='col' style='width: 30%;'>
+				<figure>
+				<img src='https://www.eastmancrushing.com/files/images/grrvel-sand-gravel-aggregate.jpg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+				</div>
+				</div>
+
+				<div class='findingBox' style='margin-top: 20px;margin-left: 0px;'>
+				In some cases we are interested in testing <strong style='color:#7abbe6'>coarse</strong> materials (e.g., for cyclic loading and liquefaction). In these cases, samples must be <span class='atb'>reconstituted</span> at different <span class='atb'>densities</span> to characterize behavior under a <strong style='color:#7abbe6'>wide range of conditions</strong>.
+				</div>
+				
+				</section>
+
+				<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+				<h1>Sample reconstitution techniques</h1>
+				<figure style="margin-top: 0px;">
+				<img src='FiguresGeneral/reconstitution.svg' width='100%'/>
+				<footer style='margin-top: -380px;font-size: 0.8em;'> <em>Taken from Kwan & Mohtar (2020)</em> </footer>
+				</figure>
+
+				<div class='container' style="margin-top: 350px;">
+				<div class='col' style='width: 30%;'>
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				Better for obtaining <span class='atb'>loose to medium</span> dense samples. 
+				</div>
+				</div>
+				<div class='col' style='width: 30%;'>
+				Better for obtaining <strong style='color:#7abbe6'>loose to medium</strong> dense <span class='atb'>saturated</span> samples.
+				</div>
+				<div class='col' style='width: 40%;'>
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				Better for obtaining <span class='atb'>dense</span> samples.
+				</div>
+				</div>
+				</div>
+				</section>
+
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>About ASTM</h1>
+					<div class="container">
+						<div class="col" style='width: 50%;'>
+					   <p><strong style="color:#7abbe6">FACTS about ASTM</strong></p>
+
+					   <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+						<ul>
+							<li>Over <strong style='color:#7abbe6'>12,500</strong> standards</li>
+						   <li>Over <strong style='color:#7abbe6'>140</strong> participating countries</li>
+						   <li><strong style='color:#7abbe6'>80+ volumes</strong> of ASTM book of standards</li>
+						   <li>Manages the <strong style="color:#7abbe6">Geotechnical Testing Journal</strong></li>
+
+						</ul>
+					   </div>
+
+						</div>
+						<div class="col" style='width: 50%;'>
+							<iframe src="FiguresGeneral/Helping-Our-World-EN-2017.pdf" width="100%" height="600px"></iframe>
+						</div>
+					</div>
+				</section>
+
+				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Parts of the ASTM standard</h1>
+					<div class="container" style="margin-top: -20px;">
+						<div class="col">
+					            <ul>
+					            	<li>Title</li>
+												<li>Designation</li>
+												<li>Introduction</li>
+												<li>Scope</li>
+												<li>Terminology</li>
+												<li>Summary of test method</li>
+												<li>Significance and use</li>
+												<li>Interferences</li>
+												<li><strong style='color:#7abbe6'>Apparatus</strong></li>
+												<li>Reagents materials</li>
+												<li>Hazards</li>
+												<li><strong style='color:#7abbe6'>Sampling</strong>, t. specimens, t. units</li>
+					            </ul>
+						</div>
+						<div class="col">
+							<ul>
+
+								<li><strong style='color:#7abbe6'>Preparation</strong> of apparatus</li>
+								<li><strong style='color:#7abbe6'>Calibration</strong> and standardization</li>
+								<li>Conditioning</li>
+								<li><strong style='color:#7abbe6'>Procedure</strong></li>
+								<li><strong style='color:#7abbe6'>Calculation</strong> and results interpretation</li>
+								<li><strong style='color:#7abbe6'>Precision and Bias</strong></li>
+								<li>Measurement of <strong style='color:#7abbe6'>uncertainty</strong></li>
+								<li>Keywords</li>
+								<li>Annexes and Appendixes</li>
+								<li>References</li>
+								<li>Summary of <strong style='color:#7abbe6'>changes</strong></li>
+							</ul>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- <section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
+					<h1>Laboratory validation</h1>
+					<ul>
+						<li>Required for all government and several private jobs.</li>
+						<li>Validation uses either ASTM or AASHTO standards.</li>
+						<li>Doesn't ensure a good job. It ensures the lab follows standards.</li>
+					</ul>
+				</section> -->
+
 				<section data-background-image="FiguresGeneral/Normal_slide_Maine.svg">
 					<h1>Take away</h1>
 					<ul>
-						<li class="fragment">Cohesive soil sampling <strong style="color:#7abbe6">inhebitably disturbs samples</strong>. Refer to well treated samples as <strong style="color:#7abbe6">"intact"</strong> instead of "undisturbed"   </li>
+						<li class="fragment">
+							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								Cohesive soil sampling <strong style="color:#7abbe6">inevitably disturbs samples</strong>. Refer to well treated samples as <strong style="color:#7abbe6">"intact"</strong> instead of "undisturbed."
+							</div>
+							   </li>
 						<li class="fragment">Sample disturbance is minimized <strong style="color:#7abbe6">following quality protocols and standards</strong> from the drilling process to sample preparation and testing.  </li>
-						<li class="fragment">Good geotechnical experimental testing is <strong style="color:#7abbe6">10% solid knowledge and 90% skills</strong> (T. Brandon VT).  </li>
+						<li class='fragment'>
+							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								Samples of coarse materials must be <strong style='color:#7abbe6'>reconstituted</strong>.
+							</div>
+							</li>
+						<li class='fragment'> 
+							ASTM standards are <strong style="color:#7abbe6">essential</strong> for geotechnical testing. They provide <strong style="color:#7abbe6">guidelines</strong> for sampling, testing, and reporting.
+						</li>
+						<li class="fragment">
+							<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+								Good geotechnical experimental testing is <strong style="color:#7abbe6"> 10% solid knowledge and 90% skills</strong> (T. Brandon VT).
+							</div>
+							 </li>
 
 					</ul>
 
 				</section>
 
 
-				<section data-background-image="FiguresGeneral\Main_slide_Maine.svg">
-					<p style="margin-top:400px">Questions or comments?</p>
-				</section>
+
 
 
 
@@ -323,139 +581,144 @@
   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
+   var today = new Date();
+   today.setTime(today.getTime());
 document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
 </script>
 <script type="text/javascript">
-			 var months = ['January','February','March','April','May','June','July',
+	var months = ['January','February','March','April','May','June','July',
 'August','September','October','November','December'];
-			var today = new Date();
-			today.setTime(today.getTime());
-	document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
-	<script type="text/javascript">
-				 var months = ['January','February','March','April','May','June','July',
-	'August','September','October','November','December'];
-				var today = new Date();
-				today.setTime(today.getTime());
-		document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-	</script>
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
 
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/search/search.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script src="plugin/fullscreen/plugin.js"></script>
-	<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-	<script src="plugin/chalkboard/plugin.js"></script>
-	<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-	<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-	<script src="plugin/audio-slideshow/recorder.js"></script> -->
-	<script src="plugin/menu/menu.js"></script>
-	<script src="plugin/customcontrols/plugin.js"></script>
-	<script>
 
-		Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-											pdfSeparateFragments: false});
-		// Also available as an ES module, see:
-		// https://revealjs.com/initialization/
-		Reveal.initialize({
-			dependencies: [
-				{ src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-			controls: true,
-			progress: true,
-			center: false,
-			hash: true,
-			transition: 'none',
-			slideNumber: 'c/t',
-			autoPlayMedia: true,
-			width: 1280,
-			height: 720,
-			math: {
-				mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-				config: 'TeX-AMS_HTML-full',
-				tex2jax: {
-					inlineMath: [['\\(','\\)']],
-					displayMath: [['\\[','\\]']],
-					balanceBraces: true,
-					processEscapes: false,
-					processRefs: true,
-					processEnvironments: true,
-					preview: 'TeX',
-					skipTags: ['script','noscript','style','textarea','pre','code'],
-					ignoreClass: 'tex2jax_ignore',
-					processClass: 'tex2jax_process'
-				},
-			},
 
-			spotlight: {
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
 
-					// size of the spotlight
-					size: 100,
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   defaultTiming: 120,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
 
-					// true: Locks the mouse pointer inside the presentation
-					// there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-					// displayed regardless of the configured values
-					lockPointerInsideCanvas: false,
+   spotlight: {
 
-					// toggle spotlight by holding down the mouse key
-					toggleSpotlightOnMouseDown: false,
+		   // size of the spotlight
+		   size: 100,
 
-					// the keyCode pressed and held to turn on spotlight, disabled when set to false
-					// Problems with this config? Maybe your touchpad is disabled on keypress?
-					spotlightOnKeyPressAndHold: true,
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
 
-					// choose the cursor when spotlight is on. Maybe "crosshair"?
-					spotlightCursor: 'default',
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
 
-					// choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-					presentingCursor: 'default',
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
 
-					// true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-					initialPresentationMode: true,
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
 
-					// true: disable selecting in presentation mode
-					disablingUserSelect: false,
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
 
-					// set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-					fadeInAndOut: 100,
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
 
-					// enable pointer mode
-					useAsPointer: false,
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
 
-					// pointer color (If pointer mode enabled)
-					pointerColor: 'red'
-			},
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
 
-			keyboard: {
-					// alternative to toggleSpotlightOnMouseDown:
-					// toggle spotlight by pressing key 'c'
-					32: function() { RevealSpotlight.toggleSpotlight() },
+		   // enable pointer mode
+		   useAsPointer: false,
 
-					// enter/leave presentation mode by pressing key 'p'
-					80: function() {
-						RevealSpotlight.togglePresentationMode();
-					},
-			},
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
 
-			// Push each slide change to the browser history
-			history: true,
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
 
-			menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-				themes: false,
-				transitions: false,
-				markers: true,
-				hideMissingTitles: true,
-				// custom: [
-				// 					{ title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-				// 					{ title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-				// 			]
-			},
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
 //
 // 			audio: {
 // 					prefix: 'chalkboard/',
@@ -467,59 +730,59 @@ document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + 
 // 					defaultText: true,
 // 					playerOpacity: 0.2,
 // 				},
-			// ...
-			chalkboard: {
-							boardmarkerWidth: 3,
-							chalkWidth: 5,
-							chalkEffect: 0.05,
-							src: "chalkboard.json",
-							// storage: ,
-							readOnly: false,
-							transition: 800,
-							theme: "chalkboard",
-							background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-							grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-							eraser: { src: path + 'img/sponge.png', radius: 20},
-							boardmarkers : [
-											{ color: 'rgba(255,255,255,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-											{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-											{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-											{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-											{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-											{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-											{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-							],
-							chalks: [
-											{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-											{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-											{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-											{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-											{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-											{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-											{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-							]
-					},
-					customcontrols: {
-						controls: [
-							{ icon: '<i class="fa fa-pen-square"></i>',
-								title: 'Toggle chalkboard (B)',
-								action: 'RevealChalkboard.toggleChalkboard();'
-							},
-							{ icon: '<i class="fa fa-pen"></i>',
-								title: 'Toggle notes canvas (C)',
-								action: 'RevealChalkboard.toggleNotesCanvas();'
-							}
-						]
-					},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
 
-				// ...
-			//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
-								],
-									// RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-				});
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
 
-	</script>
+</script>
 
 </html>
