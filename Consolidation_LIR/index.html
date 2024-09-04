@@ -1,0 +1,607 @@
+<!doctype html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>CIE-598: Experimental Soil Mechanics</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>		
+
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
+	</head>
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+						display: flex;
+					}
+					.col{
+						flex-wrap: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-598
+						Fall 2024
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/1WQSUdXDimlFk2r2Nlub8z4t7Lw__UWq6/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-450px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Load Incremental Ratio (LIR) Consolidation Test">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Fall 2024</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>
+
+
+        <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>In these slides...</h1>
+					<div class='container'>
+						<div class='col' style="width: 50%;">
+							<ul class="contentStyle" style="margin-top: -40px;">
+								<li class="l1">Primary and secondary consolidation</li>
+								<li class="l1">Non-uniformity and effect of disturbance</li>								
+								<li class='l1'>Preconsolidation, compression and recompression indices, and OCR</li>
+								<li class='l1'>LIR consolidation procedure</li>										
+							</ul>
+						</div>
+						<div class='col' style="width: 50%;">
+							<div class='container'>
+								<div class='col' >
+									<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+										<p style="margin-top: -10px;"> Objectives of the lecture</p>
+										<ul>
+											<li>Get familiar with consolidation theory.</li>
+											<li>Understand the methods to calculate soil consolidation parameters for LIR tests.</li>
+											<li>Become familiar with the requirements of the ASTM-D2435.</li>
+										</ul>
+									</div>
+								</div>
+								<div class='col'>
+								<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+									<p style="margin-top: -20px;">After this lecture we will able to:</p>
+									<ul style="margin-top: -15px;">
+										<li>Describe the elements and limitations of the standard consolidation theory.</li>
+										<li>Calculate soil consolidation parameters.</li>					
+										<li>Describe the requirements of the ASTM-D2435.</li>											
+									</ul>
+								</div>
+								</div>
+								</div>
+						</div>
+						</div>
+
+        </section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Consolidation</h1>
+		<div class='defBox' name='Consolidation' style='margin-top: 0px;margin-left: 0px;'>
+		: Is the process of <span class='atb'>densification</span> as water <strong style='color:#7abbe6'>flows out</strong> of the soil mass as a response to <strong style='color:#7abbe6'>an increase</strong> in <span class='atb'>total stresses</span>. It is a <span class='atb'>time dependent</span> process.
+		</div>
+
+		<figure style="margin-top: -20px;">
+		<img src='FiguresGeneral/consol_analogy.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</section>
+
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Terzaghi's 1D consolidation theory</h1>
+		<div class='container'>
+		<div class='col' style='width: 20%;'>
+		<figure style="margin-top: -40px;">
+		<img src='FiguresGeneral/single_element.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 80%;'>
+		<div class="fragment">
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			Therzaghi's 1D consolidation theory (TCT) is based on <span class='atb'>mass balance</span> concepts.
+			</div>
+		</div>
+		</div>
+		</div>
+
+		<div class='container' style="margin-top: -25px;">
+		<div class='col bordered' style='width: 60%;'>
+		<p style="margin-top: -15px;" >The following assumptions are made:
+			<ol>				
+				<li class="fragment">The soil is <span class='atb'>isotropic</span> and <span class='atb'>homogeneous</span></li>
+
+				<li class='fragment'> The soil compressibility is <span class='atb'>linear</span></li>
+
+				<li class='fragment'>The grains and the water are <span class='atb'>incompressible</span></li>
+
+				<li class='fragment'>Darcy's law is <span class='atb'>valid</span></li>
+			 </ol>
+
+		</p>
+
+		</div>
+		<div class='col bordered' style='width: 40%;'>
+		<div class='fragment'>
+			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+			The derivation leads to: <br>
+			<div class='equationBox'>
+			\(\frac{\partial u}{\partial t}= C_v \frac{\partial^2 u}{\partial z^2} \)	
+			</div>
+			</div>
+		</div>
+
+		<div class='fragment'>
+			\( \begin{align}
+			C_v=k_z / m_v \gamma_w
+			\end{align} \)
+		</div>
+
+		<div class='fragment' style="font-size: 0.6em; text-align: left;">
+			\(C_v=\) Coefficient of consolidation <br>
+			\(k_z=\) Permeability in the vertical direction <br>
+			\(m_v=\) Modulus of volume compressibility <br>
+			\(\gamma_w=\) Unit weight of water <br>
+			\(u=\) Excess pore water pressure
+		</div>
+
+		</div>
+		</div>
+
+
+		</section>
+
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<div class='container'>
+		<div class='col' style='width: 60%;'>
+			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+				TCT theory has <span class='atb'>analytical solution</span> for the following boundary conditions: <br>
+				<ol>
+					<li>Initial condition: <strong style='color:red'>\(u(z, 0)=q\)</strong> </li>
+					<li>Boundary condition: <strong style='color:navy'>\(u(0, t)=0\)</strong> </li>
+					<li>Boundary condition: <strong style='color:green'>\(u(H, t)=0\)</strong></li>
+				</ol>
+				</div>
+		</div>
+		<div class='col' style='width: 40%;'>
+		<figure style="margin-top: -25px;">
+		<img src='FiguresGeneral/Boundary_conditions.svg' width='80%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		</div>	
+		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+			<div class='equationBox' style="font-size: 0.8em;">
+			\( \begin{align}
+			u(z,t) = q \sum_{n=1}^{\infty} \frac{2}{M} \sin\left(M Z\right) \exp\left(-M^2 T_v\right)
+			\end{align} \)
+	
+	
+			</div> <br>
+	
+			<div class='container'>
+			<div class='col' style='width: 50%;'>
+				<div class='equationBox' style="margin-left: 150px; font-size: 1em; margin-top: 30px;">
+					\( \begin{align}
+					T_v=\frac{t}{C_v H_{dr}^2}
+					\end{align} \)
+					</div>
+			</div>
+			<div class='col' style='width: 50%;'>
+				<div style="font-size: 1em; text-align: left;">
+					\(q=\) Surcharge load <br>
+					\(M= (\pi/2)(2n+1)\)  <br>
+					\(Z= z / H_{dr}\) <br>
+					\(H_{dr}=\) drainage path length <br>
+				</div>
+			</div>
+			</div>
+	
+			
+	
+			</div>		
+		</section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+
+		<div class='container'>
+		<div class='col' style='width: 70%;'>
+			<figure style="margin-top: -5px;">
+				<img src='FiguresGeneral/u_consol.svg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+		</div>
+		<div class='col' style='width: 30%;'>
+			<figure>
+			<img src='FiguresGeneral/Boundary_conditions.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Representation of the consolidation <span class='atb'>process</span> in a <span class='atb'>single element</span> of soil.
+		</div>
+		</div>
+		</div>
+
+		
+		</section>
+
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<div class='defBox' name='Degree of consolidation' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:green'>\(U\):</strong> It helps understand the <span class='atb'>progress</span> of the consolidation process in the <span class='atb'>whole system</span>.
+			<div class='equationBox' style="font-size: 0.8em;">
+			\( \begin{align}
+			U(t) = 1 - \sum_{n=1}^{\infty} \frac{2}{M^2} \exp\left(-M^2 T_v\right)
+			\end{align} \)
+			</div>
+
+		</div>
+		
+		<div class='container'>
+		<div class='col' style='width: 60%;'>
+		<figure style="margin-top: 0px;">
+		<img src='FiguresGeneral/U_degree.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 40%;'>
+		<p>
+			<table style="background-color: antiquewhite;">
+				<tr>
+					<th>\(U\)</th>
+					<th>\(T_v\)</th>
+					<th>\(U\)</th>
+					<th>\(T_v\)</th>
+				</tr>
+				<tr>
+					<td>0.1</td>
+					<td>0.008</td>
+					<td>0.6</td>
+					<td>0.287</td>
+				</tr>
+				<tr>
+					<td>0.2</td>
+					<td>0.031</td>
+					<td>0.7</td>
+					<td>0.403</td>
+				</tr>
+				<tr>
+					<td>0.3</td>
+					<td>0.071</td>
+					<td>0.8</td>
+					<td>0.567</td>
+				</tr>
+				<tr>
+					<td>0.4</td>
+					<td>0.126</td>
+					<td>0.9</td>
+					<td>0.848</td>
+				</tr>
+				<tr>
+					<td>0.5</td>
+					<td>0.197</td>
+					<td>0.95</td>
+					<td>1.163</td>
+				</tr>
+				
+
+			</table>
+
+		</p>
+		</div>
+		</div>
+		</section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Secondary consolidation</h1>
+		<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+		Also known as <span class='atb'>creep</span>, is a <strong style='color:#7abbe6'>time-dependent</strong> process of deformation that occurs without <strong style='color:#7abbe6'>change</strong> of <span class='atb'>effective stress</span>. <strong style='color:red'>Do not confuse with</strong> the primary consolidation described by the TCT.
+		</div>
+
+		<div class='container'>
+		<div class='col' style='width: 60%;'>
+		<figure style="margin-top: -15px;">
+		<img src='FiguresGeneral/secondary_consol.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
+		</div>
+		<div class='col' style='width: 40%;'>
+		<div class='textBox' style='margin-top: 10px;margin-left: 0px;'>
+		<strong style='color:#7abbe6'>Note:</strong> Creep could be <span class='atb'>ongoing</span> before EOP.
+		</div>
+
+		<div class='defBox' name='Coeff. of secondary consol.' style='margin-top: 5px;margin-left: 0px;'>
+			<div class='equationBox'>
+			\( C_{\alpha e}= -\Delta e/ \log (t_f/t_o) \)
+			</div>
+		
+		</div>
+		</div>
+		</div>
+		
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   defaultTiming: 120,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>
