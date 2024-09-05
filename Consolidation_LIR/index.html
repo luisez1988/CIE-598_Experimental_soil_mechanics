@@ -76,10 +76,10 @@
 					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-							<div class="qrCode" name="https://drive.google.com/file/d/1WQSUdXDimlFk2r2Nlub8z4t7Lw__UWq6/view?usp=sharing"> </div>
+							<div class="qrCode" name="https://drive.google.com/file/d/1SwCw7Y59YwFjeHAYF7kpilHhIYfkiS68/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-450px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Load Incremental Ratio (LIR) Consolidation Test">
+						<div style="margin-top:-380px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 2: Consolidation of soils">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 							<p style="color:#faffff; font-size:35px">Fall 2024</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
@@ -91,33 +91,36 @@
         <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
 					<h1>In these slides...</h1>
 					<div class='container'>
-						<div class='col' style="width: 50%;">
+						<div class='col' style="width: 45%;">
 							<ul class="contentStyle" style="margin-top: -40px;">
-								<li class="l1">Primary and secondary consolidation</li>
-								<li class="l1">Non-uniformity and effect of disturbance</li>								
 								<li class='l1'>Preconsolidation, compression and recompression indices, and OCR</li>
-								<li class='l1'>LIR consolidation procedure</li>										
+								<li class="l1">Primary consolidation</li>
+								<li class="l1">Secondary consolidation</li>								
+								
+								<li class="l1">Effect of creep</li>								
+								
+																	
 							</ul>
 						</div>
-						<div class='col' style="width: 50%;">
+						<div class='col' style="width: 55%;">
 							<div class='container'>
-								<div class='col' >
+								<div class='col' style="width: 50%;" >
 									<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
 										<p style="margin-top: -10px;"> Objectives of the lecture</p>
 										<ul>
 											<li>Get familiar with consolidation theory.</li>
-											<li>Understand the methods to calculate soil consolidation parameters for LIR tests.</li>
-											<li>Become familiar with the requirements of the ASTM-D2435.</li>
+											<li>Understand the effects of secondary consolidation on the test results.</li>
+											
 										</ul>
 									</div>
 								</div>
-								<div class='col'>
+								<div class='col' style="width: 50%;"">
 								<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
 									<p style="margin-top: -20px;">After this lecture we will able to:</p>
 									<ul style="margin-top: -15px;">
 										<li>Describe the elements and limitations of the standard consolidation theory.</li>
-										<li>Calculate soil consolidation parameters.</li>					
-										<li>Describe the requirements of the ASTM-D2435.</li>											
+										<li>Calculate consolidation parameters.</li>					
+										<li>Describe the effects of secondary compressibility.</li>											
 									</ul>
 								</div>
 								</div>
@@ -196,7 +199,7 @@
 		</div>
 		<div class='col' style='width: 50%;'>
 		<div class='equationBox'>
-			\( C_{r\varepsilon}= - \frac{ \Delta \varepsilon_a}{\Delta \log \sigma'} = \frac{C_c}{1+e_0} \)
+			\( C_{r\varepsilon}= - \frac{ \Delta \varepsilon_a}{\Delta \log \sigma'} = \frac{C_r}{1+e_0} \)
 		</div>
 		</div>
 		</div> 
@@ -205,12 +208,12 @@
 		<div class='container'>
 			<div class='col' style='width: 50%;'>
 			<div class='equationBox'>
-			\( C_r= - \frac{ \Delta e}{\Delta \log \sigma'} \)
+			\( C_c= - \frac{ \Delta e}{\Delta \log \sigma'} \)
 			</div>
 			</div>
 			<div class='col' style='width: 50%;'>
 			<div class='equationBox'>
-				\( C_{r\varepsilon}= - \frac{ \Delta \varepsilon_a}{\Delta \log \sigma'} = \frac{C_c}{1+e_0} \)
+				\( C_{c\varepsilon}= - \frac{ \Delta \varepsilon_a}{\Delta \log \sigma'} = \frac{C_c}{1+e_0} \)
 			</div>
 			</div>
 			</div>
@@ -697,8 +700,69 @@
 		<h1>Effect of creep on consolidation results</h1>
 
 		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		
+		There are two <span class='atb'>opposite</span> hypothesis about the <strong style='color:#7abbe6'>mechanism</strong> of secondary consolidation:
+		</div>
 
+		<div class='container'>
+		<div class='col' style='width:50%'>
+		<h4>Hypothesis A</h4>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<ol>
+			<li class="fragment">Creep is <span class='atb'>independent</span> of the primary consolidation.</li>
+			<li class="fragment">Creep <span class='atb'>starts</span> after the EOP.</li>
+			<li class="fragment">The amount of secondary consolidation depends on the <span class='atb'>elapsed time</span> after EOP.</li>
+		</ol>
+		</div>
+		</div>
+		<div class='col' style='width:50%'>
+		<h4>Hypothesis B</h4>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<ol>
+			<li class="fragment">Creep is <span class='atb'>dependent</span> on the primary consolidation.</li>
+			<li class="fragment">Creep <span class='atb'>starts</span> before the EOP.</li>
+			<li class="fragment">The amount of secondary consolidation depends on the <span class='atb'>total time</span> of loading.</li>
+		</ol>
+		</div>
+		</div>
+		</div>
+		
+		</section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+			<figure>
+				<img src='FiguresGeneral/layers.svg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>	
+			<div class='textBox' style='margin-top: -20px;margin-left: 0px; font-size: 0.9em;'>
+				<ul>
+					<li class='fragment'>Parts of sample <span class='atb'>creep</span> while others are still in primary consolidation.</li>
+					<li class='fragment'> Longer <span class='atb'>time periods</span> (i.e., large <strong style='color:#7abbe6'>strain rate</strong>) \(\equiv\) Larger \(\Delta e\)</li>
+
+					<li class='fragment'> Larger sample <span class='atb'>thickness</span> \(\equiv\) <span class='atb'>non-uniform</span> EOP</li>
+				</ul>
+				</div>
+		
+		</section>
+
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<figure>
+		<img src='FiguresGeneral/kenichi.svg' width='100%'/>
+		<footer style='margin-top: -30px;font-size: 0.6em;'> <em>Figures taken from Mitchell and Soga (2005)</em> </footer>
+		</figure>
+		<div class='container'>
+		<div class='col' style='width:50%'>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<p class='fragment'>Prolonged setting times or high strain rates <span class='atb'>shift the preconsolidation pressure</span> </p>
+		</div>
+		</div>
+		<div class='col' style='width:50%'>
+			<div class="fragment">
+				<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+				The <strong style='color:#7abbe6'>loading sequence</strong>/<strong style='color:#7abbe6'>strain rates</strong> <span class='atb'>affect</span> the results of the consolidation test.
+				</div>
+			</div>
+		</div>
 		</div>
 		
 		</section>
