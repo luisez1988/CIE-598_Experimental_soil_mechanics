@@ -296,6 +296,61 @@ section.has-light-background, section.has-light-background h1, section.has-light
   margin: var(--r-block-margin) 0;
 }
 
+.reveal .theorem2 {
+  display: block;
+  text-align: left;
+  font-style: normal;
+  border-left-style: solid;
+  border-left-color: #7abbe6;
+  padding-left: 5px;
+  border-left-width: 5px;
+}
+
+.reveal .theorem2:before {
+  content: "";
+  font-weight: bold;
+  color: #7abbe6;
+  font-style: normal;
+}
+
+.reveal .theorem2[name]:before {
+  content: attr(name);
+}
+
+.reveal .title_slide {
+  display: block;
+  margin: 0px;
+  background-color: #7abbe6;
+  text-align: center;
+  font-style: normal;
+  border-bottom-style: solid;
+  border-bottom-color: #7abbe6;
+  padding-bottom: 5px;
+  border-bottom-width: 5px;
+}
+
+.reveal .title_slide:before {
+  content: "";
+  color: #001d51;
+  font-weight: bold;
+  font-style: bold;
+  font-family: "EB Garamond";
+  font-size: 62px;
+}
+
+.reveal .title_slide[name]:before {
+  content: attr(name);
+}
+
+.reveal .footer {
+  position: absolute;
+  bottom: 0.4em;
+  left: 0em;
+  font-size: 0.5em;
+  font-family: "Roboto Slab";
+  color: #77b5e6;
+}
+
 /*********************************************
  * LINKS
  *********************************************/
