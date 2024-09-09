@@ -421,30 +421,6 @@ li.l2:nth-child(even){
   /* max-height: 150px; */
 }
 
-.reveal .ProblemBox {
-  text-decoration:none;
-  color:#000;
-  background:#e1e7dd;
-  display:block;
-  /* height:15em;
-  width:12em; */
-  padding:0.1em;
-  /*background-image: url('https://www.freeiconspng.com/thumbs/grid-png/dot-grid-png-transparent--2.png');*/
-  background-size: 10%;
-  background-repeat: repeat;
-  text-align: left;
-}
-
-.reveal .ProblemBox:before {
-  content: "📝 Solution:";
-  font-weight: bold;
-  color: #001d51;
-  font-style: normal;
-  text-align: left;
-  
-}
-
-
 .reveal blockquote {
   display: block;
   position: relative;
