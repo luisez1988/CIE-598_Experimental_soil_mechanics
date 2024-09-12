@@ -385,6 +385,26 @@ li.l2:nth-child(even){
   
 }
 
+.reveal .InquiryBox {
+  text-decoration:none;
+  color:#000;
+  background:rgb(163, 185, 255);
+  display:block;
+  /* height:15em;
+  width:12em; */
+  padding:0.2em;
+
+}
+
+.reveal .InquiryBox:before {
+  content: "🤔";
+  font-weight: bold;
+  color: #001d51;
+  font-style: normal;
+  
+}
+
+
 .reveal .defBox {
   text-decoration:none;
   color:#000;
