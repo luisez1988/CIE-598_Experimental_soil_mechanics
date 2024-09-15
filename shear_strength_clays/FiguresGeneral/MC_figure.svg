@@ -1,165 +1,9 @@
-<!doctype html>
-<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	
-		<title>CIE-598: Experimental Soil Mechanics</title>
-	
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-		<link rel="stylesheet" href="plugin/chalkboard/style.css">
-		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>		
-
-		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
-		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
-		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
-		<!-- Shares the screen -->
-	
-	</head>
-	  <body onload="init_api()">
-	
-		<div class="reveal">
-	
-		  <div class="slides">
-					<style>
-					.container{
-						display: flex;
-					}
-					.col{
-						flex-wrap: wrap;
-					}
-	
-					</style>
-	
-					<div class='footer'>
-						CIE-598
-						Fall 2024
-					</div>
-	
-					<style>
-					.reveal .slides section .fragment.fade-down {
-							opacity: 1;
-							visibility: visible;
-					}
-					.reveal .slides section .fragment.fade-down.visible,
-					.reveal .slides section .fragment.visible:not(.current-fragment) {
-							opacity: 1;
-							margin-top:0px;
-						}
-					.reveal .slides section .fragment.fade-down,
-					.reveal .slides section .fragment.current-fragment {
-							color: #000;
-							margin-top:0px;
-					}
-	
-	
-				</style>
-	
-				<style >
-	
-				.circle {
-			width: 80px;
-			line-height: 80px;
-			border-radius: 50%;
-			text-align: center;
-			font-size: 32px;
-			border: 10px solid #296B64;
-		  }
-		</style>
-				<!-- <section> -->
-					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
-
-						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-							<div class="qrCode" name="https://drive.google.com/file/d/1eU5fNLVb_IcLOjKcMCdSxSDoKLjVGCtA/view?usp=sharing"> </div>
-						</div>
-			
-						<div style="margin-top:-380px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 3: Drained Shear Strength of Clay">
-							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
-							<p style="color:#faffff; font-size:35px">Fall 2024</p>
-							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
-							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
-						</div>
-					</section>
-
-
-        <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
-					<h1>In these slides...</h1>
-					<div class='container'>
-						<div class='col' style="width: 45%;">
-							<ul class="contentStyle" style="margin-top: -40px;">
-								<li class='l1'>Parameters affecting the shear strength of clay</li>
-								<li class="l1">Effect of OCR on the effective shear strength of clay</li>
-								<li class="l1">Fully softened shear strength</li>								
-								
-								<li class="l1">Correlations for FSSS</li>								
-								
-																	
-							</ul>
-						</div>
-						<div class='col' style="width: 55%;">
-							<div class='container'>
-								<div class='col' style="width: 50%;" >
-									<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
-										<p style="margin-top: -10px;"> Objectives of the lecture</p>
-										<ul>
-											<li>Understand the factors affecting the drained shear strength of clay.</li>
-											<li>Understand the mechanism that strain softening.</li>
-											<li>Become familiar with the characterization of FSSS. </li>
-											
-										</ul>
-									</div>
-								</div>
-								<div class='col' style="width: 50%;">
-								<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
-									<p style="margin-top: -20px;">After this lecture we will able to:</p>
-									<ul style="margin-top: -15px;">
-										<li>Describe the factors affecting the shear strength of clay.</li>
-										<li>Describe the drained stress-strain behavior.</li>					
-										<li>Calculate FSSS effective parameters.</li>											
-									</ul>
-								</div>
-								</div>
-								</div>
-						</div>
-						</div>
-
-        </section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Drained shear strength of soils</h1>
-		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		Using a <strong style='color:#7abbe6'>classic</strong> view of shear strength (\(\tau_f=S\)), we can calculate it using the <span class='atb'>Mohr-Coulomb model</span>.
-		<div class='equationBox' style="margin-left: 480px;">
-		\( \tau_f = S= c' + \sigma'_n \tan \phi' \)
-		</div><br>
-		where: \(c' \equiv\) effective cohesion, \(\sigma'_n \equiv\) effective normal stress, and \(\phi' \equiv\) effective angle of internal friction.
-
-		</div>
-
-		<div class='findingBox fragment' style='margin-top: 20px;margin-left: 0px;'>
-		<strong style='color:#7abbe6'>Note:</strong> More <strong style='color:#7abbe6'>sophisticated</strong> models exist but are covered in great detail in advanced courses. <br>
-
-		However, the <strong style='color:#7abbe6'>Mohr-Coulomb</strong> model is still <span class='atb'>widely used</span> and <span class='atb'>facilitates</span> understanding <strong style='color:#7abbe6'>soil behavior</strong>.
-		</div>
-		
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		
-			<!-- <figure>
-			<img src='FiguresGeneral/MC_figure.svg' width='100%'/>
-			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-			</figure> -->
-
-			<svg
-   width="100%"
-   
+<svg
+   width="4in"
+   height="2.3in"
    viewBox="0 0 101.6 58.419998"
    version="1.1"
    id="svg1"
@@ -328,8 +172,7 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-	 class="fragment">
+     id="layer1">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#DartArrow)"
        d="m 13.5,2.0915493 0,36.8397877"
@@ -423,8 +266,7 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Layer 2"
-     sodipodi:insensitive="true"
-	 class="fragment">
+     sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#ff0000;stroke-width:0.365;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 5.5140843,23.957746 90.507041,3.6126761"
@@ -877,8 +719,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Layer 3"
-     sodipodi:insensitive="true"
-	 class="fragment">
+     sodipodi:insensitive="true">
     <circle
        style="fill:#008000;stroke:none;stroke-width:0.365001;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="path10"
@@ -940,8 +781,7 @@
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Layer 4"
-     sodipodi:insensitive="true"
-	 class="fragment">
+     sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#4d4d4d;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:0.793749, 0.793749;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker15);marker-end:url(#Dot)"
        d="M 13.5,11.875219 H 55.856401 V 28.045774"
@@ -1104,8 +944,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Layer 5"
-     sodipodi:insensitive="true"
-	 class="fragment">
+     sodipodi:insensitive="true">
     <ellipse
        style="fill:none;stroke:#008000;stroke-width:0.365;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:0.793751, 0.793751;stroke-dashoffset:0"
        id="path16"
@@ -1272,8 +1111,7 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Layer 6"
-     sodipodi:insensitive="true" 
-	 class="fragment">
+     sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#marker29)"
        d="M 60.355614,28.045762 55.856401,12.016042"
@@ -1431,8 +1269,7 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="Layer 7"
-	 class="fragment">
+     inkscape:label="Layer 7">
     <rect
        style="fill:#ffb380;stroke:#1a1a1a;stroke-width:0.365001;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0"
        id="rect30"
@@ -2183,349 +2020,4 @@
        d="m 18.386021,49.61992 c 6.184694,-5.478832 7.092231,-6.285531 6.016632,-3.730982 -1.075599,2.554547 0.100838,2.083972 1.378111,1.445334 1.277274,-0.638635 4.36962,-0.806698 4.36962,-0.806698"
        id="path74" />
   </g>
-			</svg>
-
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-		How can we get <span class='atb'>drained</span> behavior of clay❓
-		</div>
-		<div class='textBox fragment' style='margin-top: 0px;margin-left: 0px;'>
-		<strong style='color:#7abbe6'>Recall</strong> drained means \(\Delta u= 0\) and clay has a <strong style='color:#7abbe6'>very low</strong> <span class='atb'>permeability</span>.	</div>
-
-		<div class='container'>
-		<div class='col' style='width: 50%;'>
-		<figure class="fragment">
-		<img src='FiguresGeneral/drainedundrained.svg' width='100%'/>
-		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-		</figure>
-		</div>
-		<div class='col' style='width: 50%;'>
-		<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
-		<strong style='color:green'>Drained</strong> behavior of clay is obtained by <strong style='color:green'>allowing</strong> the <span class='atb'>pore water</span> to <strong style='color:green'>flow</strong> out of the soil during <span class='atb'>shearing</span>. This is done using <strong style='color:green'>drained boundary conditions</strong> and <span class='atb'>very slow rates</span> of loading.
-		</div>
-		</div>
-		</div>
-		
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Observations of drained behavior of clay</h1>
-
-		<div class='container'>
-		<div class='col bordered' style='width: 50%;'>
-		<h4>NC clay</h4>
-		<figure style="margin-top: -50px;">
-		<img src='FiguresGeneral/NC_clay.svg' width='100%'/>
-		<footer style='margin-top: 0px;font-size: 0.8em;'> <em></em> </footer>
-		</figure>
-		</div>
-		<div class='col bordered' style='width: 50%;'>
-		<h4>OC clay</h4>
-		<figure style="margin-top: -50px;" class="fragment">
-		<img src='FiguresGeneral/OC_clay.svg' width='100%'/>
-		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-		</figure>
-		</div>
-		</div>
-		
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-
-		<div class='container'>
-		<div class='col' style='width: 50%;'>
-		<figure>
-		<img src='FiguresGeneral/OC_clay_void.svg' width='100%'/>
-		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-		</figure>
-		</div>
-		<div class='col' style='width: 50%;'>
-		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		
-		The <strong style='color:#7abbe6'>shear strength</strong> of clay is function of:
-		<ol >
-			<li class='fragment'>The <span class='atb'>OCR</span>. \(\uparrow OCR \implies \uparrow \tau_f\). </li>
-			<li class='fragment'>The <span class='atb'>confinement stress</span>. \(\uparrow \sigma'_3 \implies \uparrow \tau_f\) </li>
-			<li class='fragment'>The <span class='atb'>density</span>. \(\uparrow e_o \implies \downarrow \tau_f\)</li>
-		</ol>
-		<div style="text-align: left;">
-			<span class="fragment">To a lesser degree \(\tau_f\) is function of:</span> <br>
-			<ul>
-				<li class='fragment'><span class='atb'>Fabric</span>.</li>
-				<li class='fragment'><span class='atb'>Mineralogy</span>.</li>
-				<li class='fragment'><span class='atb'>Rate of</span> loading.</li>
-			</ul>
-		</div>
-
-
-		</div>
-		</div>
-		</div>
-
-		
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Strength of NC and OC clay</h1>
-		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		If <span class='atb'>peak strength</span> is selected as <span class='atb'>criteria of failure</span> the following occurs:
-		</div>
-		<div class='container'>
-		<div class='col' style='width: 70%;'>
-			<figure>
-				<img src='FiguresGeneral/MC_of_soil.svg' width='100%'/>
-				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-				</figure>
-		</div>
-		<div class='col' style='width: 30%;'>
-		<div class='findingBox' style='margin-top: 20px;margin-left: 0px;'>
-		<ol>
-			<li class='fragment'> \(\phi'_{NC}> \phi'_{OC}\)</li>
-			<li class='fragment'> For <span class='atb'>NC clay</span>: \(c'=0\)</li>
-			<li class='fragment'>For <span class='atb'>OC clay</span>: \(c'_{OC}>0\)</li>
-		</ol>
-		</div>
-		</div>
-		</div>
-
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<figure>
-		<img src='FiguresGeneral/FSSS.svg' width='100%'/>
-		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-		</figure>
-
-		<div class='defBox' name='Fully softened shear strength (FSSS):' style='margin-top: 0px;margin-left: 0px;'>
-		Is the strength equivalent to the <span class='atb'>peak strength</span> of a <span class='atb'>normally consolidated</span> <strong style='color:#7abbe6'>remolded</strong> specimen.
-		</div>
-		
-		</section>
-
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1></h1>
-		
-		</section>
-
-
-
-
-
-      </div>
-    </div>
-  </body>
-
-
-
-
-  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
-<script type="text/javascript">
-	var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];
-   var today = new Date();
-   today.setTime(today.getTime());
-document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
-</script>
-<script type="text/javascript">
-	var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];
-   var today = new Date();
-   today.setTime(today.getTime());
-document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-</script>
-<script type="text/javascript">
-		var months = ['January','February','March','April','May','June','July',
-'August','September','October','November','December'];
-	   var today = new Date();
-	   today.setTime(today.getTime());
-document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
-</script>
-
-
-
-<script src="dist/reveal.js"></script>
-<script src="plugin/qrcode/qrcode.js"></script>
-<script src="plugin/complete_box/complete_box.js"></script>
-<script src="plugin/zoom/zoom.js"></script>
-<script src="plugin/notes/notes.js"></script>
-<script src="plugin/search/search.js"></script>
-<script src="plugin/markdown/markdown.js"></script>
-<script src="plugin/highlight/highlight.js"></script>
-<script src="plugin/fullscreen/plugin.js"></script>
-<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
-<script src="plugin/chalkboard/plugin.js"></script>
-<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
-<script src="plugin/audio-slideshow/RecordRTC.js"></script>
-<script src="plugin/audio-slideshow/recorder.js"></script> -->
-<script src="plugin/menu/menu.js"></script>
-<script src="plugin/customcontrols/plugin.js"></script>
-<script>
-
-Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
-								   pdfSeparateFragments: false});
-// Also available as an ES module, see:
-// https://revealjs.com/initialization/
-Reveal.initialize({
-   dependencies: [
-	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
-   controls: true,
-   progress: true,
-   center: false,
-   hash: true,
-   transition: 'fade',
-   slideNumber: 'c/t',
-   autoPlayMedia: true,
-   defaultTiming: 120,
-   width: 1280,
-   height: 720,
-   math: {
-	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
-	   config: 'TeX-AMS_HTML-full',
-	   tex2jax: {
-		   inlineMath: [['\\(','\\)']],
-		   displayMath: [['\\[','\\]']],
-		   balanceBraces: true,
-		   processEscapes: false,
-		   processRefs: true,
-		   processEnvironments: true,
-		   preview: 'TeX',
-		   skipTags: ['script','noscript','style','textarea','pre','code'],
-		   ignoreClass: 'tex2jax_ignore',
-		   processClass: 'tex2jax_process'
-	   },
-   },
-
-   spotlight: {
-
-		   // size of the spotlight
-		   size: 100,
-
-		   // true: Locks the mouse pointer inside the presentation
-		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
-		   // displayed regardless of the configured values
-		   lockPointerInsideCanvas: false,
-
-		   // toggle spotlight by holding down the mouse key
-		   toggleSpotlightOnMouseDown: false,
-
-		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
-		   // Problems with this config? Maybe your touchpad is disabled on keypress?
-		   spotlightOnKeyPressAndHold: true,
-
-		   // choose the cursor when spotlight is on. Maybe "crosshair"?
-		   spotlightCursor: 'default',
-
-		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
-		   presentingCursor: 'default',
-
-		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
-		   initialPresentationMode: true,
-
-		   // true: disable selecting in presentation mode
-		   disablingUserSelect: false,
-
-		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
-		   fadeInAndOut: 100,
-
-		   // enable pointer mode
-		   useAsPointer: false,
-
-		   // pointer color (If pointer mode enabled)
-		   pointerColor: 'red'
-   },
-
-   keyboard: {
-		   // alternative to toggleSpotlightOnMouseDown:
-		   // toggle spotlight by pressing key 'c'
-		   32: function() { RevealSpotlight.toggleSpotlight() },
-
-		   // enter/leave presentation mode by pressing key 'p'
-		   80: function() {
-			   RevealSpotlight.togglePresentationMode();
-		   },
-   },
-
-   // Push each slide change to the browser history
-   history: true,
-
-   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
-	   themes: false,
-	   transitions: false,
-	   markers: true,
-	   hideMissingTitles: true,
-	   custom: [
-						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
-						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
-				   ]
-   },
-//
-// 			audio: {
-// 					prefix: 'chalkboard/',
-// 					suffix: '.ogg',
-// 					defaultDuration: 5,
-// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
-// 					advance: 500,
-// 					autoplay: false,
-// 					defaultText: true,
-// 					playerOpacity: 0.2,
-// 				},
-   // ...
-   chalkboard: {
-				   boardmarkerWidth: 3,
-				   chalkWidth: 5,
-				   chalkEffect: 0.05,
-				   src: "chalkboard.json",
-				   // storage: ,
-				   readOnly: false,
-				   transition: 800,
-				   theme: "chalkboard",
-				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
-				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
-				   eraser: { src: path + 'img/sponge.png', radius: 20},
-				   boardmarkers : [
-								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
-								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
-								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
-								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
-								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
-								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
-								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
-				   ],
-				   chalks: [
-								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
-								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
-								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
-								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
-								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
-								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
-								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
-				   ]
-		   },
-		   customcontrols: {
-			   controls: [
-				   { icon: '<i class="fa fa-pen-square"></i>',
-					   title: 'Toggle chalkboard (B)',
-					   action: 'RevealChalkboard.toggleChalkboard();'
-				   },
-				   { icon: '<i class="fa fa-pen"></i>',
-					   title: 'Toggle notes canvas (C)',
-					   action: 'RevealChalkboard.toggleNotesCanvas();'
-				   }
-			   ]
-		   },
-
-	   // ...
-   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-   // Learn about plugins: https://revealjs.com/plugins/
-   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
-					   ],
-						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
-	   });
-
-</script>
-
-</html>
+</svg>
