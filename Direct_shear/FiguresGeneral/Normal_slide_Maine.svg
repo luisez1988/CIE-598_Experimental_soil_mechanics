@@ -24,26 +24,26 @@
      inkscape:pagecheckerboard="1"
      inkscape:document-units="px"
      showgrid="true"
-     inkscape:snap-page="false"
+     inkscape:snap-page="true"
      inkscape:lockguides="false"
      showguides="true"
      guidecolor="#0000ff"
      guideopacity="1"
      inkscape:snap-grids="false"
      inkscape:snap-intersection-paths="true"
-     inkscape:zoom="0.42164515"
-     inkscape:cx="807.55109"
-     inkscape:cy="366.42186"
+     inkscape:zoom="0.59629629"
+     inkscape:cx="975.18635"
+     inkscape:cy="643.13665"
      inkscape:window-width="2400"
-     inkscape:window-height="1276"
-     inkscape:window-x="2391"
+     inkscape:window-height="1271"
+     inkscape:window-x="-5"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
      inkscape:snap-to-guides="false"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-bbox="true"
-     inkscape:snap-global="false">
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid1265"
@@ -377,7 +377,7 @@
     </clipPath>
     <filter
        style="color-interpolation-filters:sRGB;"
-       inkscape:label="Lightness-Contrast"
+       inkscape:label="Invert"
        id="filter11719"
        x="0"
        y="0"
@@ -385,7 +385,23 @@
        height="1">
       <feColorMatrix
          values="4.09211 0 0 1.49078 -1.54605 0 4.09211 0 1.49078 -1.54605 0 0 4.09211 1.49078 -1.54605 0 0 0 1 0"
-         id="feColorMatrix11717" />
+         id="feColorMatrix11717"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix1743" />
+      <feColorMatrix
+         id="feColorMatrix1745"
+         type="hueRotate"
+         values="180"
+         result="color1"
+         in="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix1747"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 -0.21 -0.72 -0.07 2 0 "
+         result="color2" />
     </filter>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -405,7 +421,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:1;fill:#0a0b0d;stroke:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
        id="rect10969"
        width="1920"
        height="1080"
@@ -419,8 +435,8 @@
        id="image11295"
        x="-2160"
        y="-637.61841"
-       transform="matrix(0,-0.65048412,0.65048412,0,334.76065,-5.0456992)"
-       style="opacity:0.1237721;filter:url(#filter11719)"
+       transform="matrix(0,-0.65048412,0.65048412,0,334.76065,-5.0457025)"
+       style="opacity:0.06946984;filter:url(#filter11719)"
        clip-path="url(#clipPath11968)" />
   </g>
 </svg>
