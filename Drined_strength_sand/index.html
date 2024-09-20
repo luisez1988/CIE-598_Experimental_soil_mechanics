@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+		<title>CIE-598: Experimental Soil Mechanics</title>
+	
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black_bears.css" id="theme">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="plugin/chalkboard/style.css">
+		<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>		
+
+		<script type="text/javascript" src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+		<script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script> 
+		<script type="text/javascript" src="./plugin/screen_sharing/screen-sharing-min.js"></script>
+		<!-- Shares the screen -->
+	
+	</head>
+	  <body onload="init_api()">
+	
+		<div class="reveal">
+	
+		  <div class="slides">
+					<style>
+					.container{
+						display: flex;
+					}
+					.col{
+						flex-wrap: wrap;
+					}
+	
+					</style>
+	
+					<div class='footer'>
+						CIE-598
+						Fall 2024
+					</div>
+	
+					<style>
+					.reveal .slides section .fragment.fade-down {
+							opacity: 1;
+							visibility: visible;
+					}
+					.reveal .slides section .fragment.fade-down.visible,
+					.reveal .slides section .fragment.visible:not(.current-fragment) {
+							opacity: 1;
+							margin-top:0px;
+						}
+					.reveal .slides section .fragment.fade-down,
+					.reveal .slides section .fragment.current-fragment {
+							color: #000;
+							margin-top:0px;
+					}
+	
+	
+				</style>
+	
+				<style >
+	
+				.circle {
+			width: 80px;
+			line-height: 80px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 32px;
+			border: 10px solid #296B64;
+		  }
+		</style>
+				<!-- <section> -->
+					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
+
+						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
+							<div class="qrCode" name="https://drive.google.com/file/d/1t_7Eslqu0tqJbpPo_nM9pp0iJ0mPgChW/view?usp=sharing"> </div>
+						</div>
+			
+						<div style="margin-top:-380px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Drained Strength of Sand">
+							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
+							<p style="color:#faffff; font-size:35px">Fall 2024</p>
+							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
+							<span id="spanDate_text" style="color:#faffff; font-size:35px"></span>
+						</div>
+					</section>
+
+
+        <section data-background-image="FiguresGeneral\Normal_slide_Maine.svg">
+					<h1>In these slides...</h1>
+					<div class='container'>
+						<div class='col' style="width: 45%;">
+							<ul class="contentStyle" style="margin-top: -40px;">
+								<li class='l1'>Dilation</li>
+								<li class="l1">Drained behavior of sand</li>
+								<li class="l1">Critical state line</li>
+								<li class='l1'>Factors affecting the friction angle</li>								
+							
+								
+																	
+							</ul>
+						</div>
+						<div class='col' style="width: 55%;">
+							<div class='container'>
+								<div class='col' style="width: 50%;" >
+									<div class="stickynote" style="margin-top: 100px;margin-left: 75px;">
+										<p style="margin-top: -10px;"> Objectives of the lecture</p>
+										<ul>
+											<li>Understand the drained behavior of sand.</li>
+											<li>Understand the factors affecting the friction angle.</li>
+											<li>Get familiar with critical state theory (CST). </li>
+											
+										</ul>
+									</div>
+								</div>
+								<div class='col' style="width: 50%;">
+								<div class='stickynote' style='margin-top: 100px;margin-left: 75px;'>
+									<p style="margin-top: -20px;">After this lecture we will able to:</p>
+									<ul style="margin-top: -15px;">
+										<li>Describe sand behavior for different confinement and density conditions.</li>
+										<li>Describe the factors affecting the friction angle of sands.</li>					
+										<li>Describe basic aspects of CST.</li>											
+									</ul>
+								</div>
+								</div>
+								</div>
+						</div>
+						</div>
+
+        </section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Soil Dilatancy</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+Soil dilatancy is the <strong style='color:#7abbe6'>increase</strong> in <span class='atb'>void volume</span> of a soil mass when it is <strong style='color:#7abbe6'>sheared</strong>. It has a significant effect on the <span class='atb'>shear strength</span> of soils.
+</div>
+
+<div class='container'>
+<div class='col bordered' style='width: 50%;'>
+<h4>Loose sand</h4>
+<figure>
+<img src='FiguresGeneral/loose_balls.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col bordered' style='width: 50%;'>
+<h4>Dense sand</h4>
+<figure>
+<img src='FiguresGeneral/dense_balls.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Behavior of sand in drained triaxial tests</h1>
+<div class='container'>
+   <div class='col bordered' style='width: 50%;'>
+   <p>Equal \(e_o\)</p>
+   </div>
+   <div class='col bordered' style='width: 50%;'>
+   <p>Equal \(\sigma'_3\)</p>
+   </div>
+   </div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The following points are a summary of <span class='atb'>observed patterns</span> in the drained behavior of sand at <strong style='color:#7abbe6'>equal \(\sigma'_3\)</strong>.
+</div>
+
+<div class='container'>
+<div class='col' style='width: 60%;'>
+<ul>
+   <li class='fragment'>The peak deviator stress of dense sands is larger than the loose sand.</li>
+   <li class='fragment'>The ultimate deviator stress of all samples converges to a critical value. </li>
+   <li class='fragment'>The ultimate void ratio of all tests converges to a critical void ratio. </li>
+</ul>
+<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+At <strong style='color:#7abbe6'>large strains</strong>, shear occurs <span class='atb'>without volume change</span>. In other words at <span class='atb'>constant volume</span>.
+</div>
+</div>
+<div class='col' style='width: 40%;'>
+Add figure
+</div>
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+The <span class='atb'>critical state line</span> provides a <strong style='color:#7abbe6'>useful</strong> framework for the <strong style='color:#7abbe6'>interpretation</strong> of the <span class='atb'>soil behavior.</span>
+</div>
+
+Add figure
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+Add figure
+
+</section>
+
+      </div>
+    </div>
+  </body>
+
+
+
+
+  <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  SCRIIPTS XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-->
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_text").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+</script>
+<script type="text/javascript">
+	var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+   var today = new Date();
+   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+<script type="text/javascript">
+		var months = ['January','February','March','April','May','June','July',
+'August','September','October','November','December'];
+	   var today = new Date();
+	   today.setTime(today.getTime());
+document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
+</script>
+
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/complete_box/complete_box.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/fullscreen/plugin.js"></script>
+<script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+<script src="plugin/chalkboard/plugin.js"></script>
+<!-- <script src="plugin/audio-slideshow/plugin.js"></script>
+<script src="plugin/audio-slideshow/RecordRTC.js"></script>
+<script src="plugin/audio-slideshow/recorder.js"></script> -->
+<script src="plugin/menu/menu.js"></script>
+<script src="plugin/customcontrols/plugin.js"></script>
+<script>
+
+Reveal.configure({ pdfMaxPagesPerSlide: 1 ,
+								   pdfSeparateFragments: false});
+// Also available as an ES module, see:
+// https://revealjs.com/initialization/
+Reveal.initialize({
+   dependencies: [
+	   { src: 'plugin/mouse-pointer/mouse-pointer.js' } , { src: 'plugin/spotlight/spotlight.js' },   ],
+   controls: true,
+   progress: true,
+   center: false,
+   hash: true,
+   transition: 'fade',
+   slideNumber: 'c/t',
+   autoPlayMedia: true,
+   defaultTiming: 120,
+   width: 1280,
+   height: 720,
+   math: {
+	   mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+	   config: 'TeX-AMS_HTML-full',
+	   tex2jax: {
+		   inlineMath: [['\\(','\\)']],
+		   displayMath: [['\\[','\\]']],
+		   balanceBraces: true,
+		   processEscapes: false,
+		   processRefs: true,
+		   processEnvironments: true,
+		   preview: 'TeX',
+		   skipTags: ['script','noscript','style','textarea','pre','code'],
+		   ignoreClass: 'tex2jax_ignore',
+		   processClass: 'tex2jax_process'
+	   },
+   },
+
+   spotlight: {
+
+		   // size of the spotlight
+		   size: 100,
+
+		   // true: Locks the mouse pointer inside the presentation
+		   // there is by design (Pointer Lock API) no spotlightCursor and presentingCursor
+		   // displayed regardless of the configured values
+		   lockPointerInsideCanvas: false,
+
+		   // toggle spotlight by holding down the mouse key
+		   toggleSpotlightOnMouseDown: false,
+
+		   // the keyCode pressed and held to turn on spotlight, disabled when set to false
+		   // Problems with this config? Maybe your touchpad is disabled on keypress?
+		   spotlightOnKeyPressAndHold: true,
+
+		   // choose the cursor when spotlight is on. Maybe "crosshair"?
+		   spotlightCursor: 'default',
+
+		   // choose the cursor when spotlight is off and in presentation mode. Maybe "default"?
+		   presentingCursor: 'default',
+
+		   // true: initially in presentation mode, will also be ture if this is not set and toggleSpotlightOnMouseDown is true
+		   initialPresentationMode: true,
+
+		   // true: disable selecting in presentation mode
+		   disablingUserSelect: false,
+
+		   // set to a number as transition duration in ms to enable fade in and out, disabled when set to false
+		   fadeInAndOut: 100,
+
+		   // enable pointer mode
+		   useAsPointer: false,
+
+		   // pointer color (If pointer mode enabled)
+		   pointerColor: 'red'
+   },
+
+   keyboard: {
+		   // alternative to toggleSpotlightOnMouseDown:
+		   // toggle spotlight by pressing key 'c'
+		   32: function() { RevealSpotlight.toggleSpotlight() },
+
+		   // enter/leave presentation mode by pressing key 'p'
+		   80: function() {
+			   RevealSpotlight.togglePresentationMode();
+		   },
+   },
+
+   // Push each slide change to the browser history
+   history: true,
+
+   menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+	   themes: false,
+	   transitions: false,
+	   markers: true,
+	   hideMissingTitles: true,
+	   custom: [
+						   { title: 'Plugins', icon: '<i class="fa fa-external-link-alt"></i>', src: 'toc.html' },
+						   { title: 'About', icon: '<i class="fa fa-info"></i>', src: 'about.html' }
+				   ]
+   },
+//
+// 			audio: {
+// 					prefix: 'chalkboard/',
+// 					suffix: '.ogg',
+// 					defaultDuration: 5,
+// //					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+// 					advance: 500,
+// 					autoplay: false,
+// 					defaultText: true,
+// 					playerOpacity: 0.2,
+// 				},
+   // ...
+   chalkboard: {
+				   boardmarkerWidth: 3,
+				   chalkWidth: 5,
+				   chalkEffect: 0.05,
+				   src: "chalkboard.json",
+				   // storage: ,
+				   readOnly: false,
+				   transition: 800,
+				   theme: "chalkboard",
+				   background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+				   grid: { color: 'rgb(50,50,10,0.5)', distance: 40, width: 2},
+				   eraser: { src: path + 'img/sponge.png', radius: 20},
+				   boardmarkers : [
+								   { color: 'rgba(0,0,0,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+								   { color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+								   { color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+								   { color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+								   { color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},
+								   { color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+								   { color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+				   ],
+				   chalks: [
+								   { color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+								   { color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+								   { color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+								   { color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+								   { color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+								   { color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+								   { color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+				   ]
+		   },
+		   customcontrols: {
+			   controls: [
+				   { icon: '<i class="fa fa-pen-square"></i>',
+					   title: 'Toggle chalkboard (B)',
+					   action: 'RevealChalkboard.toggleChalkboard();'
+				   },
+				   { icon: '<i class="fa fa-pen"></i>',
+					   title: 'Toggle notes canvas (C)',
+					   action: 'RevealChalkboard.toggleNotesCanvas();'
+				   }
+			   ]
+		   },
+
+	   // ...
+   //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   // Learn about plugins: https://revealjs.com/plugins/
+   plugins: [ RevealCustomControls, RevealMath,RevealFullscreen, RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealChalkboard, RevealMenu
+					   ],
+						   // RevealAudioSlideshow, RevealAudioRecorder, RevealMenu, RevealCustomControls],
+	   });
+
+</script>
+
+</html>
+
