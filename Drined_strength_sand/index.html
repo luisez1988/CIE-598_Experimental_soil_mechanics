@@ -77,7 +77,7 @@
 					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-							<div class="qrCode" name="https://drive.google.com/file/d/1t_7Eslqu0tqJbpPo_nM9pp0iJ0mPgChW/view?usp=sharing"> </div>
+							<div class="qrCode" name="https://drive.google.com/file/d/1squUOIrwrzw5QfI8WJUxcjh8Gh35W9Q1/view?usp=sharing"> </div>
 						</div>
 			
 						<div style="margin-top:-380px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 4: Drained Strength of Sand">
@@ -254,7 +254,140 @@ The <span class='atb'>critical state line</span> provides a <strong style='color
 	</div>
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Interpretation using Mohr-Coulomb</h1>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/interpretation.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: -15px;margin-left: 0px;'>
+<ul>
+	<li class='fragment'>At <strong style='color:#7abbe6'>peak</strong> conditions \(\phi'_p \equiv\) <span class='atb'>peak friction angle</span>.</li>
+	<li class='fragment'>Can calculate <span class='atb'>secant</span> friction angles \(\phi'_s\). Eg. using 10% of strain as reference.</li>
+	<li class='fragment'>The <span class='atb'>critical friction</span> angle \(\phi'_c\) is reflective of pure <strong style='color:#7abbe6'>inter-particle friction</strong>.</li>
+	<li class='fragment'><span class='atb'>Cohesionless</span>. Cohesion arises from <strong style='color:#7abbe6'>cementation only</strong>.</li>
+</ul>
+</div>
+</div>
+</div>
 
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+What factors affect the friction angle of sands❓
+</div>
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<div class='textBox' style='margin-top: 20px;margin-left: 0px;'>
+	<ul>
+		<li class='fragment'>\(\uparrow\) <span class='atb'>Density</span> \(\implies \uparrow \phi'\)  </li>
+		<li class='fragment'>\(\uparrow\) <span class='atb'>confining pressure</span> \(\implies \downarrow \phi'\) </li>
+		<li class='fragment'>Particle <span class='atb'>shape</span>: \(\uparrow\) angularity \(\implies \uparrow \phi'\)</li>
+		<li class='fragment'>\(\uparrow\) <span class='atb'>particle size</span> \(\implies \downarrow \phi'\)</li>
+		<li class='fragment'>\(\uparrow\) <span class='atb'>gradation</span> \(\implies \uparrow \phi'\)</li>
+		<li class='fragment'><span class='atb'>Mineralogy</span> controls <strong style='color:#7abbe6'>base</strong> coefficient of friction.</li>
+		
+		
+	</ul>
+</div>	
+
+</div>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/seed_and_lee.svg' width='100%'/>
+<footer style='margin-top: -45px;font-size: 0.8em;'> <em>Modified from Seed and Lee (1967)</em> </footer>
+</figure>
+</div>
+</div>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Correlations for friction angle</h1>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	In practice, <span class='atb'>estimating</span> the <strong style='color:#7abbe6'>friction angle</strong> is essential and often done through <span class='atb'>correlations</span> with more accessible properties like <span class='atb'>relative density</span>, which also help <span class='atb'>validate</span> lab results.
+</div>
+
+<p>The following expression was proposed by Duncan et al. (2014): <br>
+	<div class='equationBox'>
+	\( \phi'= a+bD_r-[c+d D_r] \log_{10} \left( \cfrac{\sigma'_n}{P_a}\right) \)
+	</div> <br>
+	\(a\), \(b\), \(c\), and \(d\) are regression coefficients. \(D_r\) is the relative density, \(\sigma'_n\) is the normal stress, and \(P_a\) is the atmospheric pressure.
+</p>
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+The coefficients for Duncan's equation can be found below:
+</div>
+
+<table style="background-color: antiquewhite; margin-top: 10px;">
+	<thead>
+	  <tr>
+		<th>Material</th>
+		<th>\(a\) (deg)</th>
+		<th>\(b\) (deg)</th>
+		<th>\(c\) (deg)</th>
+		<th>\(d\) (deg)</th>
+		<th>Standard Deviation (deg)</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>Gravel and cobbles with \(C_u>4\)</td>
+		<td>44</td>
+		<td>10</td>
+		<td>7</td>
+		<td>2</td>
+		<td>3.1</td>
+	  </tr>
+	  <tr>
+		<td>Sand with \(C_u>6\)</td>
+		<td>39</td>
+		<td>10</td>
+		<td>3</td>
+		<td>2</td>
+		<td>3.2</td>
+	  </tr>
+	  <tr>
+		<td>Sand with \(C_u \leq 6\)</td>
+		<td>34</td>
+		<td>10</td>
+		<td>3</td>
+		<td>2</td>
+		<td>3.2</td>
+	  </tr>
+	</tbody>
+  </table>
+  
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<h1>Take away...</h1>
+
+<ul>
+	<li class='fragment'><div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	The drained behavior of sand is <strong style='color:#7abbe6'>affected</strong> by the <span class='atb'>initial</span> void ratio and <span class='atb'>confining</span> pressure. </div></li>
+	<li class='fragment'> At <strong style='color:#7abbe6'>equal confinement pressure</strong> a <span class='atb'>critical state</span> is attained at <strong style='color:#7abbe6'>large</strong> axial <strong style='color:#7abbe6'>strains</strong>.</li>
+	
+	<li class='fragment'> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Soils with initial state parameter \(\psi_0>0\) will <span class='atb'>compress</span>.
+	</div>
+		</li>
+	<li class='fragment'>Soils with initial state parameter \(\psi_0<0\) will <span class='atb'>dilate</span>.</li>
+	<li class='fragment'> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:#7abbe6'>Peak, secant, and critical</strong> friction angles can be <span class='atb'>interpreted</span> from tests.
+	</div>
+		</li>
+	
+</ul>
+
+</section>
 
       </div>
     </div>
