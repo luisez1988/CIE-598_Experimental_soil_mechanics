@@ -1328,16 +1328,72 @@ Check the <strong style='color:#7abbe6'>ASTM D7181</strong> for detailed definit
 
 </section>
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	You must correct for membrane <strong style='color:green'>\(\Delta \sigma_{dm}\)</strong> and filter paper <strong style='color:green'>\(\Delta \sigma_{dfp}\)</strong>:
+	<div class='equationBox'>
+	\( \sigma_{dc}= \sigma_d -\Delta \sigma_{dfp} - \Delta \sigma_{dm} \)
+	</div>
+
+</div>
+<div style="text-align: left;">
+	<ul>
+		<li class='fragment'>Effect of side paper on the deviator stress.
+			<div class='container'>
+			<div class='col bordered' style='width: 50%;'>
+			If \(\varepsilon_a>2 \%\)
+			<div class='equationBox'>
+			\( \Delta \sigma_{dfp}= \cfrac{K_{fp}P_{fp}}{A_c}  \)
+			</div>
+			</div>
+			<div class='col bordered' style='width: 50%;'>
+			If \(\varepsilon_a \leq 2 \%\)
+			<div class='equationBox'>
+				\( \Delta \sigma_{dfp}= \cfrac{50 \varepsilon_a K_{fp}P_{fp}}{A_c}  \)
+			</div>
+			</div>
+			</div>
+
+			<li class='fragment'>Effect of the membrane:
+				<div class='container'>
+				<div class='col bordered' style='width: 50%;'>
+					<div class='equationBox'>
+						\( \Delta \sigma_{dm}= \cfrac{4 E_m t_m \varepsilon_a}{D_c} \)
+						</div>
+				</div>
+				<div class='col bordered' style='width: 50%; font-size: 0.8em;'>
+					\(K_{fp}\equiv\) Yield stress of filter paper (0.19 kN/m) <br>
+					\(P_{fp} \equiv\) Perimeter of filter paper <br>
+					\(E_m \equiv\) Young modulus of the membrane (1400 kPa)<br>
+					\(t_m \equiv\) Thickness of the membrane <br>
+				</div>
+				</div>
+
+
+			</li>
+	
+		</li>
+		<li class='fragment'>Effect ot the membrane on the deviator stress.</li>
+	</ul>
+</div>
+
+
+</section>
+
+
+
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='container'>
-<div class='col' style='width: 50%;'>
-ADD Figure of getting phi and c
-</div>
-<div class='col' style='width: 50%;'>
-Add points about that
-</div>
-</div>
+	<div class='textBox' style='margin-top: 0; margin-left: 0;'>
+		To determine the <span class='atb'>MC envelope</span>, draw the <strong style='color:blue'>three Mohr circles</strong>, fit a tangent, and measure \(\phi'\). A <span class='atb'>better alternative</span> is using <strong style='color:red'>MIT</strong> stress space to find <strong style='color:red'>\(\alpha\) and \(d'\)</strong> using linear regression, and convert to <strong style='color:green'>\(\phi'\) and \(c'\)</strong>.
+	</div>
+	
+<figure>
+<img src='FiguresGeneral/post_process.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+	
 
 </section>
 
