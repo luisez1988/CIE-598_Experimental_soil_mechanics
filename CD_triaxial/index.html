@@ -1221,23 +1221,110 @@ The <strong style='color:#7abbe6'>strain rate</strong> must be calculated to ens
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Determining the consolidation stresses</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-This can be done in the same fashion as for the direct shear tests. The tests should be conducted at stress levels comparable to those expected in the field in operation.
+	Conduct the tests at <strong style='color:#7abbe6'>stress levels</strong> <span class='atb'>similar</span> to those expected at <span class='atb'>long-term</span> conditions.
 </div>
+
+<figure>
+<img src='FiguresGeneral/Normal_stress_selection.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
 
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Example 4.1</h1>
+<div class='textBox' style='margin-top: 0; margin-left: 0;'>
+	The figure below shows the <strong style='color:#7abbe6'>stress state</strong> from a <strong style='color:#7abbe6'>slope stability analysis</strong> at the sample extraction point. Determine <strong style='color:#7abbe6'>three consolidation stresses</strong> for ICDTx tests. If \(t_{90}=5\) min, calculate the <strong style='color:#7abbe6'>axial strain rate</strong> and <strong style='color:#7abbe6'>total test time</strong>.
+</div>
+<div class='container'>
+<div class='col' style='width: 45%;'>
+<figure>
+<img src='FiguresGeneral/Slope.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 55%;'>
+<div class='ProblemBox' style='margin-top: 5px;margin-left: 0px;'>
+<figure>
+<img src='FiguresGeneral/Example.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+</div>
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='ProblemBox' style='margin-top: 0px;margin-left: 0px;'>
+<figure>
+<img src='FiguresGeneral/Example2.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+
+</div>
 
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Post processing</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-The post processing calculations are well detailed in the ASTM XXXX. Here we will revise some of the criteria to correct the data.
+The post processing calculations are well detailed in the <strong style='color:#7abbe6'>ASTM D7181</strong>. Here we will revise some of the criteria to <strong style='color:#7abbe6'>correct the data</strong>.
 </div>
 
-ADD FIGURE
+<p>To calculate <strong style='color:#7abbe6'>stresses</strong>, you need to account for <span class='atb'>change of cross sectional area</span>.</p>
+
+<div class='container'>
+<div class='col' style='width: 50%;'>
+<figure>
+<img src='FiguresGeneral/sample_deformed.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 50%;'>
+<div class='equationBox'>
+\( A= \cfrac{V_c - \Delta V_{\varepsilon}}{H_c - \Delta H_{\varepsilon}} \)
+</div>
+<div style="font-size: 0.8em; margin-top: 30px;">
+	\(V_c \equiv\) Sample's volume after consolidation <br>
+	\(\Delta V_{\varepsilon} \equiv\) change of volume at current strain <br>
+	\(H_c \equiv\) Sample's height after consolidation <br>
+	\(\Delta H_{\varepsilon} \equiv\) change of height at current strain
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+For calculating the acting <span class='atb'>deviator stress</span> the <strong style='color:#7abbe6'>ASTM D7181</strong> add the <span class='atb'>piston</span>, cap, and half sample <span class='atb'>weight</span>. Besides it adds the load acting on the <strong style='color:#7abbe6'>difference of area between the piston and sample</strong>.
+</div>
+
+<div class='container'>
+<div class='col' style='width: 30%;'>
+<figure>
+<img src='FiguresGeneral/deviator_calculations.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
+</div>
+<div class='col' style='width: 70%;'>
+<div class='equationBox' style="margin-top: 20px;">
+\( \sigma_d= \cfrac{P + K + (A-a) \sigma_3}{A} - \sigma_3 \)
+</div>
+<div style="font-size: 0.9em; ">
+\(P \equiv\) Load on the piston <br>
+\(K \equiv\) Additional weight <br>
+\(A \equiv\) Area of the sample <br>
+\(a \equiv\) Area of the piston <br>
+</div>
+
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+Check the <strong style='color:#7abbe6'>ASTM D7181</strong> for detailed definition of \(K\).
+</div>
+</div>
+</div>
 
 </section>
 
