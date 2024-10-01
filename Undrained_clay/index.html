@@ -77,7 +77,7 @@
 					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-							<div class="qrCode" name="https://drive.google.com/file/d/1LmPqksl6DJWw-XHR36WqOCwHTPmK8RM-/view?usp=sharing"> </div>
+							<div class="qrCode" name="https://drive.google.com/file/d/12dYEsfaqsCqwDaP-4Ql9g2PjxFgR_Uh5/view?usp=sharing"> </div>
 						</div>
 			
 						<div style="margin-top:-380px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 5: Undrained Strength of Clay">
@@ -6173,18 +6173,23 @@
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 		<h1>\(S_u\) vs. effective stress</h1>
 		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		As observed in the figure the consolidation pressure influences the value of the undrained shear strength. The larger the consolidation pressure the larger the undrained shear strength.
+		The <span class='atb'>consolidation pressure</span> influences the value of the <span class='atb'>undrained shear strength</span>. The larger the \(\sigma'_{3CON}\) the larger \(S_u\).
 		</div>
 
 		<div class='container'>
 		<div class='col' style='width: 50%;'>
-		Add figure
+		<figure>
+		<img src='FiguresGeneral/Su_vs_sigma3.svg' width='100%'/>
+		<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+		</figure>
 		</div>
 		<div class='col' style='width: 50%;'>
-		<p>This is capture by the relationship (XXXXX): <br>
+		<p>Capture by the relationship (Jamiolkowski et al. 1985): <br>
 		<div class='equationBox'>
-		\( S_u= USR \sigma'_v OCR^b \)
-		</div>
+		\( \left(\cfrac{S_u}{\sigma'_{CON}}\right)_{NC}= USR  \)
+		</div> <br>
+		For triaxial conditions \(0.19 \leq USR \leq 0.27\). <br>
+		\(USR \equiv\) Undrained strength ratio
 		</p>
 		</div>
 		</div>
@@ -6192,31 +6197,72 @@
 		</section>
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Effect of disturbance on \(S_u\)</h1>
-		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-		Add somethign
-		</div>
-		Add figure
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			The <strong style='color:green'>\(USR\)</strong> is also affected by the <strong style='color:green'>\(OCR\)</strong>. Ladd et al. (1977) proposed the following generalized equation for the <strong style='color:green'>\(USR\)</strong>.
+	
+	
+			</div>
+	
+			<div class='equationBox' style="margin-left: 500px; margin-top: 80px;">
+				\( \cfrac{(S_u/\sigma'_v)_{OC}}{(S_u/\sigma'_v)_{NC}}= OCR^{0.8} \)
+			</div>
+	
+			<div class='findingBox' style='margin-top: 80px;margin-left: 0px;'>
+			<strong style='color:#7abbe6'>Note:</strong> Jamiolkowski's and Ladd's equation are true for direct <span class='atb'>simple shear</span> stress path. For <span class='atb'>triaxial compression</span> \(USR\) would be about <span class='atb'>1.4 times</span> larger.
+			</div>
+			
 		</section>
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Effect of stress path on \(S_u\)</h1>
-
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		The <strong style='color:#7abbe6'>\(USR\)</strong> is affected by the <span class='atb'>stress path</span>. 
+		</div>
 		<div class='container'>
-		<div class='col' style='width: 50%;'>
-		Add figure
+		<div class='col' style='width: 70%;'>
+			<figure style="margin-top: 0px;">
+				<img src='FiguresGeneral/USR_LADD.svg' width='100%'/>
+				<footer style='margin-top: -30px;font-size: 0.8em;'> <em>Ladd (1991)</em> </footer>
+				</figure>
 		</div>
-		<div class='col' style='width: 50%;'>
-		Add points
+		<div class='col' style='width: 30%;'>
+		<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+			<ul>
+				<li class='fragment'>
+				For <span class='atb'>triaxial</span> compression <strong style='color:green'>\(USR \approx 0.33\)</strong>.	
+				</li>
+				<li class='fragment'>\(USR\) is influenced by <strong style='color:green'>\(\bar{A}_f\)</strong></li>
+	
+				<li class='fragment'>Use this figure to <span class='atb'>validate</span> your results.</li>
+			</ul>
+		</div>
+
 		</div>
 		</div>
-		
-		</section>
+
+		</section>		
+
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 		<h1>Take away...</h1>
 
-		Add points
+		<ol>
+			<li class='fragment'>
+				<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+				The <span class='atb'>undrained shear strength</span> \(S_u\) is influenced by:
+					<ul>
+						<li>Consolidation pressure \(\sigma'_{3CON}\)</li>
+						<li>Overconsolidation ratio \(OCR\) and density</li>
+						<li>Stress path</li>
+					</ul>
+				</div>
+			</li>
+
+			<li class='fragment'> <span class='atb'>NC and slightly OC</span> samples generate <span class='atb'>positive</span> excess pore pressure and <span class='atb'>heavily OC</span> samples generate <span class='atb'>negative</span> excess pore pressure.</li>
+
+			<li class='fragment'> <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			\(S_u\) is related to <span class='atb'>effective consolidation stresses</span>. The <span class='atb'>undrained strength ratio</span> measures this relationship.
+			</div></li>
+		</ol>
 		
 		</section>
 
