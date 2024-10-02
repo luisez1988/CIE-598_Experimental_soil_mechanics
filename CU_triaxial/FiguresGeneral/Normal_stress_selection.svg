@@ -25,12 +25,12 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.9678956"
-     inkscape:cx="282.78939"
-     inkscape:cy="106.96705"
-     inkscape:window-width="1920"
-     inkscape:window-height="1015"
-     inkscape:window-x="1217"
-     inkscape:window-y="1347"
+     inkscape:cx="52.086096"
+     inkscape:cy="72.158299"
+     inkscape:window-width="2400"
+     inkscape:window-height="1280"
+     inkscape:window-x="2391"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -128,26 +128,6 @@
          style="fill:context-stroke;fill-rule:evenodd;stroke:none"
          id="path17" />
     </marker>
-    <marker
-       style="overflow:visible"
-       id="ArrowWideRounded"
-       refX="0"
-       refY="0"
-       orient="auto-start-reverse"
-       inkscape:stockid="Wide, rounded arrow"
-       markerWidth="1"
-       markerHeight="1"
-       viewBox="0 0 1 1"
-       inkscape:isstock="true"
-       inkscape:collect="always"
-       preserveAspectRatio="xMidYMid">
-      <path
-         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:round"
-         d="M 3,-3 0,0 3,3"
-         transform="rotate(180,0.125,0)"
-         sodipodi:nodetypes="ccc"
-         id="path8" />
-    </marker>
     <inkscape:path-effect
        effect="fill_between_many"
        method="originald"
@@ -174,7 +154,7 @@
        id="path35"
        sodipodi:nodetypes="cc" />
     <path
-       style="fill:#916f6f;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.52916598,0.26458299;stroke-dashoffset:0"
        d="m 3.6602111,15.971831 5.6566903,-5.65669 H 22.911972 l 6.987675,5.65669"
        id="path5" />
     <path
@@ -215,12 +195,12 @@
        transform="translate(4.4272501,-0.95070423)"><tspan
          x="4.1830983"
          y="4.5633802"
-         id="tspan15">Proposed<tspan
+         id="tspan1">Proposed<tspan
    y="4.5633802"
-   id="tspan16"> </tspan></tspan><tspan
+   id="tspan2"> </tspan></tspan><tspan
          x="4.1830983"
          y="7.5796304"
-         id="tspan17">embankment</tspan></text>
+         id="tspan4">embankment</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 12.40669,7.3204225 4.368085,5.8083295"
@@ -242,68 +222,22 @@
        width="2.7226102"
        height="2.7226102"
        x="16.463312"
-       y="16.254929" />
-    <path
-       style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-mid:url(#ArrowWideRounded)"
-       d="m 12.410268,10.315141 c 0.64156,1.113242 1.288816,2.217743 1.977446,3.258758 0.494826,0.748039 1.011014,1.463298 1.561802,2.125465 0.61353,0.737597 1.269991,1.409319 1.987678,1.98709 0.874586,0.704082 1.840093,1.268646 2.929631,1.642888 0.941926,0.323538 1.976551,0.504831 3.125268,0.511053 1.05024,0.0057 2.195848,-0.134966 3.453173,-0.447048 1.209972,-0.300328 2.523404,-0.759415 3.954868,-1.399619 1.208359,-0.540423 2.500825,-1.209906 3.886162,-2.021897"
-       id="path7"
-       sodipodi:nodetypes="csssssssc" />
+       y="23.134102" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;stroke-width:0.264583"
        x="10.391989"
-       y="24.26289"
+       y="31.142063"
        id="text8"><tspan
          sodipodi:role="line"
          id="tspan8"
          style="stroke-width:0.264583"
          x="10.391989"
-         y="24.26289">Sample</tspan></text>
+         y="31.142063">Sample</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 15.162646,21.970455 2.661971,-2.992916"
+       d="M 15.162646,28.849626 17.824617,25.85671"
        id="path9" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;white-space:pre;inline-size:27.1509;display:inline;fill:#ff0000;stroke-width:0.264583"
-       x="31.931845"
-       y="22.865335"
-       id="text9"
-       transform="translate(9.1170769,0.49953624)"><tspan
-         x="31.931845"
-         y="22.865335"
-         id="tspan18">Potential failure<tspan
-   y="22.865335"
-   id="tspan19"> </tspan></tspan><tspan
-         x="31.931845"
-         y="25.881587"
-         id="tspan20">surface from a<tspan
-   y="25.881587"
-   id="tspan21"> </tspan></tspan><tspan
-         x="31.931845"
-         y="28.897837"
-         id="tspan22">sacrificial analysis</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 37.43398,21.358773 C 37.101232,18.371164 33.495816,16.969966 33.495816,16.969966"
-       id="path10" />
-    <g
-       id="g14"
-       transform="translate(-26.4868, 5.17549)">
-      <g
-         id="g11">
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 42.949938,10.832742 0,-5.6930931 h 0.818077 1.904534 v 5.6930931 z"
-           id="path13"
-           sodipodi:nodetypes="cccccc" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.264583px"
-           d="M 17.522888,10.415141 l -0.959784,0.959784 M 16.563104,12.789138 l 2.373997,-2.373997 M 19.085715,11.680741 l -2.522611,2.522611 M 16.563104,15.617565 l 2.522611,-2.522611 M 19.085715,14.509168 l -1.399066,1.399066"
-           transform="translate(26.4868, -5.17549)"
-           id="path11" />
-      </g>
-    </g>
     <text
        xml:space="preserve"
        style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';text-align:center;text-anchor:middle;white-space:pre;inline-size:23.4986;display:inline;fill:#008000;stroke-width:0.264583"
@@ -313,23 +247,23 @@
        transform="translate(-23.435564,0.44120181)"><tspan
          x="64.340485"
          y="4.4119186"
-         id="tspan23">Need the minor<tspan
+         id="tspan5">Need the minor<tspan
    y="4.4119186"
-   id="tspan24"> </tspan></tspan><tspan
+   id="tspan7"> </tspan></tspan><tspan
          x="64.340485"
          y="7.4281688"
-         id="tspan25">principal stress</tspan></text>
+         id="tspan9">principal stress</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 30.75528,6.8450703 22.446806,16.846659"
+       d="M 30.75528,6.8450703 27.559923,20.779318"
        id="path15"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:#00ff00;stroke:#00ff00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ConcaveTriangle)"
-       d="m 17.82441,10.28112 v 4.094262"
+       d="m 17.82441,17.160291 v 4.094262"
        id="path16" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,19.413329,10.151634)"
+       transform="matrix(0.352778,0,0,0.352778,19.413329,17.030805)"
        ns3:version="1.10.2"
        ns3:texconverter="pdflatex"
        ns3:pdfconverter="inkscape"
@@ -551,10 +485,10 @@
        id="path40" />
     <path
        style="fill:#00ff00;stroke:#008080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#ConcaveTriangle)"
-       d="M 25.035378,17.616234 H 20.941116"
+       d="M 25.035378,24.495405 H 20.941116"
        id="path12" />
     <g
-       transform="matrix(0.352778 0 0 0.352778 25.4418 15.1463)"
+       transform="matrix(0.352778,0,0,0.352778,25.4418,22.025471)"
        ns3:version="1.10.2"
        ns3:texconverter="pdflatex"
        ns3:pdfconverter="inkscape"
@@ -602,10 +536,10 @@
       <g
          fill-opacity="1"
          id="id-2f9a969e-85dc-4ade-a004-683b82739750"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#008080;stroke-width:0">
         <g
-           transform="translate(148.712, 134.765)"
+           transform="translate(148.712,134.765)"
            id="g3042"
            style="fill:#008080;stroke-width:0">
           <path
@@ -617,10 +551,10 @@
       <g
          fill-opacity="1"
          id="id-cef3a83b-c8b7-4ca4-8e7f-b6ace8d6996a"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#008080;stroke-width:0">
         <g
-           transform="translate(154.763, 131.149)"
+           transform="translate(154.763,131.149)"
            id="g1413"
            style="fill:#008080;stroke-width:0">
           <path
@@ -632,10 +566,10 @@
       <g
          fill-opacity="1"
          id="id-a7342e3c-eecc-4677-a965-727e2b6f0e1e"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#008080;stroke-width:0">
         <g
-           transform="translate(154.405, 137.237)"
+           transform="translate(154.405,137.237)"
            id="g8326"
            style="fill:#008080;stroke-width:0">
           <path
