@@ -1708,7 +1708,7 @@ The equation is based on the <strong style='color:#7abbe6'>assumption</strong> t
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Post processing</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-The post processing calculations are well detailed in the <strong style='color:#7abbe6'>ASTM D7181</strong>. Here we will revise some of the criteria to <strong style='color:#7abbe6'>correct the data</strong>.
+The post processing calculations are well detailed in the <strong style='color:#7abbe6'>ASTM D4767</strong>. Here we will revise some of the criteria to <strong style='color:#7abbe6'>correct the data</strong>.
 </div>
 
 <p>To calculate <strong style='color:#7abbe6'>stresses</strong>, you need to account for <span class='atb'>change of cross sectional area</span>.</p>
@@ -1722,13 +1722,11 @@ The post processing calculations are well detailed in the <strong style='color:#
 </div>
 <div class='col' style='width: 50%;'>
 <div class='equationBox'>
-\( A= \cfrac{V_c - \Delta V_{\varepsilon}}{H_c - \Delta H_{\varepsilon}} \)
+\( A= \cfrac{A_c}{1- \varepsilon_a} \)
 </div>
 <div style="font-size: 0.8em; margin-top: 30px;">
-	\(V_c \equiv\) Sample's volume after consolidation <br>
-	\(\Delta V_{\varepsilon} \equiv\) change of volume at current strain <br>
-	\(H_c \equiv\) Sample's height after consolidation <br>
-	\(\Delta H_{\varepsilon} \equiv\) change of height at current strain
+	\(A_c \equiv\) Sample's cross-sectional area after consolidation <br>
+	\(\varepsilon_a \equiv\) Axial strain
 </div>
 
 </div>
@@ -1738,7 +1736,7 @@ The post processing calculations are well detailed in the <strong style='color:#
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-For calculating the acting <span class='atb'>deviator stress</span> the <strong style='color:#7abbe6'>ASTM D7181</strong> add the <span class='atb'>piston</span>, cap, and half sample <span class='atb'>weight</span>. Besides it adds the load acting on the <strong style='color:#7abbe6'>difference of area between the piston and sample</strong>.
+For calculating the acting <span class='atb'>deviator stress</span> the <strong style='color:#7abbe6'>ASTM D4767</strong> add the <span class='atb'>piston</span>, cap, and subtract <span class='atb'>piston friction and uplift</span> if needed.
 </div>
 
 <div class='container'>
@@ -1749,18 +1747,17 @@ For calculating the acting <span class='atb'>deviator stress</span> the <strong 
 </figure>
 </div>
 <div class='col' style='width: 70%;'>
-<div class='equationBox' style="margin-top: 20px;">
-\( \sigma_d= \cfrac{P + K + (A-a) \sigma_3}{A} - \sigma_3 \)
+<div class='equationBox' style="margin-top: 20px; margin-left: 300px;">
+\( \sigma_d= \cfrac{P}{A} - \sigma_3 \)
 </div>
 <div style="font-size: 0.9em; ">
-\(P \equiv\) Load on the piston <br>
-\(K \equiv\) Additional weight <br>
-\(A \equiv\) Area of the sample <br>
-\(a \equiv\) Area of the piston <br>
+\(P \equiv\) Load on the piston minus corrections if needed <br>
+\(A \equiv\) Corrected area of the sample <br>
+
 </div>
 
-<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-Check the <strong style='color:#7abbe6'>ASTM D7181</strong> for detailed definition of \(K\).
+<div class='findingBox' style='margin-top: 50px;margin-left: 0px;'>
+Check the <strong style='color:#7abbe6'>ASTM D4767</strong> for detailed definitions.
 </div>
 </div>
 </div>
@@ -1820,12 +1817,22 @@ Check the <strong style='color:#7abbe6'>ASTM D7181</strong> for detailed definit
 </section>
 
 
+<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+One of the big advantages of the <strong style='color:green'>ICUTx</strong> is that it allows to calculate <span class='atb'>total and effective</span> stresses. As a result, <strong style='color:green'>\(S_u\)</strong> and <strong style='color:green'>\(\phi'\)</strong> can be calculated.
+</div>
+<figure>
+<img src='FiguresGeneral/SuSigma3.svg' width='100%'/>
+<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+</figure>
 
+
+</section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<div class='textBox' style='margin-top: 0; margin-left: 0;'>
-		To determine the <span class='atb'>MC envelope</span>, draw the <strong style='color:blue'>three Mohr circles</strong>, fit a tangent, and measure \(\phi'\). A <span class='atb'>better alternative</span> is using <strong style='color:red'>MIT</strong> stress space to find <strong style='color:red'>\(\alpha\) and \(d'\)</strong> using linear regression, and convert to <strong style='color:green'>\(\phi'\) and \(c'\)</strong>.
-	</div>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+   <span class='atb'>Effective stresses</span> can be calculated using <strong style='color:green'>\(\sigma'= \sigma - u\)</strong>. Then, plot <strong style='color:red'>MIT</strong> stress paths, find <strong style='color:red'>\(\alpha\) and \(d'\)</strong>, and finally transform to <strong style='color:green'>\(\phi'\) and \(c'\)</strong>.
+   </div>
 	
 <figure>
 <img src='FiguresGeneral/post_process.svg' width='100%'/>
