@@ -3,8 +3,8 @@
 
 <svg
    width="4in"
-   height="1.3in"
-   viewBox="0 0 101.6 33.019999"
+   height="1.7in"
+   viewBox="0 0 101.6 43.180002"
    version="1.1"
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -13,7 +13,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:ns2="http://www.iki.fi/pav/software/textext/">
+   xmlns:ns6="http://www.iki.fi/pav/software/textext/">
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -25,14 +25,14 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.3915123"
-     inkscape:cx="238.58933"
-     inkscape:cy="26.949096"
+     inkscape:cx="371.89754"
+     inkscape:cy="98.813356"
      inkscape:window-width="1920"
      inkscape:window-height="1015"
      inkscape:window-x="1217"
      inkscape:window-y="1347"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer5" />
+     inkscape:current-layer="layer4" />
   <defs
      id="defs1">
     <marker
@@ -60,23 +60,23 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle);marker-end:url(#ConcaveTriangle)"
-       d="M 1.9014084,2.3504796 V 29.165621 H 98.968307"
+       style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle);marker-end:url(#ConcaveTriangle)"
+       d="M 1.9014084,2.5030003 V 38.137256 H 98.968307"
        id="path1"
        sodipodi:nodetypes="ccc" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,96.724852,29.892847)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\sigma'$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.352778,0,0,0.352778,96.724852,39.209749)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\sigma'$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g106"
-       ns2:jacobian_sqrt="0.352778">
+       ns6:jacobian_sqrt="0.352778">
       <defs
          id="id-4e1eb943-e1ee-401e-bc9b-5de20356addb">
         <g
@@ -124,17 +124,17 @@
     </g>
     <g
        transform="matrix(0.352778,0,0,0.352778,0.16004936,0.30954948)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\tau$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\tau$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g5840"
-       ns2:jacobian_sqrt="0.352778">
+       ns6:jacobian_sqrt="0.352778">
       <defs
          id="id-a41b60a4-41c6-4a93-9c2f-96f83ac5d870">
         <g
@@ -168,25 +168,26 @@
      inkscape:label="Layer 5">
     <path
        style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 1.9014084,29.165621 96.686617,0.5494227"
-       id="path2" />
+       d="M 1.9014084,38.242529 93.59427,0"
+       id="path2"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 80.284398,5.3715163 H 70.114437"
+       d="M 82.355838,4.5812871 H 72.185877"
        id="path44" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,67.766655,5.9253549)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\phi'$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.352778,0,0,0.352778,72.674076,4.7134463)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\phi'$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g4071"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#008000">
       <defs
          id="id-787d7880-a375-4773-a894-112b2dfad00f">
@@ -248,57 +249,57 @@
        style="fill:none;stroke:#000080;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="path3"
        sodipodi:type="arc"
-       sodipodi:cx="48.634697"
-       sodipodi:cy="-29.165621"
-       sodipodi:rx="13.468253"
-       sodipodi:ry="13.468253"
+       sodipodi:cx="55.680222"
+       sodipodi:cy="-38.161453"
+       sodipodi:rx="20.513767"
+       sodipodi:ry="20.582394"
        sodipodi:start="0"
        sodipodi:end="3.1415927"
        sodipodi:open="true"
        sodipodi:arc-type="arc"
-       d="m 62.10295,-29.165621 a 13.468253,13.468253 0 0 1 -6.734127,11.66385 13.468253,13.468253 0 0 1 -13.468253,-10e-7 13.468253,13.468253 0 0 1 -6.734126,-11.663849"
+       d="m 76.193989,-38.161453 a 20.513767,20.582394 0 0 1 -10.256884,17.824876 20.513767,20.582394 0 0 1 -20.513768,-1e-6 20.513767,20.582394 0 0 1 -10.256883,-17.824875"
        transform="scale(1,-1)" />
     <path
        style="fill:none;stroke:#000080;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="path4"
        sodipodi:type="arc"
-       sodipodi:cx="67.699471"
-       sodipodi:cy="-29.165621"
-       sodipodi:rx="18.932281"
-       sodipodi:ry="18.923607"
+       sodipodi:cx="77.586792"
+       sodipodi:cy="-38.161449"
+       sodipodi:rx="28.819595"
+       sodipodi:ry="28.875128"
        sodipodi:start="0"
        sodipodi:end="3.1415927"
        sodipodi:open="true"
        sodipodi:arc-type="arc"
-       d="m 86.631752,-29.165621 a 18.932281,18.923607 0 0 1 -9.466141,16.388325 18.932281,18.923607 0 0 1 -18.932282,-1e-6 18.932281,18.923607 0 0 1 -9.46614,-16.388324"
+       d="m 106.40639,-38.161449 a 28.819595,28.875128 0 0 1 -14.409801,25.006594 28.819595,28.875128 0 0 1 -28.819595,-1e-6 28.819595,28.875128 0 0 1 -14.409797,-25.006593"
        transform="scale(1,-1)" />
     <path
-       style="fill:none;stroke:#000080;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
+       style="fill:none;stroke:#000080;stroke-width:0.265;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="path5"
        sodipodi:type="arc"
-       sodipodi:cx="29.540249"
-       sodipodi:cy="-29.165623"
-       sodipodi:rx="7.9745607"
-       sodipodi:ry="7.9664359"
+       sodipodi:cx="33.719551"
+       sodipodi:cy="-38.161453"
+       sodipodi:rx="12.153853"
+       sodipodi:ry="12.209837"
        sodipodi:start="0"
        sodipodi:end="3.1415927"
        sodipodi:open="true"
        sodipodi:arc-type="arc"
-       d="m 37.51481,-29.165623 a 7.9745607,7.9664359 0 0 1 -3.987281,6.899136 7.9745607,7.9664359 0 0 1 -7.974561,0 7.9745607,7.9664359 0 0 1 -3.98728,-6.899136"
+       d="m 45.873405,-38.161453 a 12.153853,12.209837 0 0 1 -6.076927,10.574029 12.153853,12.209837 0 0 1 -12.153854,0 12.153853,12.209837 0 0 1 -6.076926,-10.574029"
        transform="scale(1,-1)" />
     <g
-       transform="matrix(0.35277801,0,0,0.35277801,18.609682,29.025583)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\sigma'_{3,1}$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.35277801,0,0,0.35277801,18.609682,38.99853)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\sigma'_{3,1}$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g9187"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#0000ff">
       <defs
          id="id-288a1249-8ed2-4675-990f-4227fbfa0de2">
@@ -418,18 +419,18 @@
       </g>
     </g>
     <g
-       transform="matrix(0.35277801,0,0,0.35277801,32.357999,29.025699)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\sigma'_{3,2}$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.35277801,0,0,0.35277801,32.357999,38.998646)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\sigma'_{3,2}$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g23"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#0000ff;stroke-width:0">
       <defs
          id="id-a1a34285-f4b4-435a-8947-dd3900ea49f6"
@@ -482,10 +483,10 @@
       <g
          fill-opacity="1"
          id="id-f34e9d81-2909-4d2c-9f05-0a4c7811a150"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(148.712, 134.765)"
+           transform="translate(148.712,134.765)"
            id="g7479"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -497,10 +498,10 @@
       <g
          fill-opacity="1"
          id="id-67a73685-8b0a-469a-97d0-1710d6687042"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(154.763, 131.149)"
+           transform="translate(154.763,131.149)"
            id="g7945"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -512,10 +513,10 @@
       <g
          fill-opacity="1"
          id="id-d1c637ea-2a36-4c27-a7a9-bb97ab4d916d"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(154.405, 137.237)"
+           transform="translate(154.405,137.237)"
            id="g1029"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -527,10 +528,10 @@
       <g
          fill-opacity="1"
          id="id-45a8167f-fe68-46f7-bb88-35e48b7fc7ad"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(158.376, 137.237)"
+           transform="translate(158.376,137.237)"
            id="g6427"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -542,10 +543,10 @@
       <g
          fill-opacity="1"
          id="id-d494a7c6-79a3-43c5-9dd0-1d1b1d96990e"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(160.742, 137.237)"
+           transform="translate(160.742,137.237)"
            id="g8134"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -556,18 +557,18 @@
       </g>
     </g>
     <g
-       transform="matrix(0.35277801,0,0,0.35277801,46.005901,29.025699)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\sigma'_{3,3}$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.35277801,0,0,0.35277801,46.005901,38.998646)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\sigma'_{3,3}$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g40"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#0000ff;stroke-width:0">
       <defs
          id="id-a22ac700-9267-456f-b8ae-7b8754e51b0c"
@@ -612,10 +613,10 @@
       <g
          fill-opacity="1"
          id="id-04055b33-8420-477f-9861-785905ffdfcb"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(148.712, 134.765)"
+           transform="translate(148.712,134.765)"
            id="g5172"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -627,10 +628,10 @@
       <g
          fill-opacity="1"
          id="id-b05c97ac-2127-42ad-86ae-dda08c276f91"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(154.763, 131.149)"
+           transform="translate(154.763,131.149)"
            id="g7157"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -642,10 +643,10 @@
       <g
          fill-opacity="1"
          id="id-9b9551df-5e1a-4b8b-8d17-f3ccffa26a06"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(154.405, 137.237)"
+           transform="translate(154.405,137.237)"
            id="g9494"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -657,10 +658,10 @@
       <g
          fill-opacity="1"
          id="id-45694769-4cb9-4c65-acb9-89e3b8ed29ad"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(158.376, 137.237)"
+           transform="translate(158.376,137.237)"
            id="g569"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -672,10 +673,10 @@
       <g
          fill-opacity="1"
          id="id-d8e62454-a858-40a6-bae1-372a25ba9168"
-         transform="translate(-149.087, -127.258)"
+         transform="translate(-149.087,-127.258)"
          style="fill:#0000ff;stroke-width:0">
         <g
-           transform="translate(160.742, 137.237)"
+           transform="translate(160.742,137.237)"
            id="g4444"
            style="fill:#0000ff;stroke-width:0">
           <path
@@ -693,20 +694,20 @@
     <circle
        style="fill:#ff0000;stroke:none;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="path40"
-       cx="29.167667"
-       cy="21.207886"
+       cx="33.719551"
+       cy="25.951616"
        r="0.89999998" />
     <circle
        style="fill:#ff0000;stroke:none;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="circle40"
-       cx="48.634697"
-       cy="15.697368"
+       cx="55.680222"
+       cy="17.57906"
        r="0.89999998" />
     <circle
        style="fill:#ff0000;stroke:none;stroke-width:0.264999;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none"
        id="circle41"
-       cx="67.699471"
-       cy="10.242014"
+       cx="77.586792"
+       cy="9.2863216"
        r="0.89999998" />
   </g>
   <g
@@ -715,21 +716,22 @@
      inkscape:label="Layer 4">
     <path
        style="fill:none;stroke:#ff0000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 1.8874654,29.139488 96.702232,1.8282761"
-       id="path41" />
+       d="M 1.8933088,38.229393 98.606332,1.2022774"
+       id="path41"
+       sodipodi:nodetypes="cc" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,92.204236,3.2494247)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$\\alpha$"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.352778,0,0,0.352778,86.314387,6.2903837)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$\\alpha$"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g3000"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#ff0000">
       <defs
          id="id-1e9836b0-51f8-414f-a160-fadcf06df1d4">
@@ -762,21 +764,21 @@
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 83.942099,5.5038079 h 8.704828"
+       d="M 80.580852,8.2540302 H 89.28568"
        id="path42" />
     <g
-       transform="matrix(0.352778,0,0,0.352778,82.965465,8.5501799)"
-       ns2:version="1.10.2"
-       ns2:texconverter="pdflatex"
-       ns2:pdfconverter="inkscape"
-       ns2:text="$K_f$ line"
-       ns2:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
-       ns2:scale="1.0"
-       ns2:alignment="middle center"
-       ns2:stroke-to-path="0"
-       ns2:inkscapeversion="1.3.2"
+       transform="matrix(0.352778,0,0,0.352778,72.674208,14.165003)"
+       ns6:version="1.10.2"
+       ns6:texconverter="pdflatex"
+       ns6:pdfconverter="inkscape"
+       ns6:text="$K_f$ line"
+       ns6:preamble="C:\Users\zamcr\AppData\Roaming\inkscape\extensions\textext\default_packages.tex"
+       ns6:scale="1.0"
+       ns6:alignment="middle center"
+       ns6:stroke-to-path="0"
+       ns6:inkscapeversion="1.3.2"
        id="g8620"
-       ns2:jacobian_sqrt="0.352778"
+       ns6:jacobian_sqrt="0.352778"
        style="fill:#ff0000">
       <defs
          id="id-c58b9c38-9138-4b0f-b589-a083b0709de2">
@@ -898,7 +900,7 @@
     </g>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 83.621411,9.7739225 80.377944,6.5304558"
+       d="M 73.330154,15.388746 70.086687,12.145279"
        id="path43" />
   </g>
 </svg>
