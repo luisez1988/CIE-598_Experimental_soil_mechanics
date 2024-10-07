@@ -1707,26 +1707,22 @@ The following is a <strong style='color:#7abbe6'>brief list</strong> of the step
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Calculating the strain rate</h1>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-Strain rate affects <span class='atb'>soil behavior</span>. A larger strain rate will produce apparently <span class='atb'>stronger</span> soils due to <strong style='color:#7abbe6'>viscous properties</strong>. A suitable strain rate must be selected to prevent <span class='atb'>viscous effects</span>.
-</div>
+<h1>Strain rate selection</h1>
 
-<div class='equationBox' style="margin-left: 400px; margin-top: 10px;">
-\( \dot{\varepsilon_a}=4\% / (10 t_{50}) \)
-</div>
-
-<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
-The equation is based on the <strong style='color:#7abbe6'>assumption</strong> that soil will <span class='atb'>fail</span> at 4% of axial strain. If more adequate knowledge is available, the equation can be <span class='atb'>modified</span>. Finally, <strong style='color:green'>\(t_{50}\)</strong> is obtained from the consolidation stage. If no information is available, use \(\dot{\varepsilon}_a=\) <span class='atb'>1%/hr</span>.
-</div>
+<ul>
+   <li class='fragment'>The <strong style='color:#7abbe6'>strain rate</strong> shall be chosen so that the time to <span class='atb'>"failure"</span> <strong style='color:red'>does not exceed</strong> <span class='atb'>15 minutes</span>.</li>
+   <li class='fragment'>Select a <strong style='color:#7abbe6'>strain rate</strong> between <span class='atb'>0.3 to 1%/min</span>.</li>
+   <li class='fragment'><span class='atb'>Softer or plastic</span> materials will exhibit <span class='atb'>larger deformation</span> at failure. As a result should be tested in the <span class='atb'>higher range</span> of <strong style='color:#7abbe6'>strain rates</strong>.</li>
+   <li class='fragment'><span class='atb'>Stiff or brittle</span> materials will exhibit <span class='atb'>small deformations</span> at failure and should be tested at the <span class='atb'>lower range</span> of <strong style='color:#7abbe6'>strain rates</strong>.</li>
+</ul>
 
 </section>
 
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Determining the consolidation stresses</h1>
+<h1>Determining the cell pressures</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	Samples should be <strong style='color:#7abbe6'>consolidated</strong> to stresses similar to <span class='atb'>in-situ conditions</span> prior to the application of any external load.
+	The <strong style='color:green'>cell pressure</strong> should be similar to <span class='atb'>in-situ conditions</span> <strong style='color:blue'>total stresses</strong> prior to the application of any external load.
 </div>
 
 <figure>
@@ -1737,9 +1733,9 @@ The equation is based on the <strong style='color:#7abbe6'>assumption</strong> t
 </section>
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<h1>Example 5.1</h1>
+<h1>Example 6.2</h1>
 <div class='textBox' style='margin-top: 0; margin-left: 0;'>
-	Determine <strong style='color:#7abbe6'>three consolidation stresses</strong> for ICUTx tests for a sample extracted at <strong style='color:#7abbe6'>10 m depth</strong>. If \(t_{50}=15\) min, calculate the <strong style='color:#7abbe6'>axial strain rate</strong> and <strong style='color:#7abbe6'>total time</strong> required for the test.
+	Determine <strong style='color:#7abbe6'>three cell pressures</strong> for UUTx tests conducted on a sample extracted at <strong style='color:#7abbe6'>10 m depth</strong>. <strong style='color:#7abbe6'>Select</strong> the <strong style='color:#7abbe6'>axial strain rate</strong> and <strong style='color:#7abbe6'>estimate</strong> <strong style='color:#7abbe6'>total time</strong> required for the test.
 </div>
 <div class='ProblemBox' style='margin-top: 5px;margin-left: 0px;'>
    <figure>
@@ -1764,141 +1760,15 @@ The equation is based on the <strong style='color:#7abbe6'>assumption</strong> t
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Post processing</h1>
 <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-The post processing calculations are well detailed in the <strong style='color:#7abbe6'>ASTM D4767</strong>. Here we will revise some of the criteria to <strong style='color:#7abbe6'>correct the data</strong>.
+The post processing calculations are <span class='atb'>identical</span> to CUTx calculations. If <strong style='color:green'>\(S \approx 100\%\)</strong>, use the average <strong style='color:green'>\(S_u\)</strong> from the three tests.
 </div>
 
-<p>To calculate <strong style='color:#7abbe6'>stresses</strong>, you need to account for <span class='atb'>change of cross sectional area</span>.</p>
-
-<div class='container'>
-<div class='col' style='width: 50%;'>
-<figure>
-<img src='FiguresGeneral/sample_deformed.svg' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-</div>
-<div class='col' style='width: 50%;'>
-<div class='equationBox'>
-\( A= \cfrac{A_c}{1- \varepsilon_a} \)
-</div>
-<div style="font-size: 0.8em; margin-top: 30px;">
-	\(A_c \equiv\) Sample's cross-sectional area after consolidation <br>
-	\(\varepsilon_a \equiv\) Axial strain
-</div>
-
-</div>
-</div>
-
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-For calculating the acting <span class='atb'>deviator stress</span> the <strong style='color:#7abbe6'>ASTM D4767</strong> add the <span class='atb'>piston</span>, cap, and subtract <span class='atb'>piston friction and uplift</span> if needed.
-</div>
-
-<div class='container'>
-<div class='col' style='width: 30%;'>
-<figure>
-<img src='FiguresGeneral/deviator_calculations.svg' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-</div>
-<div class='col' style='width: 70%;'>
-<div class='equationBox' style="margin-top: 20px; margin-left: 300px;">
-\( \sigma_d= \cfrac{P}{A} - \sigma_3 \)
-</div>
-<div style="font-size: 0.9em; ">
-\(P \equiv\) Load on the piston minus corrections if needed <br>
-\(A \equiv\) Corrected area of the sample <br>
-
-</div>
-
-<div class='findingBox' style='margin-top: 50px;margin-left: 0px;'>
-Check the <strong style='color:#7abbe6'>ASTM D4767</strong> for detailed definitions.
-</div>
-</div>
-</div>
-
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-	You must correct for membrane <strong style='color:green'>\(\Delta \sigma_{dm}\)</strong> and filter paper <strong style='color:green'>\(\Delta \sigma_{dfp}\)</strong>:
-	<div class='equationBox'>
-	\( \sigma_{dc}= \sigma_d -\Delta \sigma_{dfp} - \Delta \sigma_{dm} \)
-	</div>
-
-</div>
-<div style="text-align: left;">
-	<ul>
-		<li class='fragment'>Effect of side paper on the deviator stress.
-			<div class='container'>
-			<div class='col bordered' style='width: 50%;'>
-			If \(\varepsilon_a>2 \%\)
-			<div class='equationBox'>
-			\( \Delta \sigma_{dfp}= \cfrac{K_{fp}P_{fp}}{A_c}  \)
-			</div>
-			</div>
-			<div class='col bordered' style='width: 50%;'>
-			If \(\varepsilon_a \leq 2 \%\)
-			<div class='equationBox'>
-				\( \Delta \sigma_{dfp}= \cfrac{50 \varepsilon_a K_{fp}P_{fp}}{A_c}  \)
-			</div>
-			</div>
-			</div>
-
-			<li class='fragment'>Effect of the membrane:
-				<div class='container'>
-				<div class='col bordered' style='width: 50%;'>
-					<div class='equationBox'>
-						\( \Delta \sigma_{dm}= \cfrac{4 E_m t_m \varepsilon_a}{D_c} \)
-						</div>
-				</div>
-				<div class='col bordered' style='width: 50%; font-size: 0.8em;'>
-					\(K_{fp}\equiv\) Yield stress of filter paper (0.19 kN/m) <br>
-					\(P_{fp} \equiv\) Perimeter of filter paper <br>
-					\(E_m \equiv\) Young modulus of the membrane (1400 kPa)<br>
-					\(t_m \equiv\) Thickness of the membrane <br>
-				</div>
-				</div>
-
-
-			</li>
-	
-		</li>
-		<li class='fragment'>Effect ot the membrane on the deviator stress.</li>
-	</ul>
-</div>
-
-
-</section>
-
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-One of the big advantages of the <strong style='color:green'>ICUTx</strong> is that it allows to calculate <span class='atb'>total and effective</span> stresses. As a result, <strong style='color:green'>\(S_u\)</strong> and <strong style='color:green'>\(\phi'\)</strong> can be calculated.
-</div>
-<figure>
-<img src='FiguresGeneral/SuSigma3.svg' width='100%'/>
-<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-</figure>
-
-
-</section>
-
-<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-   <span class='atb'>Effective stresses</span> can be calculated using <strong style='color:green'>\(\sigma'= \sigma - u\)</strong>. Then, plot <strong style='color:red'>MIT</strong> stress paths, find <strong style='color:red'>\(\alpha\) and \(d'\)</strong>, and finally transform to <strong style='color:green'>\(\phi'\) and \(c'\)</strong>.
-   </div>
-	
 <figure>
 <img src='FiguresGeneral/post_process.svg' width='100%'/>
 <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
 </figure>
 
-	
-
 </section>
-
 
 <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 <h1>Pros and cons</h1>
@@ -1907,22 +1777,26 @@ One of the big advantages of the <strong style='color:green'>ICUTx</strong> is t
 <h4>PROS</h4>
 <ul>
 	<li class='fragment'>
-		Simulates true <span class='atb'>triaxial state</span> in soils.
+		It is a <span class='atb'>fast test</span> to perform.
 	</li>
 	<li class='fragment'>
-		<strong style='color:#7abbe6'>Stress state</strong> is <span class='atb'>known</span> at all times.
+		<span class='atb'>Simple</span> mounting and <span class='atb'>interpretation</span>.
 	</li>
-	<li class='fragment'>Can get <span class='atb'>effective</span> and <span class='atb'>total</span> stress parameters.</li>
-	<li class='fragment'>Can get partial information about <span class='atb'>consolidation properties</span>.</li>
 	
 </ul>
 </div>
 <div class='col bordered' style='width: 50%;'>
 	<h4>CONS</h4>
 <ul>
- <li class='fragment'>ICU is not <span class='atb'>\(K_o\) consolidated</span>. 
+ <li class='fragment'>Results are highly <span class='atb'>depending</span> on <span class='atb'>saturation</span> and <span class='atb'>disturbance</span></li>
 
-</li>
+ <li class='fragment'>Sample is not <span class='atb'>back pressured</span>.</li>
+
+ <li class='fragment'><strong style='color:#7abbe6'>Pore pressure</strong> is not <span class='atb'>monitored</span>.</li>
+
+ <li class='fragment'> Can't get <span class='atb'>effective stress</span> parameters.</li>
+
+
 
 </ul>
 </div>
