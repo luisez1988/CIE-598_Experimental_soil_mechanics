@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Add click event listener to each div with class Animation
             animationDivs.forEach(div => {
+                const svgPaths = div.querySelectorAll('path');
                 div.addEventListener('click', () => {
                     // Trigger the animation on the SVG elements inside the div
-                    const svgPaths = div.querySelectorAll('path');
+                    
                     svgPaths.forEach(path => {
                         const pathLength = path.getTotalLength();
                         path.style.strokeDasharray = pathLength;
