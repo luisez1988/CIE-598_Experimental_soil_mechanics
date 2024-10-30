@@ -58,9 +58,18 @@
 							color: #000;
 							margin-top:0px;
 					}
+               
 	
 	
 				</style>
+
+            <style>
+               .my_line {
+                  stroke-dasharray: 100;
+                  stroke-dashoffset: 100;
+                  transition: stroke-dashoffset 1s linear;
+               }
+            </style>
 	
 				<style >
 	
@@ -143,6 +152,18 @@
       <img src='FiguresGeneral/simple_shear.svg' width='100%'/>
       <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
       </figure>
+      
+      </section>
+
+      <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+      <h1>Test</h1>
+
+      <div class="Animation">
+         <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 101.6 50.8">
+            <path id="myLine" class="my_line" d="M5.777 45.196 96.17 3.398" style="fill:none;stroke:#000;stroke-width:.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        </svg>
+
+      </div>
       
       </section>
 
@@ -1831,10 +1852,9 @@ document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + 
 document.getElementById("spanDate_number").innerHTML = today.getMonth() + "." + today.getDate()+ "." + today.getFullYear();
 </script>
 
-
-
 <script src="dist/reveal.js"></script>
 <script src="plugin/qrcode/qrcode.js"></script>
+<script src="plugin/Animated_lines/animate_svg.js"></script>
 <script src="plugin/complete_box/complete_box.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script src="plugin/notes/notes.js"></script>
