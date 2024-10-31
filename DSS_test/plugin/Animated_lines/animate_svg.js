@@ -48,6 +48,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 let currentPathIndex = 0; // Variable to keep track of the current path index
                 const svgPaths = div.querySelectorAll('.Animate');
 
+                svgPaths.forEach(element => {
+                    const tagType = getTagType(element);
+
+                    // Add mouseover event listener to each path element
+                    if (tagType === 'path') {
+                        const originalStrokeWidth = element.style.strokeWidth; // Store the original stroke width
+
+                        element.addEventListener('mouseover', () => {
+                            element.style.strokeWidth = '1'; // Change stroke width on hover
+                        });
+        
+                        element.addEventListener('mouseout', () => {
+                            element.style.strokeWidth = originalStrokeWidth; // Reset stroke width when not hovering
+                        });
+                    }
+                });
+
                 div.addEventListener('click', () => {
                     if (currentPathIndex < svgPaths.length) {
 
@@ -72,11 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (tagType === 'text') {
                         path.style.transition = 'opacity 1s ease';   
                         path.style.opacity = 1;
-                        }
-
-
-
-                        
+                        }                        
                         currentPathIndex++; // Move to the next path
                     }
                 });
