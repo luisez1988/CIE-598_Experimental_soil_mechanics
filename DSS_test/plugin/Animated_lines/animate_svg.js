@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const currentHash = window.location.hash;
         if (currentHash) {
             const hashLevels = currentHash.slice(1).split('/'); // Remove the '#' and split by '/'
-            const currentFirstLevel = hashLevels[1]; // Get the first level of the hash
+            const currentFirstLevel = hashLevels[1]; // Get the first level of the hash       
+            
 
             // Get section handle associated with current hash
             const sectionHandle = document.getElementById(currentFirstLevel);
@@ -45,11 +46,12 @@ document.addEventListener("DOMContentLoaded", function() {
             
             // Add click event listener to each div with class Animation
             animationDivs.forEach(div => {
+                
                 let currentPathIndex = 0; // Variable to keep track of the current path index
                 const svgPaths = div.querySelectorAll('.Animate');
 
                 svgPaths.forEach(element => {
-                    const tagType = getTagType(element);
+                    const tagType = getTagType(element);                    
 
                     // Add mouseover event listener to each path element
                     if (tagType === 'path') {
@@ -67,7 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 div.addEventListener('click', () => {
                     if (currentPathIndex < svgPaths.length) {
-
+                        // alert
+                        
                         const path = svgPaths[currentPathIndex];
 
                         // Select case based on the tag type
