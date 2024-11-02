@@ -26,6 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
             if (tagType === 'text') {
                 path.style.opacity = 0;
             }  
+            
+            if (tagType === 'g') {
+                path.style.opacity = 0;
+            }
         });
     });
 
@@ -79,11 +83,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         // If the tag type is path
                         if (tagType === 'path') {
                         const pathLength = path.getTotalLength();
+                        const strokeDashStyle = path.style.strokeDasharray;
                         path.style.strokeDasharray = pathLength;
                         path.style.strokeDashoffset = pathLength;
                         path.getBoundingClientRect(); // Trigger a reflow to ensure the animation works
                         path.style.transition = 'stroke-dashoffset 2s ease-in-out';
                         path.style.strokeDashoffset = '0';
+                        path.style.strokeDasharray = strokeDashStyle;
                         if (path.getAttribute('ns1:texconverter') === 'pdflatex') {
                             path.style.opacity = 1;    }  
                         }
@@ -92,7 +98,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (tagType === 'text') {
                         path.style.transition = 'opacity 1s ease';   
                         path.style.opacity = 1;
-                        }                        
+                        } 
+                        
+                        if (tagType === 'g') {    
+                        path.style.transition = 'opacity 1s ease';
+                        path.style.opacity = 1;     }     
+
                         currentPathIndex++; // Move to the next path
                     }
                 });
