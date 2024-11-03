@@ -12,8 +12,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // If the tag type is path
             if (tagType === 'path') {
+                // If path has dash style then save it 
+                if (path.style.strokeDasharray) {
+                    path.setAttribute('ns1:stroke-dasharray', path.style.strokeDasharray);
+                    
+                }
                 path.style.strokeDasharray = path.getTotalLength();
                 path.style.strokeDashoffset = path.getTotalLength();
+
+                // If has fill then save the fill color and make it transparent
+                if (path.style.fill) {
+                    path.setAttribute('ns1:fill', path.style.fill);
+                    path.style.fill = 'transparent';
+                }
+
+
+
+                // If path has markers then save info and make it transparent
+
+                if (path.style.markerEnd) {
+                    path.setAttribute('ns1:marker-end', path.style.markerEnd);
+                    path.style.markerEnd = 'none';
+                }
+
+                if (path.style.markerStart) {
+                    path.setAttribute('ns1:marker-start', path.style.markerStart);
+                    path.style.markerStart = 'none';
+                }
+
+                if (path.style.markerMid) {
+                    path.setAttribute('ns1:marker-mid', path.style.markerMid);
+                    path.style.markerMid = 'none';
+                }
+
 
                 // If ns1:texconverter="pdflatex" make it transparent works for latex
                 if (path.getAttribute('ns1:texconverter') === 'pdflatex') {
@@ -54,22 +85,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 let currentPathIndex = 0; // Variable to keep track of the current path index
                 const svgPaths = div.querySelectorAll('.Animate');
 
-                svgPaths.forEach(element => {
-                    const tagType = getTagType(element);                    
+                // svgPaths.forEach(element => {
+                //     const tagType = getTagType(element);                    
 
-                    // Add mouseover event listener to each path element
-                    if (tagType === 'path') {
-                        const originalStrokeWidth = element.style.strokeWidth; // Store the original stroke width
+                //     // Add mouseover event listener to each path element
+                //     if (tagType === 'path') {
+                //         const originalStrokeWidth = element.style.strokeWidth; // Store the original stroke width
 
-                        element.addEventListener('mouseover', () => {
-                            element.style.strokeWidth = '1'; // Change stroke width on hover
-                        });
+                //         element.addEventListener('mouseover', () => {
+                //             element.style.strokeWidth = '1'; // Change stroke width on hover
+                //         });
         
-                        element.addEventListener('mouseout', () => {
-                            element.style.strokeWidth = originalStrokeWidth; // Reset stroke width when not hovering
-                        });
-                    }
-                });
+                //         element.addEventListener('mouseout', () => {
+                //             element.style.strokeWidth = originalStrokeWidth; // Reset stroke width when not hovering
+                //         });
+                //     }
+                // });
 
                 div.addEventListener('click', () => {
                     if (currentPathIndex < svgPaths.length) {
@@ -87,9 +118,38 @@ document.addEventListener("DOMContentLoaded", function() {
                         path.style.strokeDasharray = pathLength;
                         path.style.strokeDashoffset = pathLength;
                         path.getBoundingClientRect(); // Trigger a reflow to ensure the animation works
-                        path.style.transition = 'stroke-dashoffset 2s ease-in-out';
+                        path.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
                         path.style.strokeDashoffset = '0';
                         path.style.strokeDasharray = strokeDashStyle;
+
+                        // delay two seconds
+                        setTimeout(() => {
+                            path.style.strokeDasharray = path.getAttribute('ns1:stroke-dasharray');
+                            path.style.transition = 'fill 0.5s ease-in-out';
+                            path.style.fill = path.getAttribute('ns1:fill');
+                        }, 1300);
+
+                        // add markers with 1300 delay
+                        setTimeout(() => {
+                        if (path.style.markerEnd) {
+                            path.style.markerEnd = path.getAttribute('ns1:marker-end');
+                        }
+
+                        if (path.style.markerStart) {
+                            path.style.markerStart = path.getAttribute('ns1:marker-start');
+                        }
+
+                        if (path.style.markerMid) {
+                            path.style.markerMid = path.getAttribute('ns1:marker-mid');
+                        }
+                        }   , 1450);
+
+                        // Recover original fill using an animation
+                        // if (path.style.fill) {
+                        //     //path.style.transition = 'fill 1s ease';
+                        //     path.style.fill = path.getAttribute('ns1:fill');
+                        // }
+
                         if (path.getAttribute('ns1:texconverter') === 'pdflatex') {
                             path.style.opacity = 1;    }  
                         }
