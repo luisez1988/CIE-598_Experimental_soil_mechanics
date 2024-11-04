@@ -1,0 +1,83 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+// Override theme settings (see ../template/settings.scss)
+
+
+// .reveal {
+// 	background: url("FiguresGeneral/Normal_slide_Maine.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 100%;
+// }
+
+
+
+$backgroundColor: #fff;
+$mainColor: #000;
+$headingColor: #7abbe6;
+
+$mainFontSize: 40px;
+$mainFont: 'Roboto Slab', Helvetica, sans-serif;
+$headingFont: 'EB Garamond', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #7abbe6;
+$barprogress_color: #7abbe6;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: darken( #7abbe6, 25% );
+
+$heading1Size: 1.5em;
+$heading2Size: 1.5em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+  display: block;
+  text-align: center;
+  font-style: bold;
+  border-bottom-style: solid;
+  border-bottom-color: #d6d2c4;
+  padding-bottom: 0px;
+  border-bottom-width: 3px;
+  font-size: $heading1Size;
+}
+
+// Change text colors against light slide backgrounds
+@include light-bg-text-color(#222);
+
+.multiCol {
+    display: table;
+    table-layout: fixed; // don't fudge depending on content
+    width: 100%;
+    text-align: center; // matter of taste, makes imho sense
+    .col {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+        padding: 0% 0 0% 0%; // some vertical, and between columns
+        &:first-of-type { padding-left: 0; } // there's nothing before col1
+    }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
