@@ -1,6 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     let previousFirstLevel = null; // Variable to keep track of the previous first level
 
+    // Function to get the parent element of a specific tag
+    function getParentElement(element) {
+        return element.parentElement;
+    }
+
     // Make all animation elements of svgs hidden
     const animationDivs = document.querySelectorAll('.Animation');
     animationDivs.forEach(div => {
@@ -114,11 +119,16 @@ document.addEventListener("DOMContentLoaded", function() {
                         // If the tag type is path
                         if (tagType === 'path') {
                         const pathLength = path.getTotalLength();
+                        const parentElement = getParentElement(path);
+                        const ParentTagType = getTagType(parentElement);
+
+                        const animationDuration = pathLength / (ParentTagType === 'g' ? 200 : 40);
                         const strokeDashStyle = path.style.strokeDasharray;
                         path.style.strokeDasharray = pathLength;
                         path.style.strokeDashoffset = pathLength;
-                        path.getBoundingClientRect(); // Trigger a reflow to ensure the animation works
-                        path.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
+                        path.getBoundingClientRect(); // Trigger a reflow to ensure the animation works                 
+                        
+                        path.style.transition = `stroke-dashoffset ${animationDuration}s linear`;
                         path.style.strokeDashoffset = '0';
                         path.style.strokeDasharray = strokeDashStyle;
 
@@ -127,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             path.style.strokeDasharray = path.getAttribute('ns1:stroke-dasharray');
                             path.style.transition = 'fill 0.5s ease-in-out';
                             path.style.fill = path.getAttribute('ns1:fill');
-                        }, 1300);
+                        }, animationDuration*1000);
 
                         // add markers with 1300 delay
                         setTimeout(() => {
@@ -142,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         if (path.style.markerMid) {
                             path.style.markerMid = path.getAttribute('ns1:marker-mid');
                         }
-                        }   , 1450);
+                        }   , animationDuration*1000);
 
                         // Recover original fill using an animation
                         // if (path.style.fill) {
