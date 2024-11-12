@@ -183,6 +183,197 @@
         </div>
 
         </section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Types of hammer</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Must weigh <span class='atb'>140 lb</span> (63.5 kg) and have a <span class='atb'>30 in</span> (76.2 cm) drop.
+		</div>
+		<div class='container'>
+		<div class='col' style='width: 45%;'>
+			<figure>
+				<img src='FiguresGeneral/hammers.svg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+		</div>
+		<div class='col' style='width: 55%;'>
+		<div class='findingBox' style='margin-top: 5px;margin-left: 0px;'>
+		Te <span class='atb'>maximum</span> theoretical energy <strong style='color:green'>\(E_{max}\)</strong> delivered by the hammer is <span class='atb'>4200 lb-in</span>.
+		</div>
+
+		<div class='defBox' name='Energy efficiency' style='margin-top: 5px;margin-left: 0px;'>
+		<strong style='color:green'>\(E_{E}\):</strong> <br>
+		<div class='equationBox'>
+		\( E_E= E_{h}/E_{max} \)
+		</div>
+		</div>
+
+		<ul>
+			<li class='fragment'>Donut hammer: \(E_E=45\%\)</li>
+			<li class='fragment'>Safety hammer: \(E_E=60\%\)</li>
+			<li class='fragment'>Automatic hammer: \(E_E= 78\% \)</li>
+		</ul>
+		</div>
+		</div>
+
+		</section>
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Blow count corrections</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		The <strong style='color:#7abbe6'>field blow count</strong> \(N\) must be corrected for the <span class='atb'>energy loss</span>.
+		</div>
+
+		<div class='defBox' name='Normalized blow count' style='margin-top: 10px;margin-left: 0px;'>
+		<strong style='color:green'>\(N_{60}\):</strong> Is the blow count delivered by a <strong style='color:#7abbe6'>safety hammer</strong> with a <span class='atb'>60% energy efficiency</span>. It can be calculated as:
+		<div class='equationBox'>
+		\( N_{60}= N C_E C_R C_B C_S C_A C_{BF} C_C \)
+		</div>
+		</div>
+		Correction factors:
+		<div class='container'>
+		<div class='col' style='width: 50%;'>
+		<ul>
+			<li> \(C_E \equiv\) Hammer energy.</li>
+			<li> \(C_R \equiv\) Rod length.</li>
+			<li> \(C_B \equiv\) Borehole diameter.</li>
+			
+		</ul>
+		</div>
+		<div class='col' style='width: 50%;'>
+		<ul>
+			<li> \(C_S \equiv\) liner.</li>
+			<li> \(C_A \equiv\) anvil</li>
+			<li> \(C_{BF} \equiv\) Blow count frequency</li>
+			<li> \(C_{C} \equiv\) Hammer cushion</li>
+		</ul>
+		</div>
+		</div>
+		
+		</section>
+
+
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+		In practice, <strong style='color:green'>only</strong> the <span class='atb'>hammer energy</span> and <span class='atb'>rod length</span> are corrected. See McGregor and Duncan (1998) for more details.
+		</div>
+
+		<div class='container'>
+		<div class='col bordered' style='width: 50%;'>
+		<h4>Hammer energy corrections</h4>
+
+		<table style="background-color: antiquewhite;">
+			<tr>
+				<th>Hammer</th>
+				<th>Correction factor</th>
+			</tr>
+			<tr>
+				<td>Donut</td>
+				<td>0.75</td>
+			</tr>
+			<tr>
+				<td>Safety</td>
+				<td>1.0</td>
+			</tr>
+			<tr>
+				<td>Automatic</td>
+				<td>1.3</td>
+			</tr>
+
+		</table>
+
+
+		</div>
+		<div class='col bordered' style='width: 50%;'>
+			<h4>Rod length corrections</h4>
+
+			<table style="background-color: antiquewhite;">
+				<tr>
+					<th>Length (ft)</th>
+					<th>Correction factor</th>
+				</tr>
+				<tr>
+					<td>10-13</td>
+					<td>0.75</td>
+				</tr>
+				<tr>
+					<td>13-20</td>
+					<td>0.85</td>
+				</tr>
+				<tr>
+					<td>20-30</td>
+					<td>0.95</td>
+				</tr>
+				<tr>
+					<td>30-100</td>
+					<td>1.0</td>
+				</tr>
+				<tr>
+					<td>>100</td>
+					<td><1.0 </td>
+				</tr>
+
+			</table>
+		</div>
+		</div>
+		
+		</section>
+
+	
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+
+		<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:green'>\(N_{1,60}\):</strong> Is the blow count normalized to a <span class='atb'>normal stress</span> of 1 atm. It can be calculated as:
+
+		<div class='equationBox'>
+		\( N_{1,60}= N_{60} C_N \)
+		</div>
+		</div>
+
+		<table style="font-size: 0.9em; background-color: antiquewhite; margin-top: 10px;">
+			<tr>
+				<th>Author</th>
+				<th>Equation</th>
+				<th>Note</th>
+			</tr>
+			<tr>
+				<td>Peck and Bazaraa (1969)</td>
+				<td>
+					\( \begin{align}
+					C_N & = \begin{cases}
+					\frac{4}{1+ 2 \sigma'_v} & \text{if } \sigma'_{v} \leq 1.5 \\
+					\frac{4}{3.25+ 0.5 \sigma'_v} & \text{if } \sigma'_{v} > 1.5
+					\end{cases}
+					\end{align} \)
+
+				</td>
+				<td>
+					Use ksf
+				</td>
+			</tr>
+			<tr>
+				<td>Peck et al. (1974)</td>
+				<td>
+					\( \begin{align}
+					C_N= 0.77 \log_{10}(20/\sigma'_{v}) 
+					\end{align} \)
+				</td>
+				<td> Use \(\text{kg/cm}^2\) or tsf</td>
+			</tr>
+			<tr>
+				<td>Tokimatsu and Yoshimi (1983)</td>
+				<td> 
+					\( \begin{align}
+					C_N= \frac{1.7}{0.7+ \sigma'_{v}}
+					\end{align} \)
+				</td>
+				<td> Use \(\text{kg/cm}^2\) or tsf</td>
+			</tr>
+
+
+		</table>
+		
+		</section>
 		
 
 
