@@ -78,7 +78,7 @@
 					<section data-background-image="FiguresGeneral/Main_slide_Maine.svg">
 
 						<div style="margin-top:300px;margin-left:0px" class="qrCode_cont" name="Get pdf">
-							<div class="qrCode" name="https://drive.google.com/file/d/15vMjST6_vjN4Lq31JdLwH3C-hncMDTu_/view?usp=sharing"> </div>
+							<div class="qrCode" name="https://drive.google.com/file/d/1LyokYgIKiZCk_P91WCPPw60ilHqDL7fA/view?usp=sharing"> </div>
 						</div>
 			
 						<div style="margin-top:-450px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 8: Standard Penetration Test">
@@ -2234,11 +2234,54 @@
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Variation in SPT results</h1>
+	<div class='container'>
+	<div class='col' style='width: 33%;'>
+	<figure>
+	<img src='FiguresGeneral/repetebility.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	<div class='col' style='width: 67%;'>
+
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		The <span class='atb'>repeatability</span> of <strong style='color:#7abbe6'>in-situ</strong> tests is key for the <span class='atb'>reliability</span> of the results. 
+
+		</div>	
+
+		<ul>
+			<li class='fragment'>SPT results are <strong style='color:green'>more reliable</strong> when using <span class='atb'>automatic hammer</span>.</li>
+
+			<li class='fragment'>SPT results are <strong style='color:green'>more reliable</strong> when <strong style='color:#7abbe6'>appropriately</strong> correcting for <strong style='color:#7abbe6'>energy efficiency</strong>.</li>
+		</ul>
+
+		<div class='findingBox fragment' style='margin-top: 0px;margin-left: 0px;'>
+		<strong style='color:green'>Repeatable</strong> results could be obtained as long as <span class='atb'>same</span> SPT setup is used.
+		</div>
 	
+	</div>
+	</div>
 	</section>
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Adequate use of SPT correlations</h1>
+
+	<div class="textBox" style="margin-top: 0; margin-left: 0;">
+		SPT results are used to obtain <span class="atb">soil parameters</span> of interest via <span class="atb">correlations</span>. As explained earlier, <strong style="color: #7abbe6;">the reliability of SPT</strong> results is constrained. <strong style="color: red;">Caution</strong> must be exercised when using correlations.
+	</div>
+
+	<ul><li class='fragment'>
+		<strong style='color:#7abbe6'>Before</strong> using a correlation, <strong style='color:#7abbe6'>determine</strong>: <br>
+		<ol>
+			<li><strong style='color:#7abbe6'>how</strong> was it constructed.</li>
+			<li><strong style='color:#7abbe6'>What types of soils</strong> were used in the database?</li>
+			<li><strong style='color:#7abbe6'>What SPT setup</strong> was used in experiments?</li>
+			<li>What is the <strong style='color:#7abbe6'>typical range</strong> of \(N\) (among others) in the database?</li>
+		</ol>
+	</li>
+	<li class='fragment'><strong style='color:#7abbe6'>After</strong> using correlations <span class='atb'>validate</span> your results. Are you obtaining parameter values as <span class='atb'>expected</span>?</li>
+</ul>
+	
+	
 	
 	</section>
 
@@ -2246,23 +2289,224 @@
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Correlations of SPT with \(D_r\)</h1>
 
+	<table style="font-size: 0.4em; background-color: antiquewhite; margin-top: -20px;">
+		<caption>Table reproduced from Duncan et al. (2014).</caption>
+		<thead>
+			<tr>
+				<th>Soil Type</th>
+				<th>Relative Density (\(D_r\))</th>
+				<th>Parameters and Units</th>
+				<th>Reference</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Normally consolidated sands</td>
+				<td>\(D_r = \sqrt{\frac{N}{1.7(10 + \sigma'_v)}}\)</td>
+				<td>\(\sigma'_v\) = effective vertical stress in psi</td>
+				<td>Gibbs and Holtz (1957)</td>
+			</tr>
+			<tr>
+				<td>Normally consolidated silica sands</td>
+				<td>\(D_r = \sqrt{\frac{N}{0.234\sigma'_v + 16}}\)</td>
+				<td>
+					\(N\) = SPT blow count in blows/ft<br>
+					\(\sigma'_v\) = effective vertical stress in kPa
+				</td>
+				<td>Meyerhof (1956)</td>
+			</tr>
+			<tr>
+				<td>Coarse sands</td>
+				<td>
+					\(D_r = \sqrt{\frac{N}{0.773\sigma'_v + 22}}\) for \(\sigma'_v < 75\) kPa<br>
+					\(D_r = \sqrt{\frac{N}{0.193\sigma'_v + 66}}\) for \(\sigma'_v \geq 75\) kPa
+				</td>
+				<td>\(\sigma'_v\) = effective vertical stress in kPa</td>
+				<td>Peck and Bazaraa (1969)</td>
+			</tr>
+			<tr>
+				<td>Ottawa Sand</td>
+				<td>
+					\(D_r = \frac{8.6 - 0.83 \sqrt{N} + 10.4 - 3.2(OCR) - 0.24\sigma'_v}{0.0045}\)
+				</td>
+				<td>
+					\(\sigma'_v\) = effective vertical stress in psi<br>
+					\(OCR\) = overconsolidation ratio
+				</td>
+				<td>Marcuson and Bieganousky (1977)</td>
+			</tr>
+			<tr>
+				<td>Normally consolidated sands</td>
+				<td>
+					\(D_r = \sqrt{\frac{N_{60}}{a \cdot \sigma'_v + b}}\)<br>
+					\(C_f = \frac{1 + K_0}{1 + 2K_{0-nc}}\)
+				</td>
+				<td>
+					\(\sigma'_v\) = effective vertical stress in kPa<br>
+					\(N_{60}\) = blow count corrected to 60% of the maximum theoretical energy<br>
+					\(a = 0.3\) (mean value), \(b = 30\) (mean value)<br>
+					If sand is overconsolidated, increase \(b\) by a factor of \(C_f\).<br>
+					\(K_0\) = ratio of effective horizontal stress to vertical stress for overconsolidated sand<br>
+					\(K_{0-nc}\) = ratio of effective horizontal to vertical stress for normally consolidated sand (\(\approx 1 - \sin \phi\)).
+				</td>
+				<td>Skempton (1986)</td>
+			</tr>
+		</tbody>
+	</table>
 
+	<div class='findingBox' style='margin-top: 5px;margin-left: 0px; font-size: 0.8em;'>
+	Equations using \(N\) used the uncorrected blow count. However, hammers delivering 60 percent of the theoretical energy have been the  most commonly used, thus, it seems more appropriate to use \(N_{60}\) instead.
+	</div>
+	
 	
 	</section>
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Correlations with friction angles</h1>
 	
+
+	<table style="font-size: 0.55em; background-color: antiquewhite;">
+		<caption>Table reproduced from Duncan et al. (2014)</caption>
+		<thead>
+			<tr>
+				<th>Soil Type</th>
+				<th>\(\phi\) (deg)</th>
+				<th>Reference</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Angular and well-graded soil particles</td>
+				<td>\(\phi = \sqrt{12N} + 25\)</td>
+				<td>Dunham (1954)</td>
+			</tr>
+			<tr>
+				<td>Round and well-graded or angular and uniformly graded soil particles</td>
+				<td>\(\phi = \sqrt{12N} + 20\)</td>
+				<td>Dunham (1954)</td>
+			</tr>
+			<tr>
+				<td>Round and uniformly graded soil particles</td>
+				<td>\(\phi = \sqrt{12N} + 15\)</td>
+				<td>Dunham (1954)</td>
+			</tr>
+			<tr>
+				<td>Sandy</td>
+				<td>\(\phi = \sqrt{12N} + 15\)</td>
+				<td>Ohsaki et al. (1959)</td>
+			</tr>
+			<tr>
+				<td>Granular</td>
+				<td>\(\phi = 20 + 3.5\sqrt{N}\)</td>
+				<td>Muromachi et al. (1974)</td>
+			</tr>
+			<tr>
+				<td>Sandy</td>
+				<td>\(\phi = \sqrt{15N} + 15 \leq 45 \, \text{for } N > 5\)</td>
+				<td>Japan Road Association (1990)</td>
+			</tr>
+			<tr>
+				<td>Sandy</td>
+				<td>
+					\(\phi = \sqrt{12N_1} + 20\)<br>
+					\(N_1 = N\) normalized to 1 tsf of overburden pressure using the Liao and Whitman (1986) equation.<br>
+					It is recommended to use \(N_{1,60}\) with this correlation.
+				</td>
+				<td>Hatanaka and Uchida (1996)</td>
+			</tr>
+		</tbody>
+	</table>
+	
 	</section>
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Correlations with \(S_u\)</h1>
+	<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+	Many authors argue SPT values in clay are <span class='atb'>of little value</span> unless the clay is relatively <span class='atb'>stiff and insensitive</span>.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 60%;'>
+		<table style="font-size: 0.9em; background-color: antiquewhite;">
+			<caption style="font-size: 0.8em;">Reproduced from Terzaghi and Peck (1967)</caption>
+			<tr>
+				<th>Soil consistency</th>
+				<th>SPT \(N\)</th>
+				<th>\(S_u\) (psf)</th>
+			</tr>
 	
+			<tr>
+				<td>Very soft</td>
+				<td>< 2</td>
+				<td>< 250</td>
+			</tr>
+	
+			<tr>
+				<td>Soft</td>
+				<td>2 - 4</td>
+				<td>250 - 500</td>
+			</tr>
+	
+			<tr>
+				<td>Medium</td>
+				<td>4 - 8</td>
+				<td>500 - 1000</td>
+			</tr>
+	
+			<tr>
+				<td>Stiff</td>
+				<td>8 - 15</td>
+				<td>1000 - 2000</td>
+			</tr>
+	
+			<tr>
+				<td>Very stiff</td>
+				<td>15 - 30</td>
+				<td>2000 - 4000</td>
+			</tr>
+	
+			<tr>
+				<td>Hard</td>
+				<td>>30</td>
+				<td>>4000</td>
+			</tr>
+	
+		</table>
+	</div>
+	<div class='col' style='width: 40%;'>
+	<figure style="margin-top: -20px;">
+	<img src='FiguresGeneral/SPT_FIG.svg' width='100%'/>
+	<footer style='margin-top: -50px;font-size: 0.8em;'> <em>Modified from Stroud (1974)</em> </footer>
+	</figure>
+	</div>
+	</div>
+
+
+
 	</section>
 
 
 	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 	<h1>Take away</h1>
+
+	<ul>
+		<li class='fragment'>
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<strong style='color:green'>SPT</strong> is a <span class='atb'>simple</span> and <span class='atb'>inexpensive</span> test to obtain <span class='atb'>in-situ</span> soil properties.
+			</div>
+		</li>
+		<li class='fragment'>
+			<strong style='color:red'>Caution</strong> must be exercised when using <span class='atb'>correlations</span> to obtain <span class='atb'>soil parameters</span>.
+		</li>
+		<li class='fragment'>
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			<strong style='color:green'>Repeatability</strong> of SPT results is key for the <span class='atb'>reliability</span> of the results.
+			</div>
+		</li>
+		<li class='fragment'>
+			<strong style='color:green'>SPT</strong> results are <span class='atb'>affected</span> by many factors such as overburden stress, <span class='atb'>energy delivered</span>, test setup, among others.
+		</li>
+	</ul>
 	
 	</section>
 
