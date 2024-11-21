@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2in"
+   height="1.9in"
+   viewBox="0 0 50.800001 48.259999"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="sat_practice.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.2021885"
+     inkscape:cx="109.89068"
+     inkscape:cy="118.06437"
+     inkscape:window-width="1536"
+     inkscape:window-height="807"
+     inkscape:window-x="973"
+     inkscape:window-y="1077"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#path3,0,1|#path2,0,1|"
+       id="path-effect3" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       inkscape:original-d="M 0,0"
+       inkscape:path-effect="#path-effect3"
+       d="M 0,48.127708 H 50.799999 V 12.975728 H 0 Z"
+       id="path4"
+       style="fill:#ffb380" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,12.975728 H 50.799999"
+       id="path2" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,48.127708 H 50.799999"
+       id="path3" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:0.52916598,0.26458299;stroke-dashoffset:0"
+       d="M 25.4,0 V 48.259999"
+       id="path1" />
+    <path
+       style="fill:#808080;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+       d="m 11.835938,0.05 v 34.40625 l 0.482421,1.058333 0.482422,-1.058333 V 0.05 Z"
+       id="path5"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#000080;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0,40.008495 H 50.799999"
+       id="path6" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000080;stroke:#000080;stroke-width:0.1;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       id="path7"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="-34.121361"
+       sodipodi:cy="-11.293689"
+       sodipodi:r1="1.8061849"
+       sodipodi:r2="0.90309298"
+       sodipodi:arg1="1.5707963"
+       sodipodi:arg2="2.6179939"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -34.121361,-9.4875039 -0.782101,-1.3546381 -0.782101,-1.354639 1.564202,-1e-6 1.564202,1e-6 -0.7821,1.354639 z"
+       inkscape:transform-center-y="0.45154595"
+       transform="translate(35.965409,49.263707)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;inline-size:9.91729;display:inline;stroke-width:0.264583"
+       x="2.8834949"
+       y="22.827669"
+       id="text7"
+       transform="translate(-2.0764188,1.8072319)"><tspan
+         x="2.8834949"
+         y="22.827669"
+         id="tspan1">Vadose </tspan><tspan
+         x="2.8834949"
+         y="25.84392"
+         id="tspan2">zone</tspan></text>
+    <path
+       style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 11.835938,34.456251 h 0.964843"
+       id="path8" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';stroke-width:0.264583;fill:#000080"
+       x="0.64259195"
+       y="46.586376"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="stroke-width:0.264583;fill:#000080"
+         x="0.64259195"
+         y="46.586376">Fully saturated zone</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';white-space:pre;inline-size:16.4348;display:inline;fill:#008000;stroke-width:0.264583"
+       x="12.800781"
+       y="32.679611"
+       id="text9"
+       transform="translate(0.97429011,-3.1203907)"><tspan
+         x="12.800781"
+         y="32.679611"
+         id="tspan3">Pore </tspan><tspan
+         x="12.800781"
+         y="35.695862"
+         id="tspan4">pressure </tspan><tspan
+         x="12.800781"
+         y="38.712113"
+         id="tspan5">filter</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 13.764219,34.456251 H 12.800781"
+       id="path9" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';white-space:pre;inline-size:21.9051;display:inline;fill:#ff0000;stroke-width:0.264583"
+       x="3.4948525"
+       y="3.4842234"
+       id="text10"
+       transform="translate(-2.6768949,0.24029126)"><tspan
+         x="3.4948525"
+         y="3.4842234"
+         id="tspan6">Undesirable </tspan><tspan
+         x="3.4948525"
+         y="6.5004735"
+         id="tspan7">situation</tspan></text>
+    <path
+       d="m 35.822266,12.84375 v 19.052734 h 3.964843 V 12.84375 Z"
+       id="path10"
+       style="fill:#ffffff;stroke:none" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000080;stroke:#000080;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:4.1;stroke-dasharray:none;stroke-dashoffset:0;paint-order:markers fill stroke"
+       id="path12"
+       inkscape:flatsided="false"
+       sodipodi:sides="3"
+       sodipodi:cx="-34.121361"
+       sodipodi:cy="-11.293689"
+       sodipodi:r1="1.8061849"
+       sodipodi:r2="0.90309298"
+       sodipodi:arg1="1.5707963"
+       sodipodi:arg2="2.6179939"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -34.121361,-9.4875039 -0.782101,-1.3546381 -0.782101,-1.354639 1.564202,-1e-6 1.564202,1e-6 -0.7821,1.354639 z"
+       inkscape:transform-center-y="0.22577245"
+       transform="matrix(0.49999992,0,0,0.49999992,52.882944,21.191239)" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';white-space:pre;inline-size:14.2817;stroke-width:0.264583"
+       x="39.787106"
+       y="31.896484"
+       id="text12"
+       transform="translate(-18.744652,-11.462064)"><tspan
+         x="39.787106"
+         y="31.896484"
+         id="tspan9">Pre-drill </tspan><tspan
+         x="39.787106"
+         y="34.912735"
+         id="tspan10">and fill </tspan><tspan
+         x="39.787106"
+         y="37.928986"
+         id="tspan11">with water</tspan></text>
+    <path
+       style="fill:#808080;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+       d="m 37.142823,0.05 v 34.40625 l 0.482421,1.058333 0.482422,-1.058333 V 0.05 Z"
+       id="path13"
+       sodipodi:nodetypes="cccccc" />
+    <path
+       style="fill:none;stroke:#008000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 37.142823,34.456251 h 0.964843"
+       id="path14" />
+    <path
+       d="m 35.822266,16.578152 v 15.318332 h 3.964843 V 16.578152 Z"
+       id="path11"
+       style="fill:#000080;stroke:none;stroke-width:0.999998;opacity:0.295" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 31.358009,22.430384 h 4.464256"
+       id="path15" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:0.95;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, ';white-space:pre;inline-size:16.9093;stroke-width:0.264583;fill:#008000"
+       x="26.612257"
+       y="2.6432037"
+       id="text15"
+       transform="translate(-2.5230583,-0.12067921)"><tspan
+         x="26.612257"
+         y="2.6432037"
+         id="tspan12">Improved </tspan><tspan
+         x="26.612257"
+         y="5.6594536"
+         id="tspan13">filter </tspan><tspan
+         x="26.612257"
+         y="8.6757035"
+         id="tspan14">saturation</tspan></text>
+  </g>
+</svg>

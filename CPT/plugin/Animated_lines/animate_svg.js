@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         const parentElement = getParentElement(path);
                         const ParentTagType = getTagType(parentElement);
 
-                        const animationDuration = pathLength / (ParentTagType === 'g' ? 200 : 40);
+                        const animationDuration = pathLength / (ParentTagType === 'g' ? 30 : 30);
                         const strokeDashStyle = path.style.strokeDasharray;
                         path.style.strokeDasharray = pathLength;
                         path.style.strokeDashoffset = pathLength;
