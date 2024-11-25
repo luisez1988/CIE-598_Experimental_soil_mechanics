@@ -1847,24 +1847,320 @@
 
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Soil behavior type</h1>
+		<h1>Soil behavior type (SBT)</h1>
+
+      <div class='textBox' style='margin: 0;'>
+         Soil type can be <span class='atb'>interpreted</span> because: <strong style='color:green'>\(q_t\)</strong> is higher in sand and lower in clay, while <strong style='color:blue'>friction ratio \(R_f\)</strong>  is lower in sand and higher in clay.
+      </div>
+         
+
+      <div class='container'>
+      <div class='col' style='width:40%'>
+      <figure style="margin-top: -30px;">
+      <img src='FiguresGeneral/SBT.svg' width='100%'/>
+      <footer style='margin-top: -30px;font-size: 0.8em;'> <em>From Robertson et al. (1986)</em> </footer>
+      </figure>
+      </div>
+
+      <div class='col' style='width:30%'>
+
+         <table style="font-size: 0.5em; background-color: antiquewhite;">
+         <tr>
+            <td><strong>Zone</strong> </td>
+            <td> <strong>SBT</strong></td>
+         </tr>
+
+         <tr>
+            <td>1</td>
+            <td> Sensitive fine grained</td>
+         </tr>
+
+         <tr>
+            <td>2</td>
+            <td>Organic material</td>
+         </tr>
+
+         <tr>
+            <td>3</td>
+            <td>Clay</td>
+         </tr>
+
+         <tr>
+            <td>4</td>
+            <td>Silty clay to clay</td>
+         </tr>
+
+         <tr>
+            <td>5</td>
+            <td>Clayey silt to silty clay</td>
+         </tr>
+
+         <tr>
+            <td>6</td>
+            <td>Sandy silt to clayey silt</td>
+         </tr>
+
+         <tr>
+            <td>7</td>
+            <td>Silty sand to sandy silt</td>
+         </tr>
+
+         <tr>
+            <td>8</td>
+            <td>Sand to silty sand</td>
+         </tr>
+
+         <tr>
+            <td>9</td>
+            <td>Sand</td>
+         </tr>
+
+         <tr>
+            <td>10</td>
+            <td>Gravelly sand to sand</td>
+         </tr>
+
+         <tr>
+            <td>11</td>
+            <td>Very stiff fine grained*</td>
+         </tr>
+
+         <tr>
+            <td>12</td>
+            <td>Sand to clayey sands*</td>
+         </tr>
+         </table>
+
+      </div> 
+
+
+      <div class='col' style='width:30%'>
+
+      <div class='findingBox fragment' style='margin-top: 5px;margin-left: 0px;'>
+      <strong style='color:#7abbe6'>Note:</strong> Soil type is <span class='atb'>different</span> thant <strong style='color:#7abbe6'>USCS</strong>.
+      </div>   
+
+      <div class='defBox fragment' name='Friction ratio' style='margin-top: 5px;margin-left: 0px;'>
+      <strong style='color:green'>\(R_f:\)</strong> <br>
+      <div class='equationBox'>
+      \( R_f= \frac{f_s}{q_t} \times 100\% \)
+      </div>
+      </div>
+      </div>
+
+
+      
+      </div>
 		
 		</section>
 
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Normalized stresses</h1>
+         <div class='textBox' style='margin: 0;'>
+            <strong style='color:#7abbe6'> Incongruities</strong> at <span class='atb'>large depths</span> in the original SBT chart required <span class='atb'>normalizing</span> \(q_t\) to account for depth effects.
+         </div>
+
+         <div class='defBox fragment' name='Normalized cone resistance' style='margin-top: 5px;margin-left: 0px;'>
+            <strong style='color:green'>\(Q_t\):</strong> <br>
+<div class='container'>
+<div class='col' style='width:50%'>
+   <div class='equationBox'>
+      \( Q_t= \frac{q_t-\sigma_{vo}}{\sigma'_{vo}} \)
+      </div>
+</div>
+<div class='col' style='width:50%'>
+<p style="margin-top: -10px;">
+   \(\sigma_{vo} \equiv\) Total vertical stress <br>
+   \(\sigma'_{vo} \equiv\) Effective vertical stress
+</p>
+</div>
+</div>
+         </div>
+ 
+<div class='defBox fragment' name='Normalized friction ratio' style='margin-top: 5px;margin-left: 0px;'>
+            <strong style='color:green'>\(F\):</strong> <br>
+            <div class='equationBox'>
+               \( F= \frac{f_s}{q_t-\sigma_{v_o}} \times 100\% \)
+               </div>
+</div>
+
+<div class='defBox fragment' name='Normalized pore pressure' style='margin-top: 5px;margin-left: 0px;'>
+<strong style='color:green'>\(B_q\)</strong>: <br>
+<div class='container'>
+<div class='col' style='width:60%'>
+<div class='equationBox'>
+\( B_q= \Delta u/ q_n \)
+</div>
+</div>
+<div class='col' style='width:40%'>
+<p style="margin-top: -70px;">
+   \(\Delta u= u_2 - u_0 \equiv\) Excess pore pressure. <br>
+   \(q_n= q_t- \sigma_{vo} \equiv\) Net cone resistance.
+</p>
+</div>
+</div>
+</div>
 		
-		<div class='defBox' name='' style='margin-top: 0px;margin-left: 0px;'>
-		
-		</div>
+
 		
 		</section>
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<h1>Corrected SBT</h1>
+		<figure style="margin-top: -20px;">
+      <img src='FiguresGeneral/NEW_SBT.svg' width='100%'/>
+      <footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+      </figure>
+
+      <div class='defBox' name='SBT index' style='margin-top: -70px;margin-left: 0px;'>
+      <strong style='color:green'>\(I_c\)</strong>: <br>
+      <div class='equationBox'>
+      \( I_c= \sqrt{(3.47- \log Q_t)^2 + (\log F_r + 1.22)^2} \)
+      </div>
+      </div>
 		
 		</section>
+
+      <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+         <table style="font-size: 1em; background-color: antiquewhite;">
+            <tr>
+               <td><strong>Zone</strong> </td>
+               <td> <strong>SBT</strong></td>
+               <td> <strong>\(I_c\)</strong></td>
+            </tr>
+   
+            <tr>
+               <td>1</td>
+               <td> Sensitive fine grained</td>
+               <td> N/A</td>
+            </tr>
+   
+            <tr>
+               <td>2</td>
+               <td>Organic soils- peats</td>
+               <td>> 3.6</td>
+            </tr>
+   
+            <tr>
+               <td>3</td>
+               <td>Clay - silty clay to clay</td>
+               <td>2.95-3.6 </td>
+            </tr>
+   
+            <tr>
+               <td>4</td>
+               <td>Silt mixtures - clayey silt to silty clay</td>
+               <td>2.60-2.95</td>
+            </tr>
+   
+   
+            <tr>
+               <td>5</td>
+               <td>Sand mixtures - silty sand to sandy silt</td>
+               <td>2.05-2.60</td>
+            </tr>
+   
+            <tr>
+               <td>6</td>
+               <td>Sands - clean sand to silty sand</td>
+               <td>1.31-2.05</td>
+            </tr>
+   
+            <tr>
+               <td>7</td>
+               <td>Gravelly sand to dense sand</td>
+               <td>< 1.31</td>
+            </tr>
+   
+            <tr>
+               <td>8</td>
+               <td>Very stiff sand to clayey sand*</td>
+               <td>N/A</td>
+            </tr>
+   
+            <tr>
+               <td>9</td>
+               <td>Very stiff fine grained*</td>
+               <td>N/A</td>
+            </tr>
+            </table>
+      
+      </section>
+
+      <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+      <figure>
+      <img src='FiguresGeneral/CPT_example.svg' width='100%'/>
+      <footer style='margin-top: -50px;font-size: 0.8em;'> <em>Taken from Robertson and Cabal (2007)</em> </footer>
+      </figure>
+      
+      </section>
+
+
+      <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+      <h1>  Use of CPT to obtain Soil Properties</h1>
+
+      <div class='textBox' style='margin: 0;'>
+         The CPT has a solid <span class='atb'>theoretical foundation</span>, supported by numerous <span class='atb'>semi-empirical</span> correlations, and remains an <strong style='color:#7abbe6'>active</strong> research area.
+      </div>
+
+      <p>
+         <strong style='color:#7abbe6'>Reliability and applicability</strong> of CPTU for soil parameters (Robertson & Cabal, 2015)
+         </p>
+         
+   <table style="font-size: 0.8em; background-color: antiquewhite;">
+      
+      <tr>
+         <td><strong>Soil type</strong></td>
+         <td>\(D_r\)</td>
+         <td>\(\psi\)</td>
+         <td>\(K_o\)</td>
+         <td>\(OCR\)</td>
+         <td>\(S_t\)</td>
+         <td>\(S_u\)</td>
+         <td>\(\phi'\)</td>
+         <td>\(E,G\)</td>
+         <td>\(M\)</td>
+         <td>\(G_{max}\)</td>
+         <td>\(k\)</td>
+         <td>\(C_h\)</td>
+      </tr>
+
+      <tr>
+         <td>Sand</td>
+         <td>2-3</td>
+         <td>2-3</td>
+         <td>-</td>
+         <td>5</td>
+         <td>-</td>
+         <td>-</td>
+         <td>2-3</td>
+         <td>3-4</td>
+         <td>-</td>
+         <td>2-3</td>
+         <td>3</td>
+         <td>3-4</td>
+      </tr>
+
+      <tr>
+         <td>Clay</td>
+         <td>-</td>
+         <td>-</td>
+         <td>2</td>
+         <td>1</td>
+         <td>2</td>
+         <td>1-2</td>
+         <td>4</td>
+         <td>3-4</td>
+         <td>4</td>
+         <td>3-4</td>
+         <td>2-3</td>
+         <td>2-3</td>
+      </tr>
+
+      <caption> \(S_t\equiv\) sensitivity, \(E,G \equiv\) Young's and Shear moduli, \(M \equiv\) modulus of eodometric compressibility, \(G_{max} \equiv\) small strain shear moduli. 1= High to 5=low reliability </caption>
+   </table>
+         
+      
+      </section>
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
 		<h1>Correlations with \(OCR\)</h1>
