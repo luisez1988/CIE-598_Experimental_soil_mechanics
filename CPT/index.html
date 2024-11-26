@@ -2219,6 +2219,127 @@
    </section>
 
 
+   <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+   <h1>Soil sensitivity</h1>
+
+   <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+   The <strong style='color:green'>remolded</strong> undrained shear strength can be assumed equal to the <span class='atb'>sleeve friction</span> \(f_s\). Therefore the sensitivity can be calculated using: 
+   </div>
+
+   <div class='equationBox' style="margin-top: 50px;">
+   \( S_t= \cfrac{S_u}{S_{u,remolded}}= \cfrac{q_t - \sigma_v}{N_{kt}} \cfrac{1}{f_s} \)
+   </div>
+
+   <p>For <strong style='color:red'>\(S_t>10\)</strong> the value of \(f_s\) can be <span class='atb'>very low</span>, thus generating inherent issues with accuracy. Therefore, the estimate of sensitivity should be used as <span class='atb'>guide only</span>.</p>
+   
+   </section>
+
+
+   <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+   <h1>Undrained shear strength ratio (USR)</h1>
+   <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+   Determining the <strong style='color:green'>\(USR\)</strong> from CPT is <strong style='color:#7abbe6'>useful</strong> because its relationship with \(OCR\). 
+   </div>
+
+   <div class='equationBox' style="margin-top: 10px;">
+   \( (S_u/\sigma'_{vo})_{NC} = \left(\cfrac{q_t-\sigma_{vo}}{\sigma'_{vo}} \right) \cfrac{1}{N_{kt}}= Q_t/N_{kt}\)
+   </div>
+
+   <p>As a <strong style='color:#7abbe6'>rule of thumb</strong>, and since \(N_{kt}\approx 14\): <br>
+   
+      \( \begin{align}
+      (S_u/\sigma'_{vo})_{NC} \approx 0.071 Q_t
+      \end{align} \) <br>
+
+   For <span class='atb'>NC clay</span> \(Q_t \approx 3\)
+   </p>
+
+   <div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+   Assuming \(S_{u,remolded}= f_s\) leads to: <br>
+   <div class='equationBox'>
+   \( S_u/\sigma'_{vo}= f_s/\sigma'_{vo} = F Q_t/100 \)
+   </div>
+   </div>
+
+
+
+   </section>
+
+
+   <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+   <h1>Stress history- OCR</h1>
+
+   <div class='container'>
+   <div class='col' style='width: 70%;'>
+   <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+   The following is a simple method to estimate the OCR in fined grained soils:
+   </div>
+
+   <div class='equationBox' style="margin-top: 20px;">
+   \( OCR= k \left( \frac{q_t-\sigma_{vo}}{\sigma'_{vo}} \right)= k Q_t \)
+   </div>
+
+   <p>
+      <ul>
+         <li class='fragment'> \(k\) is a constant that varies from <span class='atb'>0.2 to 0.5</span>.</li>
+         <li class='fragment'> In <strong style='color:#7abbe6'>average</strong> \(k=0.33\).</li>
+         <li class='fragment'> For <span class='atb'>aged, heavily over consolidated clay</span>, higher values of \(k\) are recommended.</li>
+         <li class='fragment'>\(k\) can be <span class='atb'>fit</span> to data if <strong style='color:#7abbe6'>available</strong>.</li>
+      </ul>
+   </p>
+   </div>
+   <div class='col' style='width: 30%;'>
+   <figure>
+   <img src='FiguresGeneral/OCR_from_CPT.svg' width='100%'/>
+   <footer style='margin-top: -60px;font-size: 0.8em;'> <em>Modified from Khan et al. (2011)</em> </footer>
+   </figure>
+   </div>
+   </div>
+   
+   </section>
+
+   <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+   <h1>Friction angle from CPT</h1>
+
+   <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+   There are numerous studies published for assessing \(\phi'\). In general, a <span class='atb'>secant peak</span> friction angle is used. The most used equations are <span class='atb'>empirical</span>.
+   </div>
+
+   <p>Kulhawy adn Mayne (1990) suggested: <br>
+   <div class='equationBox' style="margin-left: 500px;">
+   \( \phi'= 17.6 +11 \log (q_{c1N}) \)
+   </div> <br>
+   And Robertson and Campanella (1983) proposed: <br>
+   <div class='equationBox'>
+   \( \tan \phi'= \frac{1}{2.68} \left[\log \left(\frac{q_c}{\sigma'_{vo}} \right) +0.29 \right] \)
+   </div> <br>
+   \(q_{c1N}= (q_c/p_a) / (\sigma'_{vo}/p_a)^{0.5}\)
+   </p>
+
+   
+   </section>
+
+   <section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+   <h1>Dissipation tests</h1>
+   <div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+   The <span class='atb'>dissipation</span> test is used to estimate the coefficient of <span class='atb'>consolidation</span> in the <span class='atb'>horizontal</span> direction <strong style='color:green'>\(C_{h}\)</strong>. It enables the determination of the <strong style='color:#7abbe6'>permeability \(k_h\)</strong>. 
+   </div>
+
+   <div class='container'>
+   <div class='col' style='width: 30%;'>
+   <figure>
+   <img src='FiguresGeneral/CPT_pressure.png' width='100%'/>
+   <footer style='margin-top: -50px;font-size: 0.8em;'> <em>Zhang et al. (2023)</em> </footer>
+   </figure>
+   </div>
+   <div class='col' style='width: 50%;'>
+   
+   </div>
+   </div>
+   
+   </section>
+
+
 
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
