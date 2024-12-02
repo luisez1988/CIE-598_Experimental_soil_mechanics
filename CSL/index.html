@@ -98,9 +98,9 @@
 													
 								<li class="l1">Introduction to Critical State</li>
 								<li class='l1'>Why is it difficult to map the CSL?</li>								
-								<li class='l1'>Minimum tests requires to map the CSL in sand</li>					
+								<li class='l1'>Minimum tests required to map the CSL in sand</li>					
                        
-                        <li class="l1">Minimum tests requires to map the CSL in clay </li>	
+                        <li class="l1">Minimum tests required to map the CSL in clay </li>	
 																	
 							</ul>
 						</div>
@@ -134,11 +134,238 @@
         </section>
 
 		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-		<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
-		What is the critical state?
-		</div>
+			<h1>critical state theory</h1>
+			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+			Critical state theory is a <strong style='color:#7abbe6'>useful framework</strong> to describe the behavior of soils. It is based on the concept that at <strong style='color:#7abbe6'>large strains</strong>, soils tend to evolve towards a <span class='atb'>critical state</span> that is independent of the initial conditions.
+			</div>
+		
+			<div class='container'>
+			<div class='col' style='width:50%'>
+			<figure>
+			<img src='FiguresGeneral/sameq_difmean.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+			</div>
+			<div class='col' style='width:50%'>
+			
+			<div class="fragment">
+				<div class='findingBox' style='margin-top: 20px;margin-left: 0px;'>
+					Idea #1: At <strong style='color:#7abbe6'>equal mean stress</strong>, materials with <strong style='color:#7abbe6'>different</strong> initial density have <strong style='color:#7abbe6'>equal ultimate strength</strong>. <br>
+					
+					<div class='equationBox' style="margin-left: 200px;">
+					\( q_c= M_c p'_c \)
+					</div> <br>
+					
+					\(M_c=\) critical friction ratio
+					</div>
+			
+			</div>
+			
+			</div>
+			</div>
+			
 		</section>
         
+		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+			<div class='container'>
+			<div class='col' style="width: 50%;">
+			<figure>
+			<img src='FiguresGeneral/voids_critical.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+			</div>
+			<div class='col' style="width: 50%;">
+			<div class="fragment">
+			
+				<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
+					Idea #2: At <strong style='color:#7abbe6'>equal mean stress</strong>, materials with <strong style='color:#7abbe6'>different</strong> densities have <strong style='color:#7abbe6'>equal ultimate void ratio</strong> also called <span class='atb'>critical void ratio</span>. <br>
+					
+					<div class='equationBox'>
+					\( e_{c}(p')= \Gamma - \lambda \ln (p') \)
+					</div>
+					</div>
+			
+			</div>
+			
+			
+			
+			</div>
+			</div>
+			
+			<div class='container'>
+			<div class='col' style="width: 50%;">
+			
+			<div class="fragment">  
+				<div class='textBox' style='margin-top: 50px;margin-left: 0px;'>
+					The equations from ideas #1 and #2 are used to define the <span class='atb'>critical state line</span>.
+				</div>
+			
+			</div>	
+			
+			</div>
+			<div class='col' style="width: 50%;">
+			<figure class="fragment">
+			<img src='FiguresGeneral/CSL.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+			</div>
+			</div>
+			
+			
+			</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>critical state axioms</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Apart from establishing the critical state line, critical state theory also provides a set of <span class='atb'>axioms</span> used to describe the behavior of soils.
+		</div>
+		
+		<div class='theorem2' name='Axiom 1:' style='margin-top: 0px;margin-left: 0px;'>
+			At large deformation, the deviatoric stress is steady. <br>
+			<div class='equationBox'> 
+			\(\lim_{\varepsilon_q \rightarrow \infty} \frac{\partial q}{\partial \varepsilon_q}=0 \)
+			</div>
+		</div>
+		<div class='theorem2' name='Axiom 2:' style='margin-top: 0px;margin-left: 0px;'>
+			At large deformation, the mean stress is steady. <br>
+			<div class='equationBox'> 
+			\(\lim_{\varepsilon_q \rightarrow \infty} \frac{\partial p}{\partial \varepsilon_q}=0 \)
+			</div>
+		</div>
+		<div class='theorem2' name='Axiom 3:' style='margin-top: 0px;margin-left: 0px;'>
+			At large deformation, there is no volume change. <br>
+			<div class='equationBox'> 
+			\(\lim_{\varepsilon_q \rightarrow \infty} \frac{\partial \varepsilon_v}{\partial \varepsilon_q}=D=0 \)
+			</div>
+		</div>
+		
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<h1>Stress-dilation</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Now, we will use the energy density equation to derive a theoretical relationship between stress and dilation.
+		</div>
+		
+		<p class="fragment">
+			\( \begin{align}
+			\dot{W}^p&= q \dot{\varepsilon}^p_q + p' \dot{\varepsilon}^p_v \\
+			\cfrac{\dot{W}^p}{p' \dot{\varepsilon}_q^p} &= \cfrac{q}{p'} + \cfrac{\dot{\varepsilon}_v^p}{\dot{\varepsilon}_q^p} \\
+			\cfrac{\dot{W}^p}{p' \dot{\varepsilon}_q^p} &= \eta + D^p\\
+			\end{align} \)
+		</p>
+		
+		<div class="fragment">
+			<div class='textBox' style='margin-top: 50px;margin-left: 0px;'>
+			Where \( \eta \) is the <strong style='color:#7abbe6'>stress ratio</strong>. Now, take the limit when \( \dot{\varepsilon}_q^p \rightarrow \infty \).
+		</div>
+		
+		
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+		<p> 
+		\( \begin{align}
+		\lim_{\dot{\varepsilon}_q^p \rightarrow  \infty} \cfrac{\dot{W}^p}{p' \dot{\varepsilon}_q^p} &= \lim_{\dot{\varepsilon}_q^p \rightarrow  \infty} ( \eta + D^p ) \\
+		\lim_{\dot{\varepsilon}_q^p \rightarrow  \infty} \cfrac{\dot{W}^p}{p' \dot{\varepsilon}_q^p} &= M_c
+		\end{align} \)
+		</p>
+		
+		<div class="fragment">
+		<div class='findingBox' style='margin-top: 50px;margin-left: 0px;'>
+		At first Roscoe and Schofield proposed that \( M_c \) was a constant. This lead to the development of the <strong style='color:#7abbe6'>Camclay model</strong>. Using this proposition we obtain: <br>
+		
+		<div class='equationBox' style="margin-left: 300px;">
+		\( M_c= \eta + D^p \)
+		</div>
+		</div>
+		</div>
+		
+	</section>
+
+
+
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+				<h1>State parameter</h1>
+				<div class='defBox' name='State parameter ' style='margin-top: 0px;margin-left: 0px;'>
+				<strong style='color:green'>\( \psi:\)</strong> Is the vertical distance between the <strong style='color:#7abbe6'>current</strong> void ratio and the <strong style='color:#7abbe6'>critical</strong> void ratio. <br>
+				<div class='equationBox'>
+				\( \psi= e- e_c \)
+				</div>
+				</div>
+				
+				<figure>
+				<img src='FiguresGeneral/state_param.svg' width='100%'/>
+				<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+				</figure>
+				
+	</section>
+
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+
+		<h1>Minimum dilation</h1>
+		<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+		Further inspection of stress-dilation curves shows that dilation can not let pass of a minimum value.
+		</div>
+		
+	<div class='container' >
+	<div class='col' style="width: 50%;">
+		<figure>
+			<img src='FiguresGeneral/Min_dil_path.svg' width='100%'/>
+			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+			</figure>
+	</div>
+	<div class='col' style="width: 50%;">
+	<figure>
+	<img src='FiguresGeneral/min_dil_jeff.PNG' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+	
+	
+	</section>
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='InquiryBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:green'>How</strong> do we map the critical state line?
+	</div>
+
+	<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+	Idea: <strong style='color:#7abbe6'>plot</strong> a series of \(e\) vs \(p'\) curves at different confining pressures?
+	</div>
+
+	<div class='findingBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+	Idea: <strong style='color:#7abbe6'>plot</strong> a series of \(q\) vs \(p'\) at ultimate strength?
+	</div>
+
+	<div class='textBox fragment' style='margin-top: 10px;margin-left: 0px;'>
+	There are a series of practical problems that make these ideas unfeasible:
+
+	<ul>
+
+		<li class='fragment'><strong style='color:#7abbe6'>Dense samples</strong> in CDTT tend to dilate and produce <span class='atb'>shear banding</span> at low strains (\(\approx 10\% \)) \(\implies\) \(p-e\) path <strong style='color:red'>does not</strong> reach CSL</li>
+
+		<li class='fragment'><strong style='color:#7abbe6'>Loose specimens</strong> in CUTT an <strong style='color:#7abbe6'>large \(p'_{CON}\)</strong> require <strong style='color:red'>too large</strong> stresses \(\implies\) device will not handle stress levels.</li>
+	</ul>
+
+
+	</div>
+	
+	</section>
+
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Recommended tests to map the CSLin \(e-p'\)</h1>s
+	
+	</section>
+
+
+
+
+
 
 
 
