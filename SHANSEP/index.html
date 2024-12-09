@@ -81,7 +81,7 @@
 							<div class="qrCode" name="https://drive.google.com/file/d/1koKuGBMZZHGFff40eVXWcnE5GEc-ZOFr/view?usp=sharing"> </div>
 						</div>
 			
-						<div style="margin-top:-450px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 9: SHANSEP Method">
+						<div style="margin-top:-525px;margin-left: 600px;margin-right:0px" class="title_slide" name="Module 9: Stress History and Normalized Soil Engineering Properties (SHANSEP)">
 							<p style="color:#faffff; font-size:35px">Luis Zambrano-Cruzatty, Ph.D.</p>
 							<p style="color:#faffff; font-size:35px">Fall 2024</p>
 							<!-- <p style="color:#faffff; font-size:35px"> February 8, 2023</p> -->
@@ -134,80 +134,84 @@
         </section>
 
 	
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-			<h1>Preliminary theory: Original Camclay model</h1>
-			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-			The <span class='atb'>original</span> Camclay model was proposed by Roscoe and Schofield in 1958.
-			</div>
-			
-			<div class='container'>
-			<div class='col bordered' style="width: 50%;">
-				<p class="fragment">
-					\( \begin{align}
-					q &= \eta p' \\
-					\dot{q} &= \dot{\eta} p' + \eta \dot{p}'  \\		
-					\end{align} \)
-				</p>
-				<p class="fragment"> By normality: <br>
-				\( \begin{align}
-				\frac{\dot{q}}{\dot{p}'} &= - D^p\\
-				\end{align} \)</p>
-			</div>
-			<div class='col bordered' style="width: 50%;">
-			<p class="fragment">
-			\( \begin{align}
-			-D^p \dot{p}' &= \dot{\eta} p'+ \eta \dot{p}'  \\
-			(-M_c+ \eta -\eta) \dot{p}' &= \dot{\eta} p' \\
-			-\int  \cfrac{\dot{p}'}{p'} &= \int  \cfrac{ \dot{\eta}   }{M_c} \\
-			\end{align} \)
-			
-			</p>
-			<p class="fragment">
-				\(-\ln(p')+C= \eta/M_c\)
-			</p>
-			</div>
-			</div>		
-			
-			
-		</section>
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>What is SHANSEP?</h1>
+
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	<strong style='color:#7abbe6'>SHANSEP</strong> stands for <span class='atb'>Stress History and Normalized</span> <strong style='color:#7abbe6'>Soil Engineering Properties</strong>. It is a <strong style='color:#7abbe6'>laboratory</strong> <span class='atb'>protocol</span> to <strong style='color:#7abbe6'>reduce/remove</strong> the <span class='atb'>disturbance</span> effects in fine-grained samples.
+
+	</div>
+
+	<div style="margin-top: 50px;">
+		<p>
+			<ol>
+				<li class='fragment'>Allows to characterize the <strong style='color:#7abbe6'>undrained shear strength ratio</strong> and <strong style='color:#7abbe6'>over consolidation</strong> history.</li>
+				<li class='fragment'>SHANSEP <strong style='color:red'>is not</strong> an equation.</li>
+				<li class='fragment'>SHANSEP <strong style='color:red'>is not</strong> a constitutive equation.</li>
+			</ol>
+		</p>
+	</div>
+
+	
+	</section>	
 
 
-		<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
-			<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
-			Now we evaluate the previous equation with condition: \( p'=p'_c \) and \( \eta=M_c\). Where \(p'_c\) is the critical mean effective stress.
-			</div>
-			
-			<div class='container'>
-			<div class='col' style="width: 50%;">
-			<p class="fragment">
-				\begin{align}
-				-\ln(p'_c)+C&= 1 \\
-				C&= 1 + \ln(p'_c) \\
-				-\ln(p')+1+\ln(p'_c)&= \eta/M_c \\
-			
-				\end{align}
-			</p>
-			
-			<div class="fragment">
-			
-			<div class='findingBox' style='margin-top: 0px;margin-left: 0px;'>
-			This is the OCC yield surface:
-			<div class='equationBox'>
-			\( q= M_cp' \left[1 - \ln \left(\cfrac{p'}{p'_c} \right) \right] \)
-			</div>
-			</div>
-			
-			</div>
-			</div>
-			<div class='col' style="width: 50%;">
-			<figure>
-			<img class="fragment"  src='FiguresGeneral/OCC.svg' width='100%'/>
-			<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
-			</figure>
-			</div>
-			</div>
-			
-		</section>
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<div class='container'>
+	<div class='col' style='width: 70%; margin-top: 30px;'>
+	<ul>
+		<li class='fragment'>
+			Originally proposed by Ladd and Foott in 1974.
+		</li>
+
+		<li class='fragment'> Two <strong style='color:#7abbe6'>key</strong> aspects behind theory:  <br>
+		<ol>
+			<li>Stress-strain <span class='atb'>normalization</span>.</li>
+			<li><span class='atb'>re-setting/erasing</span> sample disturbance by loading to virgin curve. </li>
+		</ol>
+		</li>
+
+		<li class='fragment'>Required <strong style='color:#7abbe6'>tests</strong> to be performed:
+			<ol>
+				<li>Consolidation tests to asses \(OCR\) profile.</li>
+				<li>Minimum 6 \(CK_oDSS\) or \(CK_oUTC\) tests.</li>
+				<li>Can be done with DST as well.</li>
+			</ol>
+		</li>
+	</ul>
+	</div>
+	<div class='col' style='width: 30%;'>
+	<figure>
+	<img src='FiguresGeneral/Paper.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+	
+	</section>
+
+
+	<section data-background-image='FiguresGeneral/Normal_slide_Maine.svg'>
+	<h1>Theoretical Considerations</h1>
+
+	<div class='textBox' style='margin-top: 0px;margin-left: 0px;'>
+	Let's start defining the <strong style='color:#7abbe6'>\(USR\)</strong> using <strong style='color:#7abbe6'>critical state</strong>.
+	</div>
+
+	<div class='container'>
+	<div class='col' style='width: 50%;'>
+	SOLUTION
+	</div>
+	<div class='col' style='width: 50%;'>
+	<figure>
+	<img src='FiguresGeneral/CSL.svg' width='100%'/>
+	<footer style='margin-top: px;font-size: 0.8em;'> <em></em> </footer>
+	</figure>
+	</div>
+	</div>
+	
+	</section>
+
 
         
 
